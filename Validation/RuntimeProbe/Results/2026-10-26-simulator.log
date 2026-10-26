@@ -1,0 +1,31 @@
+FOLD_PROBE 84615.571524625 phase=inactive
+FOLD_PROBE 84615.70997595834 event=1 change=lifecycle generation=2 hinge=observationSuspended
+FOLD_PROBE 84615.70999087501 event=2 change=lifecycle generation=3 hinge=observationSuspended
+FOLD_PROBE 84617.74791929167 phase=active
+FOLD_PROBE 84617.75242070833 event=3 change=geometry generation=3 hinge=awaitingSample windowPoints=466.0x678.0 source=uiWindowBounds nativePixels=1398x2034 source=UIScreen.nativeBounds attribution=unknown
+FOLD_PROBE 84617.81929733334 event=4 change=hingeStatus generation=3 hinge=closed radians=0.0 source=uiHingeInteraction origin=simulator windowPoints=466.0x678.0 source=uiWindowBounds nativePixels=1398x2034 source=UIScreen.nativeBounds attribution=unknown
+FOLD_PROBE 84651.25308608334 audit connectedScenes=1 state=0 windows=1 hingeInteractions=1 events=4
+FOLD_PROBE 84663.577693 enabled=false
+FOLD_PROBE 84663.60633408334 event=5 change=lifecycle generation=3 hinge=observationSuspended
+FOLD_PROBE 84674.03519995834 audit connectedScenes=1 state=0 windows=1 hingeInteractions=0 events=5
+FOLD_PROBE 84679.18694320833 enabled=true
+FOLD_PROBE 84679.19766091667 event=6 change=geometry generation=3 hinge=awaitingSample windowPoints=466.0x678.0 source=uiWindowBounds nativePixels=1398x2034 source=UIScreen.nativeBounds attribution=unknown
+FOLD_PROBE 84679.21206220835 event=7 change=hingeStatus generation=3 hinge=closed radians=0.0 source=uiHingeInteraction origin=simulator windowPoints=466.0x678.0 source=uiWindowBounds nativePixels=1398x2034 source=UIScreen.nativeBounds attribution=unknown
+FOLD_PROBE 84690.001580625 audit connectedScenes=1 state=0 windows=1 hingeInteractions=1 events=7
+FOLD_PROBE 84695.738197375 mounted=false
+FOLD_PROBE 84702.451842875 audit connectedScenes=1 state=0 windows=1 hingeInteractions=0 events=7
+FOLD_PROBE 84714.52062929167 mounted=true
+FOLD_PROBE 84714.52263775001 event=8 change=context generation=2 hinge=awaitingSample windowPoints=466.0x678.0 source=uiWindowBounds nativePixels=1398x2034 source=UIScreen.nativeBounds attribution=unknown
+FOLD_PROBE 84714.52264791667 event=9 change=context generation=3 hinge=awaitingSample windowPoints=466.0x678.0 source=uiWindowBounds nativePixels=1398x2034 source=UIScreen.nativeBounds attribution=unknown
+FOLD_PROBE 84714.522656375 event=10 change=geometry generation=3 hinge=awaitingSample windowPoints=466.0x678.0 source=uiWindowBounds nativePixels=1398x2034 source=UIScreen.nativeBounds attribution=unknown
+FOLD_PROBE 84714.52420366668 event=11 change=hingeStatus generation=3 hinge=closed radians=0.0 source=uiHingeInteraction origin=simulator windowPoints=466.0x678.0 source=uiWindowBounds nativePixels=1398x2034 source=UIScreen.nativeBounds attribution=unknown
+FOLD_PROBE 84714.52630716667 event=12 change=hingeStatus generation=3 hinge=unavailableInContext windowPoints=466.0x678.0 source=uiWindowBounds nativePixels=1398x2034 source=UIScreen.nativeBounds attribution=unknown
+FOLD_PROBE 84714.52631900001 event=13 change=hingeStatus generation=3 hinge=closed radians=0.0 source=uiHingeInteraction origin=simulator windowPoints=466.0x678.0 source=uiWindowBounds nativePixels=1398x2034 source=UIScreen.nativeBounds attribution=unknown
+FOLD_PROBE 84720.23450391667 audit connectedScenes=1 state=0 windows=1 hingeInteractions=1 events=13
+FOLD_PROBE 84756.77126304168 phase=inactive
+FOLD_PROBE 84756.7715055 event=14 change=lifecycle generation=3 hinge=observationSuspended
+FOLD_PROBE 84757.89767566667 phase=background
+FOLD_PROBE 84763.15598045834 phase=inactive
+FOLD_PROBE 84763.46312112501 phase=active
+FOLD_PROBE 84763.463316875 event=15 change=geometry generation=3 hinge=awaitingSample windowPoints=466.0x678.0 source=uiWindowBounds nativePixels=1398x2034 source=UIScreen.nativeBounds attribution=unknown
+FOLD_PROBE 84763.46410416668 event=16 change=hingeStatus generation=3 hinge=closed radians=0.0 source=uiHingeInteraction origin=simulator windowPoints=466.0x678.0 source=uiWindowBounds nativePixels=1398x2034 source=UIScreen.nativeBounds attribution=unknown

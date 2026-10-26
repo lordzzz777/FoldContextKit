@@ -1,6 +1,6 @@
 # Arquitectura y viabilidad de FoldContextKit
 
-Investigación: 2026-10-25. Actualización de etapa 3: 2026-10-26. Los contratos descritos en Contracts.md están implementados; el clasificador puro está implementado según Classification.md; los adaptadores siguen siendo propuestas. Ninguno es un símbolo de Apple.
+Investigación: 2026-10-25. Actualización de etapa 4: 2026-10-26. Los contratos descritos en Contracts.md están implementados; el clasificador puro está implementado según Classification.md; los adaptadores UIKit/SwiftUI están implementados según Observation.md. Ninguno es un símbolo de Apple.
 
 ## 1. Evidencia verificada y método
 
@@ -161,3 +161,7 @@ No comparar con perfiles de prueba como si fueran perfiles reales. Las reglas di
 ## Implementación de etapa 3
 
 [Classification.md](Classification.md) define la API efectiva de reglas puras. Sustituye los nombres conceptuales de inferencia por resultados explícitamente sintéticos. No hay inferencia de producción.
+
+## Implementación de etapa 4
+
+[Observation.md](Observation.md) describe el observador MainActor por ventana y el puente SwiftUI basado en UIKit. Se elige callback síncrona para UIKit y cola diferida acotada para SwiftUI, con señal de desbordamiento; no se expone AsyncSequence en esta versión. Las pruebas runtime con escena activa siguen pendientes.

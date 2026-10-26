@@ -43,14 +43,15 @@ Validación de etapa 3: 29 casos Swift Testing superados (incluidos 3 de contrat
 
 ## Etapa 4 — Observación e integración
 
-- [ ] Implementar observación UIKit por ventana con propiedad y cancelación claras.
-- [ ] Implementar integración SwiftUI y verificar primera entrega y desmontaje.
-- [ ] Comprobar deshabilitación, reactivación, cambios de jerarquía y foreground/background.
-- [ ] Verificar unidades y fuentes de cada medida de presentación.
-- [ ] Comprobar que varias ventanas no sobrescriben snapshots entre sí.
-- [ ] Acotar historial y buffering; preservar cambios discretos importantes.
+- [x] Implementar observación UIKit por ventana con propiedad y cancelación claras.
+- [x] Implementar integración SwiftUI; probar primera entrega del coordinador y desmontaje explícito.
+- [x] Comprobar deshabilitación, reactivación, jerarquía y señales foreground/background con entradas controladas.
+- [x] Verificar unidades y fuentes en código y pruebas controladas.
+- [x] Comprobar que dos ventanas no sobrescriben sus snapshots.
+- [x] Acotar historial y buffering; conservar cambios discretos dentro de capacidad y notificar desbordamiento.
+- [x] Observar primera entrega de bisagra y ciclo de vida del runtime en una app con UIWindowScene activa, incluido montaje SwiftUI automático — iPhone Duo Simulator 27.1; hardware físico pendiente.
 
-Criterio: integración compilada y comportamiento documentado sin exigir abrir/cerrar.
+Criterio de implementación cumplido: integración compilada y comportamiento documentado sin exigir abrir/cerrar. Pasan 38 casos Swift Testing con entradas controladas. Además, RuntimeProbe recibió muestras del runtime en una escena activa y verificó montaje/desmontaje SwiftUI, deshabilitación/reactivación y background/foreground en iPhone Duo Simulator 27.1. El ejecutor SwiftPM por sí solo no proporciona esa escena. Registro y límites en [Observation](Observation.md): no acredita condiciones físicas, exclusividad del modelo ni todas las combinaciones de presentación.
 
 ## Etapa 5 — App mínima de diagnóstico
 
@@ -64,7 +65,7 @@ Criterio: ejemplo local y neutral, sin navegación automática, analítica ni fu
 
 ## Etapa 6 — Matriz de observación
 
-Ejecutar por separado en simulador y dispositivos físicos; registrar versiones de SO/SDK y procedencia. No se ha ejecutado ninguna fila todavía.
+Ejecutar por separado en simulador y dispositivos físicos; registrar versiones de SO/SDK y procedencia. RuntimeProbe cubre parte del ciclo de vida en simulador; las demás condiciones siguen pendientes.
 
 | Escenario | Reglas unitarias | Simulador | Físico |
 | --- | --- | --- | --- |
@@ -75,12 +76,12 @@ Ejecutar por separado en simulador y dispositivos físicos; registrar versiones 
 | iPad mini y otros dispositivos sin bisagra | Pendiente | Pendiente | Pendiente |
 | Pantalla externa y cambio de pantalla | Pendiente | Pendiente | Pendiente |
 | iPhone Mirroring y cambio de tamaño | Pendiente | Pendiente | Pendiente |
-| Deshabilitar/reactivar observador; retirar vista | Pendiente | Pendiente | Pendiente |
-| Background y reconexión de escena | Pendiente | Pendiente | Pendiente |
+| Deshabilitar/reactivar observador; retirar vista | Entradas controladas | Observado en RuntimeProbe 27.1 | Pendiente |
+| Background y reconexión de escena | Señales controladas | Background/foreground observado; reconexión pendiente | Pendiente |
 
 Si un escenario no está disponible en una plataforma de prueba, registrar «no aplicable/no disponible» con motivo, sin marcarlo probado.
 
-Registro futuro por caso: identificador local del ensayo, entorno, versión, escenario, condición conocida por el operador, eventos recibidos, origen/unidades, resultado esperado, resultado obtenido, motivos, falso positivo/falso negativo/información insuficiente y pasos de reproducción. No recoger identificadores personales. Actualmente no hay casos medidos ni tasas calculadas; no afirmar cero errores.
+Registro futuro por caso: identificador local del ensayo, entorno, versión, escenario, condición conocida por el operador, eventos recibidos, origen/unidades, resultado esperado, resultado obtenido, motivos, falso positivo/falso negativo/información insuficiente y pasos de reproducción. No recoger identificadores personales. El ensayo RuntimeProbe registra observaciones de integración, no tasas de identificación. No hay tasas calculadas; no afirmar cero errores.
 
 ## Etapa 7 — Decisión sobre inferencia
 

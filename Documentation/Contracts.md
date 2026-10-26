@@ -6,14 +6,14 @@ Fecha: 2026-10-26. API inicial sujeta a revisión antes de publicar.
 
 - Swift tools 6.4; producto, paquete y módulo `FoldContextKit`.
 - iOS/iPadOS 26 como mínimo, siguiendo la comparación y alcance acordados en la conversación.
-- En versiones anteriores a 27.1, la futura observación de bisagra devolverá `missing(.apiUnavailable)`, nunca «sin bisagra». No hay todavía observador que calcule automáticamente ese estado.
+- En versiones anteriores a 27.1, la futura observación de bisagra devolverá `missing(.apiUnavailable)`, nunca «sin bisagra». El observador de etapa 4 calcula ese estado cuando está activo; al estar suspendido informa suspensión y permite consultar isHingeAPIAvailable.
 - En 27.1 o posterior, antes de recibir datos corresponde `awaitingSample`; la mera disponibilidad de símbolos no acredita hardware.
 - macOS 26 permite consumir el núcleo y ejecutar Swift Testing sin simulador. No se añade observación de bisagra en macOS, Android ni otras plataformas. SwiftPM puede permitir compilar el núcleo en otros destinos; eso no significa soporte de integración validado.
 - Las comprobaciones de UIKit/SwiftUI necesitan SDK 27.1. El mínimo de ejecución iOS 26 no implica compatibilidad del código de validación con SDK antiguos.
 
 ## Valores y unidades
 
-El núcleo no importa Foundation, SwiftUI, UIKit ni Combine. Expone estructuras inmutables Equatable y Sendable.
+Los archivos del núcleo no importan Foundation, SwiftUI, UIKit ni Combine; los adaptadores iOS sí importan Foundation/UIKit/SwiftUI en archivos condicionados por plataforma. Expone estructuras inmutables Equatable y Sendable.
 
 | Tipo | Contrato |
 | --- | --- |
@@ -70,3 +70,5 @@ swift run --disable-sandbox \
 ```
 
 No se requirió acceso a otros repositorios ni servicios remotos.
+
+La etapa 4 implementa observación y vigencia según [Observation](Observation.md).

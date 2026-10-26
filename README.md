@@ -4,11 +4,11 @@ Proyecto de paquete Swift independiente para observar capacidades de plegado y c
 
 ## Estado real — 26 de octubre de 2026
 
-Etapa 3: paquete/producto/módulo `FoldContextKit`, Swift tools 6.4, sin dependencias externas. Núcleo de evidencias inmutables Sendable sin imports de UI, contratos de unidades/procedencia/vigencia y target Swift Testing. Retirada la plantilla `hello()`.
+Etapa 4: paquete/producto/módulo `FoldContextKit`, Swift tools 6.4, sin dependencias externas. Núcleo de evidencias inmutables Sendable sin imports de UI; adaptadores iOS separados por archivos, contratos de unidades/procedencia/vigencia y target Swift Testing. Retirada la plantilla `hello()`.
 
-Mínimo iOS/iPadOS 26; bisagra solo desde 27.1 con disponibilidad explícita. macOS 26 sirve para el núcleo y pruebas locales. Clasificador puro con política explícita de observación o evaluación sintética. No hay observadores funcionales, perfiles de producción ni interfaz de diagnóstico todavía. No hay publicación remota ni licencia seleccionada.
+Mínimo iOS/iPadOS 26; bisagra solo desde 27.1 con disponibilidad explícita. macOS 26 sirve para el núcleo y pruebas locales. Clasificador puro con política explícita de observación o evaluación sintética. Observador UIKit por ventana y modificador SwiftUI implementados. No hay perfiles de producción. `Validation/RuntimeProbe` contiene una app local para verificar la integración; la app de diagnóstico completa sigue pendiente. No hay publicación remota ni licencia seleccionada.
 
-Las firmas SwiftUI/UIKit compilan con BuildProject de Xcode, SDK iOS Simulator 27.1 y deployment target 26.0. Pasan los 29 casos de contratos y clasificación en Xcode. Esto no valida hardware ni ejecución sobre iOS 26. Véase [Contracts](Documentation/Contracts.md).
+Las firmas SwiftUI/UIKit compilan con BuildProject de Xcode, SDK iOS Simulator 27.1 y deployment target 26.0. Pasan 38 casos en iPhone Duo Simulator, incluidos contratos, clasificación e integración con entradas controladas. Esto no valida hardware ni ejecución sobre iOS 26. Véase [Contracts](Documentation/Contracts.md).
 
 ## Objetivo y alcance
 
@@ -32,10 +32,10 @@ Tamaño físico, píxeles, puntos de pantalla y puntos de ventana son magnitudes
 | Nivel | Estado |
 | --- | --- |
 | Documentación y declaraciones del SDK | Inspeccionadas; detalles y límites en Architecture |
-| Compilación de firmas SwiftUI/UIKit | Correcta; adaptadores funcionales pendientes |
-| Contratos mediante Swift Testing | 29 casos pasan; perfiles exclusivamente sintéticos |
+| Compilación de firmas SwiftUI/UIKit | Correcta; adaptadores UIKit y SwiftUI implementados |
+| Contratos mediante Swift Testing | 38 casos pasan; reglas e integración con entradas controladas |
 | Importación local por SwiftPM | Consumidor independiente compilado y ejecutado |
-| Observación en simulador | No realizada; solo compilación para ese destino |
+| Observación en simulador | Entrega inicial, montaje/desmontaje SwiftUI y ciclo background/foreground observados con RuntimeProbe; detalles y límites en [Observation](Documentation/Observation.md) |
 | Observación en dispositivo físico | No realizada |
 | Identificación de modelo y perfiles | Pendiente de evidencia; sin garantías |
 
@@ -50,3 +50,5 @@ En Xcode, añade este directorio como paquete local y selecciona el producto `Fo
 `Validation/LocalConsumer` contiene un paquete SwiftPM independiente que depende de la raíz mediante ruta relativa. Se verifica con `swift run --package-path Validation/LocalConsumer LocalConsumer`. Usa entradas sintéticas; no observa hardware.
 
 Las reglas implementadas y sus límites se describen en [Classification](Documentation/Classification.md).
+
+Consulta [Observation](Documentation/Observation.md) para integración, buffering y límites runtime de la etapa 4.

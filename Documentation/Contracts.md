@@ -45,7 +45,7 @@ La generación debe cambiar al reasociar la ventana a otra pantalla o jerarquía
 
 Los estados missing corresponden al contexto actual del snapshot; no son eventos históricos con metadatos. Si más adelante se necesita un registro de callbacks, se modelará aparte. Los estados de bisagra desconocidos o futuros se representarán como `HingeStatus.unknown`. La falta de ángulo no equivale a cero.
 
-No se añade `isDuo`, clasificador, transición automática, perfil dimensional ni selección de vistas en esta etapa.
+La etapa 2 no añadió clasificación. La etapa 3 añade el clasificador puro descrito en [Classification](Classification.md), sin `isDuo`, perfiles de producción ni selección de vistas.
 
 ## Verificación reproducible
 

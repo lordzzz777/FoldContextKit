@@ -4,11 +4,11 @@ Proyecto de paquete Swift independiente para observar capacidades de plegado y c
 
 ## Estado real — 26 de octubre de 2026
 
-Etapa 2: paquete/producto/módulo `FoldContextKit`, Swift tools 6.4, sin dependencias externas. Núcleo de evidencias inmutables Sendable sin imports de UI, contratos de unidades/procedencia/vigencia y target Swift Testing. Retirada la plantilla `hello()`.
+Etapa 3: paquete/producto/módulo `FoldContextKit`, Swift tools 6.4, sin dependencias externas. Núcleo de evidencias inmutables Sendable sin imports de UI, contratos de unidades/procedencia/vigencia y target Swift Testing. Retirada la plantilla `hello()`.
 
-Mínimo iOS/iPadOS 26; bisagra solo desde 27.1 con disponibilidad explícita. macOS 26 sirve para el núcleo y pruebas locales. No hay observadores funcionales, clasificador, perfiles de producción ni interfaz de diagnóstico todavía. No hay publicación remota ni licencia seleccionada.
+Mínimo iOS/iPadOS 26; bisagra solo desde 27.1 con disponibilidad explícita. macOS 26 sirve para el núcleo y pruebas locales. Clasificador puro con política explícita de observación o evaluación sintética. No hay observadores funcionales, perfiles de producción ni interfaz de diagnóstico todavía. No hay publicación remota ni licencia seleccionada.
 
-Las firmas SwiftUI/UIKit compilan con BuildProject de Xcode, SDK iOS Simulator 27.1 y deployment target 26.0. Las tres pruebas de contratos pasan en Mac. Esto no valida hardware ni ejecución sobre iOS 26. Véase [Contracts](Documentation/Contracts.md).
+Las firmas SwiftUI/UIKit compilan con BuildProject de Xcode, SDK iOS Simulator 27.1 y deployment target 26.0. Pasan los 29 casos de contratos y clasificación en Xcode. Esto no valida hardware ni ejecución sobre iOS 26. Véase [Contracts](Documentation/Contracts.md).
 
 ## Objetivo y alcance
 
@@ -33,7 +33,7 @@ Tamaño físico, píxeles, puntos de pantalla y puntos de ventana son magnitudes
 | --- | --- |
 | Documentación y declaraciones del SDK | Inspeccionadas; detalles y límites en Architecture |
 | Compilación de firmas SwiftUI/UIKit | Correcta; adaptadores funcionales pendientes |
-| Contratos mediante Swift Testing | 3 pruebas pasan en Mac; reglas de clasificación pendientes |
+| Contratos mediante Swift Testing | 29 casos pasan; perfiles exclusivamente sintéticos |
 | Importación local por SwiftPM | Consumidor independiente compilado y ejecutado |
 | Observación en simulador | No realizada; solo compilación para ese destino |
 | Observación en dispositivo físico | No realizada |
@@ -48,3 +48,5 @@ Consulta la [lista de etapas verificables](Documentation/Checklist.md) y la [est
 En Xcode, añade este directorio como paquete local y selecciona el producto `FoldContextKit`. En el consumidor: `import FoldContextKit`. El directorio físico conserva el nombre AdapteDuoKit; el módulo público ya se llama FoldContextKit.
 
 `Validation/LocalConsumer` contiene un paquete SwiftPM independiente que depende de la raíz mediante ruta relativa. Se verifica con `swift run --package-path Validation/LocalConsumer LocalConsumer`. Usa entradas sintéticas; no observa hardware.
+
+Las reglas implementadas y sus límites se describen en [Classification](Documentation/Classification.md).

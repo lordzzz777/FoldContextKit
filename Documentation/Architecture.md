@@ -1,6 +1,6 @@
 # Arquitectura y viabilidad de FoldContextKit
 
-Investigación: 2026-10-25. Actualización de etapa 2: 2026-10-26. Los contratos descritos en Contracts.md están implementados; clasificador y adaptadores siguen siendo propuestas, no símbolos de Apple.
+Investigación: 2026-10-25. Actualización de etapa 3: 2026-10-26. Los contratos descritos en Contracts.md están implementados; el clasificador puro está implementado según Classification.md; los adaptadores siguen siendo propuestas. Ninguno es un símbolo de Apple.
 
 ## 1. Evidencia verificada y método
 
@@ -157,3 +157,7 @@ No comparar con perfiles de prueba como si fueran perfiles reales. Las reglas di
 - Definir cuándo vence una muestra sin usar un timeout arbitrario como prueba de ausencia; pasar tiempo/vigencia explícitos a la lógica pura si fueran necesarios.
 - Investigar cómo representar Mirroring/pantalla externa cuando no existe evidencia pública suficiente para atribuir el dispositivo. Desconocido es un resultado válido.
 - Las firmas mínimas ya compilan con BuildProject para iOS Simulator, SDK 27.1 y deployment target 26.0. Sigue pendiente observar las entregas en simulador y hardware por separado.
+
+## Implementación de etapa 3
+
+[Classification.md](Classification.md) define la API efectiva de reglas puras. Sustituye los nombres conceptuales de inferencia por resultados explícitamente sintéticos. No hay inferencia de producción.

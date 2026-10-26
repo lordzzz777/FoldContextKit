@@ -29,15 +29,17 @@ Validado: BuildProject para SDK iOS Simulator 27.1 con mínimo 26.0, tres tests 
 
 ## Etapa 3 — Reglas puras
 
-- [ ] Implementar clasificación con política explícita, sin perfiles de producción.
-- [ ] Probar API disponible sin muestra, nil, suspensión y estados desconocidos.
-- [ ] Probar bisagra sin dimensiones: capacidad observada con modelo desconocido.
-- [ ] Probar perfiles exclusivamente sintéticos: dimensión sola, combinación y contradicciones.
-- [ ] Probar rotación, unidades incompatibles y transición dependiente de dimensiones.
-- [ ] Probar evidencia caducada, cambio de ventana/escena y ausencia de transición inicial.
-- [ ] Verificar que fuentes incompatibles o atribución desconocida bloquean inferencia.
+- [x] Implementar clasificación con política explícita, sin perfiles de producción.
+- [x] Probar API disponible sin muestra, nil, suspensión y estados desconocidos.
+- [x] Probar bisagra sin dimensiones: capacidad observada con modelo desconocido.
+- [x] Probar perfiles exclusivamente sintéticos: dimensión sola, combinación y contradicciones.
+- [x] Probar rotación, unidades incompatibles y transición dependiente de dimensiones.
+- [x] Probar evidencia caducada, cambio de ventana/escena y ausencia de transición inicial.
+- [x] Verificar que fuentes incompatibles o atribución desconocida bloquean inferencia.
 
 Criterio: Swift Testing pasa con motivos deterministas; resultados etiquetados como validación de reglas, no de hardware.
+
+Validación de etapa 3: 29 casos Swift Testing superados (incluidos 3 de contratos), sin observación de hardware. Véase [Classification](Classification.md).
 
 ## Etapa 4 — Observación e integración
 

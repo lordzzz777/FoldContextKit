@@ -1,0 +1,48 @@
+Device orientation: Portrait
+------------------------
+Application bundle identifier: org.foldcontextkit.RuntimeProbe
+Application UI orientation: Portrait
+Application, pid: 21176, label: 'RuntimeProbe'
+ Window, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+   Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+    Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+     Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+      Other, {{0.0, 62.0}, {402.0, 778.0}}, hitPoint: {201.0, 451.0}
+       Other, {{0.0, 62.0}, {402.0, 778.0}}, hitPoint: {201.0, 451.0}
+      ScrollView, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+       Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+        Other, {{0.0, 0.0}, {402.0, 102.0}}, hitPoint: {201.0, 51.0}
+       Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+       Other, {{0.0, 62.0}, {402.0, 1813.3}}, hitPoint: {201.0, 468.0}
+        StaticText, {{16.0, 78.0}, {216.7, 40.7}}, label: 'FoldContextKit', hitPoint: {124.3, 98.3}
+        StaticText, {{16.0, 142.7}, {162.7, 26.3}}, label: 'Diagnóstico local', hitPoint: {97.3, 155.8}
+        StaticText, {{16.0, 193.0}, {231.7, 14.3}}, label: 'Validación en hardware físico: pendiente.', hitPoint: {131.8, 200.2}
+        Switch, {{16.0, 231.3}, {370.0, 28.0}}, label: 'Ejemplo sintético', value: 0, hitPoint: {201.0, 245.3}
+         StaticText, {{16.0, 235.2}, {130.0, 20.3}}, label: 'Ejemplo sintético', hitPoint: {81.0, 245.3}
+         Switch, {{325.0, 231.3}, {63.0, 28.0}}, value: 0, hitPoint: {356.5, 245.3}
+        StaticText, {{16.0, 267.3}, {295.3, 42.3}}, label: 'SIMULADOR — datos del runtime, no evidencia física.', hitPoint: {163.7, 288.5}
+        Switch, {{16.0, 333.7}, {370.0, 28.0}}, label: 'Montar observador', value: 1, hitPoint: {201.0, 347.7}
+         StaticText, {{16.0, 337.5}, {145.3, 20.3}}, label: 'Montar observador', hitPoint: {88.7, 347.7}
+         Switch, {{325.0, 333.7}, {63.0, 28.0}}, value: 1, hitPoint: {356.5, 347.7}
+        Switch, {{16.0, 385.7}, {370.0, 28.0}}, label: 'Habilitar observación', value: 1, hitPoint: {201.0, 399.7}
+         StaticText, {{16.0, 389.5}, {160.7, 20.3}}, label: 'Habilitar observación', hitPoint: {96.3, 399.7}
+         Switch, {{325.0, 385.7}, {63.0, 28.0}}, value: 1, hitPoint: {356.5, 399.7}
+        StaticText, {{16.0, 437.7}, {209.3, 20.3}}, label: 'Fase de esta escena: active', hitPoint: {120.7, 447.8}
+        StaticText, {{16.0, 482.0}, {209.7, 20.3}}, label: 'Disponibilidad y recepción', hitPoint: {120.8, 492.2}
+        StaticText, {{16.0, 510.3}, {358.7, 42.3}}, label: 'API UIHingeInteraction: no disponible; requiere iOS 27.1.', hitPoint: {195.3, 531.5}
+        StaticText, {{16.0, 560.7}, {370.0, 42.3}}, label: 'Observación habilitada. La recepción se muestra en Bisagra.', hitPoint: {201.0, 581.8}
+        StaticText, {{16.0, 611.0}, {328.3, 14.3}}, label: 'La disponibilidad de la API no demuestra capacidad física.', hitPoint: {180.2, 618.2}
+        StaticText, {{16.0, 649.3}, {205.7, 20.3}}, label: 'Snapshot de esta ventana', hitPoint: {118.8, 659.5}
+        StaticText, {{16.0, 681.7}, {316.0, 46.3}}, label: 'Escena: 7BA95486-8222-4B9C-9C5B-2933EF67D0DD
+Ventana: 2FC5822C-3D6F-4D77-9C47-37AB47470089
+Generación: 3', hitPoint: {174.0, 704.8}
+        StaticText, {{16.0, 740.0}, {335.7, 30.3}}, label: 'Identidades efímeras del observador, no identificadores de dispositivo.', hitPoint: {183.8, 755.2}
+        StaticText, {{32.0, 798.3}, {104.7, 20.3}}, label: 'Presentación', hitPoint: {84.3, 808.5}
+        StaticText, {{32.0, 824.7}, {329.0, 42.3}}, label: '402 × 874 puntos
+Fuente: uiWindowBounds · ámbito: ventana', hitPoint: {196.5, 845.8}
+        StaticText, {{32.0, 873.0}, {284.3, 14.3}}, label: 'Origen: simulator · vigencia: current · secuencia: 3', hitPoint: {174.2, 873.5}
+       Other, {{369.0, 62.0}, {30.0, 750.0}}, label: 'Vertical scroll bar, 3 pages', value: 0%, hitPoint: {384.0, 437.0}
+        Other, {{396.0, 65.0}, {3.0, 722.3}}, hitPoint: {397.5, 426.2}
+       Other, {{369.0, 62.0}, {30.0, 750.0}}, label: 'Vertical scroll bar, 3 pages', value: 0%, hitPoint: {384.0, 437.0}
+        Other, {{396.0, 65.0}, {3.0, 722.3}}, hitPoint: {397.5, 426.2}

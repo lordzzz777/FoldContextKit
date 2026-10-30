@@ -1,54 +1,172 @@
 # FoldContextKit
 
-Proyecto de paquete Swift independiente para observar capacidades de plegado y contexto de presentación, y evaluar evidencias de forma explicable. Cada aplicación conserva el control de su diseño, navegación y datos.
+Biblioteca Swift para observar la bisagra, inferir Duo y conocer el contexto de cada ventana: pantalla exterior, interior dividida o interior extendida. Tu app conserva el control de sus vistas y navegación.
 
-## Estado real — 26 de octubre de 2026
+Sin dependencias externas, Combine, telemetría ni permisos adicionales. Licencia [MIT](LICENSE).
 
-Etapa 4: paquete/producto/módulo `FoldContextKit`, Swift tools 6.4, sin dependencias externas. Núcleo de evidencias inmutables Sendable sin imports de UI; adaptadores iOS separados por archivos, contratos de unidades/procedencia/vigencia y target Swift Testing. Retirada la plantilla `hello()`.
+## Tutorial rápido
 
-Mínimo iOS/iPadOS 26; bisagra solo desde 27.1 con disponibilidad explícita. macOS 26 sirve para el núcleo y pruebas locales. Clasificador puro con política explícita de observación o evaluación sintética. Observador UIKit por ventana y modificador SwiftUI implementados. No hay perfiles de producción. `Validation/RuntimeProbe` contiene una app local para verificar la integración; la app de diagnóstico completa sigue pendiente. No hay publicación remota ni licencia seleccionada.
+### 1. Instalar
 
-Las firmas SwiftUI/UIKit compilan con BuildProject de Xcode, SDK iOS Simulator 27.1 y deployment target 26.0. Pasan 38 casos en iPhone Duo Simulator, incluidos contratos, clasificación e integración con entradas controladas. Esto no valida hardware ni ejecución sobre iOS 26. Véase [Contracts](Documentation/Contracts.md).
+Requisitos: **Swift 6.4**, **iOS/iPadOS 26 o posterior**. Las APIs de bisagra y regiones reservadas requieren **27.1**; en versiones anteriores se informa de su indisponibilidad. El núcleo también admite macOS 26.
 
-## Objetivo y alcance
+El paquete todavía no está publicado en GitHub. Puedes instalarlo localmente:
 
-- Un paquete instalable mediante Swift Package Manager, con integración SwiftUI y UIKit, sin dependencias externas previstas.
-- Evidencias tipadas, clasificación pura y contexto propio de cada ventana/escena.
-- Concurrencia de Swift; sin Combine, APIs privadas, permisos ajenos al objetivo, telemetría, servicios remotos ni identificadores personales.
-- Pruebas con Swift Testing y, posteriormente, una app mínima de diagnóstico.
+1. Abre tu app en Xcode.
+2. Selecciona **File → Add Package Dependencies… → Add Local…**.
+3. Elige la carpeta que contiene el `Package.swift` de FoldContextKit.
+4. Añade el producto **FoldContextKit** al target de tu app.
 
-Es independiente de SongBook/Lyrio: no usa su repositorio, modelos, recursos ni lógica. No contempla Android, Flutter, React Native, Unity ni un sistema completo de layouts.
+Después importa el módulo:
 
-## Hipótesis y límites
+```swift
+import FoldContextKit
+```
 
-La combinación de dimensiones compatibles y una bisagra observada podría apoyar una inferencia de modelo. Una transición de dimensiones dentro de la misma escena podría aportar contexto complementario; no es evidencia independiente de esas dimensiones. La hipótesis no está validada y no hay perfiles dimensionales autorizados para producción.
+Cuando exista el repositorio en GitHub, podrás añadir su URL desde **Add Package Dependencies…**. No hay todavía una URL ni una versión publicada que instalar.
 
-La disponibilidad de una API no acredita hardware. Un callback con bisagra acredita una capacidad en el contexto observado, sin certificar un modelo. Un valor ausente, la falta de callbacks o un observador deshabilitado no acreditan ausencia física. La documentación de UIKit contempla valores nulos al salir de la jerarquía que entrega datos. [UIHingeInteraction](https://developer.apple.com/documentation/uikit/uihingeinteraction).
+### 2. Usar con SwiftUI
 
-Tamaño físico, píxeles, puntos de pantalla y puntos de ventana son magnitudes distintas. Rotación, multitarea, pantallas externas y Mirroring impiden identificar un modelo por tamaño de ventana. No se exigirán gestos de abrir/cerrar para usar la app ni se prometerán porcentajes de confianza, exclusividad futura o ausencia de regresiones. Apple recomienda adaptar la interfaz al espacio disponible. [Preparación para Duo](https://developer.apple.com/iphone-duo/prepare/).
+Aplica el modificador a una raíz estable de **cada ventana**. Este ejemplo muestra el modelo y la presentación recibidos:
 
-## Validación
+```swift
+import SwiftUI
+import FoldContextKit
 
-| Nivel | Estado |
+struct FoldStatusView: View {
+    @State private var evidence: FoldEvidence?
+
+    private var assessment: FoldAssessment? {
+        evidence.map {
+            FoldClassifier.evaluate(
+                evidence: $0,
+                interiorLayout: .extended
+            )
+        }
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            if let assessment {
+                Text("Modelo: \(String(describing: assessment.model))")
+                Text("Pantalla: \(String(describing: assessment.presentation.display))")
+                Text("Modo: \(String(describing: assessment.presentation.mode))")
+            } else {
+                Text("Esperando datos de esta ventana…")
+            }
+        }
+        .padding()
+        .onFoldContextChange { event in
+            switch event {
+            case let .snapshot(value, _):
+                evidence = value
+            case .overflow:
+                evidence = nil
+            }
+        }
+    }
+}
+```
+
+El modificador gestiona montaje y cancelación. No necesitas pedir al usuario que abra o cierre el dispositivo para iniciar la observación. Los textos anteriores muestran los valores de la API; tu app puede traducirlos y adaptar su interfaz.
+
+### 3. Elegir interior dividido o extendido
+
+Cambia el argumento `interiorLayout` del ejemplo:
+
+| Elección de la app | Resultado en el interior |
 | --- | --- |
-| Documentación y declaraciones del SDK | Inspeccionadas; detalles y límites en Architecture |
-| Compilación de firmas SwiftUI/UIKit | Correcta; adaptadores UIKit y SwiftUI implementados |
-| Contratos mediante Swift Testing | 38 casos pasan; reglas e integración con entradas controladas |
-| Importación local por SwiftPM | Consumidor independiente compilado y ejecutado |
-| Observación en simulador | Entrega inicial, montaje/desmontaje SwiftUI y ciclo background/foreground observados con RuntimeProbe; detalles y límites en [Observation](Documentation/Observation.md) |
-| Observación en dispositivo físico | No realizada |
-| Identificación de modelo y perfiles | Pendiente de evidencia; sin garantías |
+| `.extended` | Una superficie continua |
+| `.divided(axis: .horizontal)` | Dos regiones lado a lado |
+| `.divided(axis: .vertical)` | Dos regiones apiladas |
+| `.unspecified` | Sin atribuir una distribución a la app |
 
-Las pruebas con entradas controladas validarán reglas, nunca hardware. La utilidad de observar capacidades puede desarrollarse aunque la identificación siga siendo incierta; no se sustituye silenciosamente un objetivo por el otro.
+La pantalla exterior se mantiene como una sola región. La bisagra y su ángulo no obligan a elegir una distribución. Si la elección cambia durante la ejecución, conserva esa elección en el estado de la ventana y vuelve a evaluar el último snapshot.
 
-Consulta la [lista de etapas verificables](Documentation/Checklist.md) y la [estructura y API conceptual](Documentation/Architecture.md). La publicación, creación del repositorio remoto, push y elección de licencia quedan fuera de esta fase.
+Dentro del callback, puedes consultar las medidas y áreas para tu diseño:
 
-## Integración local
+```swift
+let assessment = FoldClassifier.evaluate(
+    evidence: value,
+    interiorLayout: .divided(axis: .horizontal)
+)
 
-En Xcode, añade este directorio como paquete local y selecciona el producto `FoldContextKit`. En el consumidor: `import FoldContextKit`. El directorio físico conserva el nombre AdapteDuoKit; el módulo público ya se llama FoldContextKit.
+let presentation = assessment.presentation
+let regions = presentation.regions
+let contentAreas = presentation.unobscuredRegions
+let source = presentation.regionSource
+let hinge = presentation.hinge
+```
 
-`Validation/LocalConsumer` contiene un paquete SwiftPM independiente que depende de la raíz mediante ruta relativa. Se verifica con `swift run --package-path Validation/LocalConsumer LocalConsumer`. Usa entradas sintéticas; no observa hardware.
+Las coordenadas están en **puntos de la ventana**, no en píxeles de pantalla. La biblioteca prioriza las divisiones que comunica UIKit y las zonas seguras. Si utiliza dos mitades calculadas, lo indica con `appEqualSplit`; no las presenta como una bisagra medida. `unobscuredRegions` excluye las oclusiones observadas y puede devolver más de dos rectángulos. Un resultado vacío puede significar falta de datos, no falta de capacidad.
 
-Las reglas implementadas y sus límites se describen en [Classification](Documentation/Classification.md).
+### Alternativa: UIKit
 
-Consulta [Observation](Documentation/Observation.md) para integración, buffering y límites runtime de la etapa 4.
+Retén un observador por controlador/ventana y vincúlalo al ciclo de vida:
+
+```swift
+import UIKit
+import FoldContextKit
+
+@MainActor
+final class FoldStatusViewController: UIViewController {
+    private let observer = FoldContextObserver()
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        observer.interiorLayout = .extended
+        observer.onChange = { [weak self] _ in
+            guard let self, let assessment = self.observer.assessment else {
+                return
+            }
+            self.title = String(describing: assessment.model)
+        }
+        observer.start(in: view)
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        observer.stop()
+        observer.onChange = nil
+    }
+}
+```
+
+Para suspender temporalmente, usa `observer.isEnabled = false`. Para releer geometría si tu app la cambia sin generar layout, usa `observer.refresh()`. Cambiar `observer.interiorLayout` modifica la evaluación consultada; no genera un evento de hardware.
+
+## Ver la app de diagnóstico
+
+Abre [RuntimeProbe.xcodeproj](Validation/RuntimeProbe/RuntimeProbe.xcodeproj), selecciona el esquema **RuntimeProbe** y un simulador iOS. La app muestra medidas, fuentes, bisagra, clasificación, regiones e historial. Mantén desactivado **Ejemplo sintético** para observar el entorno.
+
+La biblioteca no incorpora una interfaz propia: esta app es un consumidor local que permite ver los datos que recibiría tu aplicación.
+
+### Capturas del simulador
+
+**Capturas históricas de Duo Simulator 27.1, del 27/10/2026.** Muestran la app de diagnóstico anterior a las últimas funciones de inferencia y regiones; no acreditan su funcionamiento actual ni hardware físico.
+
+<p>
+  <img src="Documentation/Images/runtime-simulator-overview-2026-10-27.png" width="300" alt="App de diagnóstico en Duo Simulator: controles de observación y disponibilidad de bisagra">
+  <img src="Documentation/Images/runtime-simulator-measurements-2026-10-27.png" width="300" alt="Medidas del simulador: 1398 por 2034 píxeles nativos y bisagra cerrada a cero radianes, con fuente y metadatos">
+</p>
+
+Izquierda: controles y disponibilidad de API. Derecha: medidas, bisagra y procedencia de las muestras. Estas pantallas pertenecen a RuntimeProbe; tu app diseña su propia interfaz.
+
+## Cómo interpretar el resultado
+
+- `duoDimensionCandidate`: dimensiones compatibles, sin una muestra admisible de bisagra.
+- `duoInferred`: dimensiones compatibles y bisagra vigente del mismo contexto y origen.
+- `insufficientInformation`: no hay evidencias suficientes para inferir el modelo.
+
+La inferencia no es una identificación oficial ni una garantía de exclusividad futura. Captura activa o desconocida, pantallas externas identificadas y atribución desconocida bloquean la inferencia. Una escena `applicationDisplayUnresolved` puede permitir la heurística con captura inactiva, pero no certifica pantalla física integrada. El resultado conserva esa limitación. La app debe seguir funcionando con el espacio disponible aunque el modelo sea desconocido.
+
+`nil` o ausencia de datos no demuestra ausencia de bisagra. Simulador, sistema y entradas sintéticas conservan su origen. Para observar capacidades sin inferir modelo, pasa `policy: .observationOnly`.
+
+## Estado y documentación
+
+Paquete y app compilados para iOS Simulator. **25 tests del núcleo superados en Mac** y consumidor SwiftPM local ejecutado. La validación actual de la app y los tests iOS en simulador permanece bloqueada por CoreSimulator; no hay dispositivo físico disponible. No se consideran superados esos escenarios.
+
+- [Ficha técnica](Documentation/FichaTecnica.md): contratos, fuentes, regiones, límites y resultados.
+- [Checklist](Documentation/Checklist.md): trabajo completado y pendientes.
+- [Licencia MIT](LICENSE).
+
+El proyecto es independiente de SongBook/Lyrio. No incluye sus datos, recursos ni funciones, y no selecciona automáticamente las vistas de ninguna app.

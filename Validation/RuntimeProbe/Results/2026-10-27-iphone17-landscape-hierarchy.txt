@@ -1,0 +1,32 @@
+Device orientation: Landscape Left
+------------------------
+Application bundle identifier: org.foldcontextkit.RuntimeProbe
+Application UI orientation: Landscape Right
+Application, pid: 21176, label: 'RuntimeProbe'
+ Window, {{0.0, 0.0}, {874.0, 402.0}}, hitPoint: {437.0, 201.0}
+  Other, {{0.0, 0.0}, {874.0, 402.0}}, hitPoint: {437.0, 201.0}
+   Other, {{0.0, 0.0}, {874.0, 402.0}}, hitPoint: {437.0, 201.0}
+    Other, {{0.0, 0.0}, {874.0, 402.0}}, hitPoint: {437.0, 201.0}
+     Other, {{0.0, 0.0}, {874.0, 402.0}}, hitPoint: {437.0, 201.0}
+      ScrollView, {{0.0, 0.0}, {874.0, 402.0}}, hitPoint: {437.0, 201.0}
+       Other, {{0.0, -695.3}, {812.0, 1473.3}}, hitPoint: {406.0, 201.0}
+        StaticText, {{109.0, -14.7}, {329.0, 42.3}}, label: '874 × 402 puntos
+Fuente: uiWindowBounds · ámbito: ventana', hitPoint: {273.5, 13.8}
+        StaticText, {{109.0, 33.7}, {284.7, 14.3}}, label: 'Origen: simulator · vigencia: current · secuencia: 4', hitPoint: {251.3, 40.8}
+        StaticText, {{109.0, 54.0}, {480.7, 30.3}}, label: 'Ámbito de muestra: escena 7BA95486-8222-4B9C-9C5B-2933EF67D0DD, ventana 2FC5822C-3D6F-4D77-9C47-37AB47470089, generación 3', hitPoint: {349.3, 69.2}
+        StaticText, {{109.0, 90.3}, {363.7, 14.3}}, label: 'Vigencia contextual; no es una garantía de antigüedad temporal.', hitPoint: {290.8, 97.5}
+        StaticText, {{109.0, 148.7}, {63.7, 20.3}}, label: 'Pantalla', hitPoint: {140.8, 158.8}
+        StaticText, {{109.0, 175.0}, {554.7, 64.3}}, label: '1206 × 2622 píxeles nativos
+Fuente: UIScreen.nativeBounds · ámbito: pantalla asociada a esta escena
+Atribución: unknown. Ejes nativos, no ejes de ventana.', hitPoint: {386.3, 207.2}
+        StaticText, {{109.0, 245.3}, {284.7, 14.3}}, label: 'Origen: simulator · vigencia: current · secuencia: 4', hitPoint: {251.3, 252.5}
+        StaticText, {{109.0, 265.7}, {480.7, 30.3}}, label: 'Ámbito de muestra: escena 7BA95486-8222-4B9C-9C5B-2933EF67D0DD, ventana 2FC5822C-3D6F-4D77-9C47-37AB47470089, generación 3', hitPoint: {349.3, 280.8}
+        StaticText, {{109.0, 302.0}, {363.7, 14.3}}, label: 'Vigencia contextual; no es una garantía de antigüedad temporal.', hitPoint: {290.8, 309.2}
+        StaticText, {{109.0, 360.3}, {60.0, 20.3}}, label: 'Bisagra', hitPoint: {139.0, 370.5}
+        StaticText, {{109.0, 386.7}, {259.7, 20.3}}, label: 'API no disponible en este sistema.', hitPoint: {238.8, 394.3}
+       Other, {{841.0, 62.0}, {30.0, 278.0}}, label: 'Vertical scroll bar, 4 pages', value: 64%, hitPoint: {856.0, 201.0}
+        Other, {{868.0, 191.7}, {3.0, 73.3}}, hitPoint: {869.5, 228.3}
+       Other, {{841.0, 62.0}, {30.0, 278.0}}, label: 'Vertical scroll bar, 4 pages', value: 64%, hitPoint: {856.0, 201.0}
+        Other, {{868.0, 191.7}, {3.0, 73.3}}, hitPoint: {869.5, 228.3}
+      Other, {{62.0, 0.0}, {750.0, 382.0}}, hitPoint: {437.0, 191.0}
+       Other, {{62.0, 0.0}, {750.0, 382.0}}, hitPoint: {437.0, 191.0}

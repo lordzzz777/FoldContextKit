@@ -1,0 +1,33 @@
+RuntimeProbe app build: BUILD SUCCEEDED. One AppIntents metadata warning, no framework dependency.
+Duo DBD1A25D-89B9-4E7E-A99E-E7ED20F6585F iOS 27.1: two MCP captures returned cannot connect. simctl bootstatus reported already booted; screenshot showed Apple boot logo, not app UI. Install did not return within observation window.
+iPhone 17 19E0A653-9089-4B17-9C62-715EEF4C9D46 iOS 27.0: MCP capture timed out. Sessions closed.
+No new first hinge delivery, classification, safe-area, capture-state, lifecycle or posture behavior observed. No physical hardware used. simctl io public controls include power/geometry but no hinge-angle command; geometry mutation was not used as posture evidence.
+
+Continuation 2026-10-30 10:44 Europe/Madrid:
+One targeted shutdown attempt for Duo DBD1A25D-89B9-4E7E-A99E-E7ED20F6585F failed immediately: CoreSimulatorService connection invalid, NSPOSIXErrorDomain 61 Connection refused; simctl could not initialize device set. No erase, global process termination, or further boot performed.
+Independent Xcode MCP session Duo Runtime Recovery opened, but capture without interaction returned: The task timed out. Please try again. Session explicitly closed (Session stopped). No UI hierarchy or new screenshot returned, and no app installation or launch was attempted after this failure. Runtime validation remains blocked by simulator/tool connectivity; these failures do not demonstrate an app defect or hardware behavior.
+
+VALIDACIÓN DE REGLAS Y CONSUMIDOR — 2026-10-30
+
+BuildProject(buildForTesting:true): compilación iOS Simulator 27.1 correcta; deployment iOS 26. La lista de fuentes del target incluye PresentationTests.swift. El aviso del procesador AppIntents indica extracción omitida sin dependencia; no es un error de compilación.
+RunAllTests: no produjo resultado completo; cancelado por el asistente con StopProject tras bloquearse. No atribuir resultado positivo a esta ejecución.
+
+Fallback macOS:
+env CLANG_MODULE_CACHE_PATH=/tmp/FoldContextKit-clang-cache SWIFTPM_MODULECACHE_OVERRIDE=/tmp/FoldContextKit-swift-cache swift test --disable-sandbox --build-system native --scratch-path /tmp/FoldContextKit-native-tests --cache-path /tmp/FoldContextKit-package-cache --jobs 2
+Exit code: 0
+Build complete! (7.33s)
+Testing Library Version: 2084
+Test run with 25 tests in 0 suites passed after 0.002 seconds.
+El resumen anterior es Swift Testing. El mensaje previo XCTest de 0 tests no representa el resultado Swift Testing.
+Incluye siete tests nuevos de panel/inferencia/captura/layout/divisiones/oclusiones/geometría inválida y buffering de fragmentos. Las entradas declaran orígenes controlados: no son muestras de hardware ni nuevas observaciones del simulador.
+Los tests UIKit condicionados por os(iOS) no se ejecutan en Mac.
+
+El primer fallback falló al escribir caché PackageDescription. Redirigir cachés corrigió ese permiso; la ruta predeterminada de compilación SwiftPM siguió sin completar y se canceló. --build-system native permitió completar tests; SwiftPM advierte que esa opción está obsoleta, por lo que se registra como workaround local, sin cambiar Package.swift.
+
+Consumidor independiente:
+env CLANG_MODULE_CACHE_PATH=/tmp/FoldContextKit-clang-cache SWIFTPM_MODULECACHE_OVERRIDE=/tmp/FoldContextKit-swift-cache swift run --package-path Validation/LocalConsumer --disable-sandbox --build-system native --scratch-path /tmp/FoldContextKit-consumer-validation --cache-path /tmp/FoldContextKit-package-cache --jobs 2 LocalConsumer
+Exit code: 0
+Build of product 'LocalConsumer' complete! (1.19s)
+FoldContextKit local import OK (synthetic input, no hardware observation)
+
+No repositorio remoto ni publicación. Runtime simulador sigue bloqueado según los intentos registrados arriba. No hardware físico disponible.

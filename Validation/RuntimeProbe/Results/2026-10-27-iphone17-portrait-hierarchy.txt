@@ -1,0 +1,45 @@
+Device orientation: Portrait
+------------------------
+Application bundle identifier: org.foldcontextkit.RuntimeProbe
+Application UI orientation: Portrait
+Application, pid: 21176, label: 'RuntimeProbe'
+ Window, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+   Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+    Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+     Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+      Other, {{0.0, 62.0}, {402.0, 778.0}}, hitPoint: {201.0, 451.0}
+       Other, {{0.0, 62.0}, {402.0, 778.0}}, hitPoint: {201.0, 451.0}
+      ScrollView, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+       Other, {{0.0, -508.7}, {402.0, 1813.3}}, hitPoint: {201.0, 437.0}
+        StaticText, {{16.0, -10.0}, {370.0, 42.3}}, label: 'Observación habilitada. La recepción se muestra en Bisagra.', hitPoint: {201.0, 16.2}
+        StaticText, {{16.0, 40.3}, {328.3, 14.3}}, label: 'La disponibilidad de la API no demuestra capacidad física.', hitPoint: {180.2, 47.5}
+        StaticText, {{16.0, 78.7}, {205.7, 20.3}}, label: 'Snapshot de esta ventana', hitPoint: {118.8, 88.8}
+        StaticText, {{16.0, 111.0}, {316.0, 46.3}}, label: 'Escena: 7BA95486-8222-4B9C-9C5B-2933EF67D0DD
+Ventana: 2FC5822C-3D6F-4D77-9C47-37AB47470089
+Generación: 3', hitPoint: {174.0, 134.2}
+        StaticText, {{16.0, 169.3}, {335.7, 30.3}}, label: 'Identidades efímeras del observador, no identificadores de dispositivo.', hitPoint: {183.8, 184.5}
+        StaticText, {{32.0, 227.7}, {104.7, 20.3}}, label: 'Presentación', hitPoint: {84.3, 237.8}
+        StaticText, {{32.0, 254.0}, {329.0, 42.3}}, label: '402 × 874 puntos
+Fuente: uiWindowBounds · ámbito: ventana', hitPoint: {196.5, 275.2}
+        StaticText, {{32.0, 302.3}, {284.3, 14.3}}, label: 'Origen: simulator · vigencia: current · secuencia: 3', hitPoint: {174.2, 309.5}
+        StaticText, {{32.0, 322.7}, {336.0, 62.3}}, label: 'Ámbito de muestra: escena 7BA95486-8222-4B9C-9C5B-2933EF67D0DD, ventana 2FC5822C-3D6F-4D77-9C47-37AB47470089, generación 3', hitPoint: {200.0, 353.8}
+        StaticText, {{32.0, 391.0}, {243.0, 30.3}}, label: 'Vigencia contextual; no es una garantía de antigüedad temporal.', hitPoint: {153.5, 406.2}
+        StaticText, {{32.0, 465.3}, {63.7, 20.3}}, label: 'Pantalla', hitPoint: {63.8, 475.5}
+        StaticText, {{32.0, 491.7}, {322.0, 108.3}}, label: '1206 × 2622 píxeles nativos
+Fuente: UIScreen.nativeBounds · ámbito: pantalla asociada a esta escena
+Atribución: unknown. Ejes nativos, no ejes de ventana.', hitPoint: {193.0, 545.8}
+        StaticText, {{32.0, 606.0}, {284.3, 14.3}}, label: 'Origen: simulator · vigencia: current · secuencia: 3', hitPoint: {174.2, 613.2}
+        StaticText, {{32.0, 626.3}, {336.0, 62.3}}, label: 'Ámbito de muestra: escena 7BA95486-8222-4B9C-9C5B-2933EF67D0DD, ventana 2FC5822C-3D6F-4D77-9C47-37AB47470089, generación 3', hitPoint: {200.0, 657.5}
+        StaticText, {{32.0, 694.7}, {243.0, 30.3}}, label: 'Vigencia contextual; no es una garantía de antigüedad temporal.', hitPoint: {153.5, 709.8}
+        StaticText, {{32.0, 769.0}, {60.0, 20.3}}, label: 'Bisagra', hitPoint: {62.0, 779.2}
+        StaticText, {{32.0, 795.3}, {259.7, 20.3}}, label: 'API no disponible en este sistema.', hitPoint: {161.8, 805.5}
+        StaticText, {{32.0, 821.7}, {285.0, 30.3}}, label: 'Sin muestra: fuente efectiva, unidad y vigencia no disponibles.', hitPoint: {174.5, 836.8}
+       Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+        Other, {{0.0, 0.0}, {402.0, 102.0}}, hitPoint: {201.0, 51.0}
+       Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+        Other, {{0.0, 0.0}, {402.0, 102.0}}, hitPoint: {201.0, 51.0}
+       Other, {{369.0, 62.0}, {30.0, 750.0}}, label: 'Vertical scroll bar, 3 pages', value: 55%, hitPoint: {384.0, 437.0}
+        Other, {{396.0, 287.3}, {3.0, 340.7}}, hitPoint: {397.5, 457.7}
+       Other, {{369.0, 62.0}, {30.0, 750.0}}, label: 'Vertical scroll bar, 3 pages', value: 55%, hitPoint: {384.0, 437.0}
+        Other, {{396.0, 287.3}, {3.0, 340.7}}, hitPoint: {397.5, 457.7}

@@ -7,6 +7,12 @@ import UIKit
 @MainActor
 public final class FoldContextObserver: NSObject {
     public private(set) var snapshot: FoldEvidence?
+    /// App-selected arrangement; read assessment again after changing it.
+    public var interiorLayout: FoldInteriorLayout = .unspecified
+    /// Current inference; unavailable while there is no snapshot.
+    public var assessment: FoldAssessment? {
+        snapshot.map { FoldClassifier.evaluate(evidence: $0, interiorLayout: interiorLayout) }
+    }
     /// Synchronous delivery on MainActor. Capture your owner weakly to avoid cycles.
     public var onChange: (@MainActor (FoldObservationEvent) -> Void)?
     public var history: [FoldObservationEvent] { historyBuffer.events.map(historicalEvent) }
@@ -25,7 +31,7 @@ public final class FoldContextObserver: NSObject {
 
     private let probe = FoldTrackingView()
     private var historyBuffer = FoldEventBuffer(capacity: 32)
-    private weak var trackedWindow: UIWindow?
+    private weak var trackedWindow: UIView?
     private weak var trackedScene: AnyObject?
     private weak var trackedScreen: AnyObject?
     private var context = ObservationContext(sceneID: UUID().uuidString, windowID: UUID().uuidString, generation: 0)
@@ -37,13 +43,14 @@ public final class FoldContextObserver: NSObject {
     private var reconciling = false
     private var sceneIsActive: Bool?
 
-    private let environment: @MainActor (UIWindow) -> FoldWindowEnvironment?
+    private let environment: @MainActor (UIView) -> FoldWindowEnvironment?
+    private let windowForView: @MainActor (UIView) -> UIView?
     private let driver: any FoldHingeDriver
     private let origin: EvidenceOrigin
 
     public override convenience init() {
         self.init(environment: { window in
-            guard let scene = window.windowScene else { return nil }
+            guard let window = window as? UIWindow, let scene = window.windowScene else { return nil }
             return FoldWindowEnvironment(scene: scene, screen: scene.screen,
                                          isActive: scene.activationState == .foregroundActive,
                                          nativeBounds: scene.screen.nativeBounds)
@@ -51,9 +58,11 @@ public final class FoldContextObserver: NSObject {
     }
 
     // Dependency injection is internal. Controlled tests must declare synthetic origin.
-    init(environment: @escaping @MainActor (UIWindow) -> FoldWindowEnvironment?,
-         driver: any FoldHingeDriver, origin: EvidenceOrigin) {
+    init(environment: @escaping @MainActor (UIView) -> FoldWindowEnvironment?,
+         driver: any FoldHingeDriver, origin: EvidenceOrigin,
+         windowForView: @escaping @MainActor (UIView) -> UIView? = { $0.window }) {
         self.environment = environment
+        self.windowForView = windowForView
         self.driver = driver
         self.origin = origin
         super.init()
@@ -133,7 +142,7 @@ public final class FoldContextObserver: NSObject {
         guard running, !reconciling else { return }
         reconciling = true
         defer { reconciling = false }
-        let window = probe.window
+        let window = windowForView(probe)
         let environment = window.flatMap(environment)
         let scene = environment?.scene
         let screen = environment?.screen
@@ -164,18 +173,41 @@ public final class FoldContextObserver: NSObject {
             pixels = PixelSize(width: Int(bounds.width), height: Int(bounds.height))
         } else { pixels = nil }
         let presentation = points.map { PresentationSize(points: $0, source: .uiWindowBounds) }
-        // There is no verified general attribution rule for Mirroring/external contexts.
-        let native = pixels.map { NativeScreenSize(pixels: $0, attribution: .unknown) }
+        // Scene role describes presentation, not hardware identity or iPhone Mirroring status.
+        let attribution: ScreenAttribution
+        if let scene = environment.scene as? UIWindowScene {
+            if scene.screen.mirrored != nil {
+                attribution = .mirrored
+            } else if scene.session.role == .windowApplication {
+                attribution = .applicationDisplay
+            } else {
+                attribution = .externalDisplay
+            }
+        } else {
+            attribution = .unknown
+        }
+        let captureState: FoldCaptureState
+        switch probe.traitCollection.sceneCaptureState {
+        case .active: captureState = .active
+        case .inactive: captureState = .inactive
+        default: captureState = .unknown
+        }
+        let native = pixels.map {
+            NativeScreenSize(pixels: $0, attribution: attribution, captureState: captureState)
+        }
+        let geometry = readLayoutGeometry(in: window)
         let old = snapshot
         // A display can change its native metrics without replacing the UIScreen object.
         if !changed, let previous = observedValue(old?.nativeScreenSize),
-           previous.pixels != native?.pixels {
+           (previous.pixels != native?.pixels || previous.attribution != native?.attribution
+               || previous.captureState != native?.captureState) {
             removeInteraction()
             context = ObservationContext(sceneID: context.sceneID, windowID: context.windowID,
                                          generation: context.generation + 1)
         }
         let contextChanged = old?.context != context
-        if contextChanged || force || presentation != observedValue(old?.presentationSize) || native != observedValue(old?.nativeScreenSize) {
+        if contextChanged || force || presentation != observedValue(old?.presentationSize) || native != observedValue(old?.nativeScreenSize)
+            || geometry != observedValue(old?.layoutGeometry) {
             let metadata = nextMetadata()
             let hinge: Observation<HingeSample>
             if contextChanged || !acceptingHinge { hinge = waitingHinge() }
@@ -184,7 +216,8 @@ public final class FoldContextObserver: NSObject {
                 context: context,
                 presentationSize: presentation.map { .observed($0, metadata: metadata) } ?? .missing(.unavailableInContext),
                 nativeScreenSize: native.map { .observed($0, metadata: metadata) } ?? .missing(.unavailableInContext),
-                hinge: hinge
+                hinge: hinge,
+                layoutGeometry: geometry.map { .observed($0, metadata: metadata) } ?? .missing(.unavailableInContext)
             ), change: contextChanged ? .context : .geometry)
         }
         // A handler may stop or disable the observer synchronously.
@@ -202,7 +235,10 @@ public final class FoldContextObserver: NSObject {
     }
 
     private func receive(_ sample: HingeSample?) {
-        guard let old = snapshot, let window = probe.window,
+        let epoch = interactionEpoch
+        reconcile(force: false)
+        guard acceptingHinge, interactionEpoch == epoch else { return }
+        guard let old = snapshot, let window = windowForView(probe),
               let environment = environment(window), window === trackedWindow,
               environment.scene === trackedScene, environment.screen === trackedScreen else {
             reconcile(force: true)
@@ -213,8 +249,36 @@ public final class FoldContextObserver: NSObject {
         let observation: Observation<HingeSample> = sample.map { .observed($0, metadata: nextMetadata()) }
             ?? .missing(.unavailableInContext)
         publish(FoldEvidence(context: context, presentationSize: old.presentationSize,
-                             nativeScreenSize: old.nativeScreenSize, hinge: observation),
+                             nativeScreenSize: old.nativeScreenSize, hinge: observation,
+                             layoutGeometry: old.layoutGeometry),
                 change: previous != nil && sample != nil && previous?.status == sample?.status ? .hingeAngle : .hingeStatus)
+    }
+
+    private func readLayoutGeometry(in window: UIView) -> FoldLayoutGeometry? {
+        guard let root = probe.superview else { return nil }
+        let safeRect = root.convert(root.safeAreaLayoutGuide.layoutFrame, to: window)
+            .intersection(window.bounds)
+        guard !safeRect.isNull, !safeRect.isInfinite else { return nil }
+        func frame(_ rect: CGRect) -> FoldPresentationRegion {
+            // Normalize to the window-bounds origin used by presentationSize.
+            FoldPresentationRegion(x: Double(rect.minX - window.bounds.minX),
+                                   y: Double(rect.minY - window.bounds.minY),
+                                   width: Double(rect.width), height: Double(rect.height))
+        }
+        if #available(iOS 27.1, *) {
+            func regions(_ kind: UIView.ReservedRegion.Kind) -> [FoldReservedRegion] {
+                root.reservedRegions(kind: kind).filter(\.isActive).map { region in
+                    let rect = root.convert(region.frame, to: window)
+                    return FoldReservedRegion(frame: frame(rect), margins: FoldRegionMargins(
+                        top: Double(region.margins.top), left: Double(region.margins.left),
+                        bottom: Double(region.margins.bottom), right: Double(region.margins.right)))
+                }
+            }
+            return FoldLayoutGeometry(safeArea: frame(safeRect), divisions: regions(.division),
+                                      occlusions: regions(.occlusion), reservedRegionAPIAvailable: true)
+        }
+        return FoldLayoutGeometry(safeArea: frame(safeRect), divisions: [], occlusions: [],
+                                  reservedRegionAPIAvailable: false)
     }
 
     private func waitingHinge() -> Observation<HingeSample> {
@@ -224,7 +288,8 @@ public final class FoldContextObserver: NSObject {
 
     private func publishSuspended() {
         let evidence = FoldEvidence(context: context, presentationSize: .missing(.observationSuspended),
-                                    nativeScreenSize: .missing(.observationSuspended), hinge: .missing(.observationSuspended))
+                                    nativeScreenSize: .missing(.observationSuspended), hinge: .missing(.observationSuspended),
+                                    layoutGeometry: .missing(.observationSuspended))
         guard evidence != snapshot else { return }
         publish(evidence, change: .lifecycle)
     }
@@ -264,6 +329,20 @@ private func isMissing<T>(_ observation: Observation<T>) -> Bool {
 @MainActor
 private final class FoldTrackingView: UIView {
     weak var owner: FoldContextObserver?
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        registerForTraitChanges([UITraitSceneCaptureState.self]) { (view: FoldTrackingView, _: UITraitCollection) in
+            view.owner?.refresh()
+        }
+    }
+
+    required init?(coder: NSCoder) { return nil }
+
+    override func safeAreaInsetsDidChange() {
+        super.safeAreaInsetsDidChange()
+        owner?.refresh()
+    }
     override func didMoveToWindow() { super.didMoveToWindow(); owner?.hierarchyChanged() }
     override func didMoveToSuperview() { super.didMoveToSuperview(); owner?.hierarchyChanged() }
     override func layoutSubviews() { super.layoutSubviews(); owner?.refresh() }

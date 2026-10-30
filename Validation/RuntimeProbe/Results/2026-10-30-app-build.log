@@ -1,0 +1,1154 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project Validation/RuntimeProbe/RuntimeProbe.xcodeproj -scheme RuntimeProbe -sdk iphonesimulator -configuration Debug -derivedDataPath /tmp/FoldContextKitRuntimeValidation build CODE_SIGNING_ALLOWED=NO
+
+Build settings from command line:
+    CODE_SIGNING_ALLOWED = NO
+    SDKROOT = iphonesimulator27.1
+
+Resolve Package Graph
+
+
+Resolved source packages:
+  FoldContextKit: /Users/estebanperezcastillejo/Developer/AdapteDuoKit @ local
+
+--- xcodebuild: WARNING: Using the first of multiple matching destinations:
+{ platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device }
+{ platform:iOS Simulator, arch:arm64, id:B4D8AC57-44AA-4F40-A419-E5E86F6679FD, OS:27.0, name:iPad Air 13-inch (M4) }
+{ platform:iOS Simulator, arch:arm64, id:BC560C14-7875-4442-BC2D-0EDCCA8E815F, OS:27.0, name:iPad Pro 11-inch (M5) }
+{ platform:iOS Simulator, arch:arm64, id:45D812D0-5740-4496-A285-1567CD4F3A34, OS:27.0, name:iPad Pro 13-inch (M5) }
+{ platform:iOS Simulator, arch:arm64, id:81A85CEC-11DB-455F-9020-6FCEC8181E4A, OS:27.0, name:iPad Pro 13-inch (M5) (16GB) }
+{ platform:iOS Simulator, arch:arm64, id:19E0A653-9089-4B17-9C62-715EEF4C9D46, OS:27.0, name:iPhone 17 }
+{ platform:iOS Simulator, arch:arm64, id:30ADEE8B-1849-4ACC-BEC8-C9FB08D4468D, OS:27.0, name:iPhone 17e }
+{ platform:iOS Simulator, arch:arm64, id:B7079F98-45DE-4FAB-87A5-0DC22AE330DB, OS:27.0, name:iPhone 18 Pro }
+{ platform:iOS Simulator, arch:arm64, id:DEDFDC29-6CB6-48AD-AE64-EDB80EEE1E26, OS:27.0, name:iPhone 18 Pro Max }
+{ platform:iOS Simulator, arch:arm64, id:76DA5EC9-CCCB-4FB2-B5DA-65F276D2C284, OS:27.1, name:iPhone Duo }
+{ platform:iOS Simulator, arch:arm64, id:DBD1A25D-89B9-4E7E-A99E-E7ED20F6585F, OS:27.1, name:iPhone Duo }
+{ platform:iOS Simulator, arch:arm64, id:E20DC110-9077-419D-9389-3474C56A1010, OS:27.0, name:iPhone Esteban }
+{ platform:macOS, arch:arm64, variant:Designed for [iPad,iPhone], id:00008112-00126422019A401E, name:My Mac }
+{ platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device }
+{ platform:iOS, arch:arm64, id:00008101-001A29382682001E, name:IPhone de Esteban }
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (3 targets)
+    Target 'RuntimeProbe' in project 'RuntimeProbe'
+        ➜ Explicit dependency on target 'FoldContextKit-product' in project 'FoldContextKit'
+    Target 'FoldContextKit-product' in project 'FoldContextKit'
+        ➜ Explicit dependency on target 'FoldContextKit' in project 'FoldContextKit'
+    Target 'FoldContextKit' in project 'FoldContextKit' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: 6230ce458377a67f04eb7e42cea0be94
+Build description path: /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/XCBuildData/6230ce458377a67f04eb7e42cea0be94.xcbuilddata
+CreateBuildDirectory /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-create-build-directory /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules
+
+CreateBuildDirectory /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-create-build-directory /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex
+
+CreateBuildDirectory /tmp/FoldContextKitRuntimeValidation/CompilationCache.noindex
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-create-build-directory /tmp/FoldContextKitRuntimeValidation/CompilationCache.noindex
+
+CreateBuildDirectory /tmp/FoldContextKitRuntimeValidation/Build/Products
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-create-build-directory /tmp/FoldContextKitRuntimeValidation/Build/Products
+
+CreateBuildDirectory /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-create-build-directory /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex
+
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk /tmp/FoldContextKitRuntimeValidation/SDKStatCaches.noindex/iphonesimulator27.1-24A94232-e829b21a6f8c9b70876ba0858053c04435d3147121984ba087c28d913653d626.sdkstatcache
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk -o /tmp/FoldContextKitRuntimeValidation/SDKStatCaches.noindex/iphonesimulator27.1-24A94232-e829b21a6f8c9b70876ba0858053c04435d3147121984ba087c28d913653d626.sdkstatcache
+
+CreateBuildDirectory /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-create-build-directory /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+CreateBuildDirectory /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/PrecompiledHeaders
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-create-build-directory /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/PrecompiledHeaders
+
+CreateBuildDirectory /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/ExplicitPrecompiledModules
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-create-build-directory /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+CreateBuildDirectory /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-create-build-directory /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator
+
+CreateBuildDirectory /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-create-build-directory /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe-0d01d5e02bde2fc42ff66da27353fb93-VFS-iphonesimulator/all-product-headers.yaml
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe-0d01d5e02bde2fc42ff66da27353fb93-VFS-iphonesimulator/all-product-headers.yaml
+
+CreateBuildDirectory /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/PackageFrameworks
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-create-build-directory /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/PackageFrameworks
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe.hmap (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe.hmap
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe.DependencyStaticMetadataFileList (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe.DependencyMetadataFileList (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe.DependencyMetadataFileList
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-project-headers.hmap (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-project-headers.hmap
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-own-target-headers.hmap (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-own-target-headers.hmap
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-generated-files.hmap (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-generated-files.hmap
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/empty-RuntimeProbe.plist (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/empty-RuntimeProbe.plist
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-all-target-headers.hmap (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-all-target-headers.hmap
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-all-non-framework-target-headers.hmap (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-all-non-framework-target-headers.hmap
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-DebugDylibPath-normal-x86_64.txt (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-DebugDylibPath-normal-x86_64.txt
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-DebugDylibPath-normal-arm64.txt (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-DebugDylibPath-normal-arm64.txt
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-DebugDylibInstallName-normal-x86_64.txt (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-DebugDylibInstallName-normal-x86_64.txt
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-DebugDylibInstallName-normal-arm64.txt (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-DebugDylibInstallName-normal-arm64.txt
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe.SwiftFileList (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe.SwiftFileList
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe.SwiftConstValuesFileList (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe_const_extract_protocols.json (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe_const_extract_protocols.json
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe.LinkFileList (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe.LinkFileList
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe-OutputFileMap.json (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe-OutputFileMap.json
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe_const_extract_protocols.json (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe_const_extract_protocols.json
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe.SwiftFileList (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe.SwiftFileList
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe.SwiftConstValuesFileList (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe.LinkFileList (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe.LinkFileList
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe-OutputFileMap.json (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe-OutputFileMap.json
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit.SwiftConstValuesFileList (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit-OutputFileMap.json (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit-OutputFileMap.json
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit.LinkFileList (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit.LinkFileList
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit_const_extract_protocols.json (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit_const_extract_protocols.json
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit.SwiftFileList (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit.SwiftFileList
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit_const_extract_protocols.json (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit_const_extract_protocols.json
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit.SwiftFileList (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit.SwiftFileList
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit.SwiftConstValuesFileList (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit.LinkFileList (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit.LinkFileList
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit-OutputFileMap.json (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit-OutputFileMap.json
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/FoldContextKit.modulemap (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/FoldContextKit.modulemap
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/FoldContextKit.DependencyStaticMetadataFileList (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/FoldContextKit.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/FoldContextKit.DependencyMetadataFileList (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit
+    write-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/FoldContextKit.DependencyMetadataFileList
+
+MkDir /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    /bin/mkdir -p /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app
+
+Copy /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator/FoldContextKit.modulemap /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/FoldContextKit.modulemap (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/FoldContextKit.modulemap /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator
+
+SwiftDriver FoldContextKit normal x86_64 com.apple.xcode.tools.swift.compiler (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -parse-as-library -module-name FoldContextKit -Onone @/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE -DXcode -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk -target x86_64-apple-ios26.0-simulator -g -module-cache-path /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /tmp/FoldContextKitRuntimeValidation/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk/Developer/Library/Frameworks -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/FoldContextKitRuntimeValidation/SDKStatCaches.noindex/iphonesimulator27.1-24A94232-e829b21a6f8c9b70876ba0858053c04435d3147121984ba087c28d913653d626.sdkstatcache -output-file-map /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex -sdk-module-cache-path /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -package-name adapteduokit -emit-const-values -const-gather-protocols-list /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit_const_extract_protocols.json -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/DerivedSources-normal/x86_64 -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/DerivedSources/x86_64 -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit-Swift.h -working-directory /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj -experimental-emit-module-separately -disable-cmo
+
+SwiftDriver FoldContextKit normal arm64 com.apple.xcode.tools.swift.compiler (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -parse-as-library -module-name FoldContextKit -Onone @/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE -DXcode -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk -target arm64-apple-ios26.0-simulator -g -module-cache-path /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /tmp/FoldContextKitRuntimeValidation/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk/Developer/Library/Frameworks -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/FoldContextKitRuntimeValidation/SDKStatCaches.noindex/iphonesimulator27.1-24A94232-e829b21a6f8c9b70876ba0858053c04435d3147121984ba087c28d913653d626.sdkstatcache -output-file-map /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex -sdk-module-cache-path /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -package-name adapteduokit -emit-const-values -const-gather-protocols-list /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit_const_extract_protocols.json -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/DerivedSources-normal/arm64 -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/DerivedSources/arm64 -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit-Swift.h -working-directory /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj -experimental-emit-module-separately -disable-cmo
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/ptrcheck-6ZDPGLMU93F65HAU4BIX9786G.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_SwiftConcurrencyShims-2RE30I68S1T0WEYVBHOFWMMLR.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/ptrauth-45Z0GIWUPJ4IH64LN97NSM4K4.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_stdbool-8GR70FVFUF62FQ0JOMPQVPAS8.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/ptrcheck-92TWNHBRRSTF0QW3SDBGTXW9A.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_SwiftConcurrencyShims-9467JIOYZIFFU1CZJYIXCGEOT.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/DeveloperToolsSupport-EZTYV6BOK4069U5JQZ61IPELX.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_stddef-BA407G6ECZCVOMSQ0THK7QKSQ.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_float-1I9WWDH67T3BEJHH1ZF14JZVJ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_stdarg-DKESX9JO43M8OJ2JGM7OBL4HW.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_AvailabilityInternal-36A2ICHHEDSUP3G03U7HGQAEW.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_float-XB3PGETTL3ATANHK8MG69VWV.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_stdbool-1HK0C4PYIDEY8L72URRP2EBUI.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_AvailabilityInternal-743ZL2LW16WGS1F25MATI0Y0N.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_stddef-1JFS0057CGTFT3C8I1C6G19FW.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_stdarg-76J8151X44CRPMXPNBOH6H2BX.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/SwiftShims-7W1D17HGQCETCY9X903DNCWI5.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/DeveloperToolsSupport-7JBY9AOTF4FT6402ZYLIBHG1B.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/SwiftShims-85TIIS4TV7YDJXNCSJSM7TPI6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/ptrauth-1GC5519G68WOMMM8M0PTDP5HR.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_DarwinFoundation1-9BZ08NZB0VQSLHWXW7UCEP42L.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_DarwinFoundation1-B0K2W3HW8F5R84LWHGL9FTV4O.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_DarwinFoundation2-4WY0QJ5GTYRR2SSHPRYFVHNH0.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_limits-APBYNUXQZEFSDPYKZ3IR6B5H7.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_limits-8U1XH9GDFOXVQCXUZHSYKBDN7.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_DarwinFoundation2-EX5BV0TVKK8W65SG67B6WQRGB.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_stdint-29T7Y3ICN5EOH436SCLBUN38H.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/sys_types-6UV3TRHOWGOK108KT1GY6ICC6.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/string_h-11J9PBNCOG2EED9IEHJC8V5OJ.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_tgmath-DANNZ45XYRRGRCY7VEZPE2XAY.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_tgmath-4C9XC6KKT9IZA95N73YC5YIZA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/string_h-AH794788XJHJHVEQ3WXD8FN76.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/sys_types-1K1FBXM037KWA1T5JAU3SR7LJ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_stdint-DNOW85YFO9UA0V1TAZYCBHJ4O.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_stdatomic-DA66JFTDRVOUWU467GNIRHJ05.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_DarwinFoundation3-3SSJ10C2F7R09DMOF55QZUSW0.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_intrinsics-8J3NI2AGNJYAC1S6DWLKYMRQM.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_DarwinFoundation3-3R3NCT80KXZ0URT0BX35ZE49R.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_stdatomic-6VVPN4X7BTR9MP2H9AX94ICVB.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_intrinsics-AW7OVIY33BWCNXI5M539KO9CI.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_inttypes-BAJA6H0T3U2ZZW1524K3623WG.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_inttypes-4W14B9XI9KV03DV8XBSKRHGOQ.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Darwin-BQZAVV6934P0Z0LMX2GBJDYQV.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Darwin-2WIKLWHPLPUGT3NYN3D9FSGG.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/simd-7K1W2WK8IUOXG225POAX1SGT0.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/simd-7JV4PTRXPUB7KIY52R08H2XEL.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/ObjectiveC-Q0NCB160MPQ0V6BW7EIWA30D.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/MachO-9JCSGSOPRPW0C0OXMGBOGZFE6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/ObjectiveC-1M5DYG1W0N5056T1W1PP0ZBOU.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/MachO-3065TEWRMD6205JMB0HC9C6EM.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Spatial-48FCQGNOSTUV1QXVGTTHIOZAH.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/os_object-DESYN1A8BUV6VCHQARULFZ29B.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/os_object-5XT1ZNNKU0UJQWPZ5U7LPRJZ8.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/os_workgroup-V84FDKXWMB480CW0XLVPNVFW.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/os_workgroup-9NL21MRFULCHXG0TRFV1UQIOQ.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Dispatch-EK58GO96PSVCMWAQAYEOT9N6S.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Dispatch-9PG08D7SKFPTHU7MEFGO1883E.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Spatial-1QQ4JZU8UA6WMD5NX83SVNWSJ.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/XPC-89VSRAEGY3RX0AX98L1JRO7FR.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreFoundation-ESPYYY98CGLTH44P749Q8S6UV.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreFoundation-41T4HTOKO7FBS4M18M1H0TVR8.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/XPC-TJBTCLN4SKERFS60I5S2C3MT.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/os-4WN2EUW8AHRQV8KKCGZ1NXN70.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/os-4CNWTIJ99C4MSQ2HQWEQ170JL.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CFNetwork-2H0J5DJHB1MQTVOS9OD9RE0JI.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Security-1HW0WMROX908JD74N4AYJ2W14.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreGraphics-3R6THM542GL1N7AQH0X3OJCI0.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreAudioTypes-67BDUIYH82AV6UFVO27Q5654Z.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreAudioTypes-C908AOBL0OZLFJNZJSKQST5UI.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreGraphics-9UULKCJ8NMQBL3ZX5753UF6P6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Security-1G7B8HV9O4G1YPFWIP1HKGUO6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CFNetwork-BS69DRUXCDAWQBUYTR8C8ZK.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreAudio-5ESY8246B6SHS3JXW99XS41YH.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreAudio-B1T22WCX2ND62BXID86WUI55F.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Foundation-EXCZG9Q8P0PCQVEM0TTH6Q8M0.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/ImageIO-3H8A64E5262Z69MWWJ5Y7YEX8.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreText-AW5IXI2ZL3D3ZV5SZBXUUBH7O.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/ImageIO-F3GN8SC9LTF37X9YABRTJ6FWP.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreText-CRB33RERB6GIY3R9HGUDZAKYM.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Foundation-3ACRM6EVTERYGWM27C0TCL2H2.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreData-7PVKEX242WBDO66MJAY97FWF4.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/IOSurface-CFZWAMPQ1Q47A73O0YRXTC7JF.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Symbols-80LYZCM7NBLWHWSQ7I0G2K0LY.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/UserNotifications-CLWT2PO3TAHK456E014MU4U6D.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Accessibility-EJ4WXSK1OQSDA8W3HX28VMDT4.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/OpenGLES-B96VRIWIQF6GL7CRS2AM5YETO.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_LocationEssentials-7IPOFHDH4LI7Y8TR43ECNA0EU.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreTransferable-54CJGWGLQW4F4SBL3U1KRBCSU.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/DataDetection-4T4L5MP38DMIMK0Y13MHTNYG6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/UIUtilities-2Q6XHB0F7UBIXYQ1VMZ7TI99W.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Accessibility-740E0JMFOSDMHFW1IX4RDW88H.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/UserNotifications-3PZSEBWBTIGWZJG9SQERDC68N.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/DataDetection-632QAS7SV62T5DWIOWMUK6T4G.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/UIUtilities-A6RZQMVNXO318319G1U3GKN1J.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/FileProvider-5CPW9LZZYJ0Z0WUFR701Y8E8W.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_LocationEssentials-2EPVLBRRQ5HE2K15PQPBWCFP3.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/IOSurface-6TN0NE3YTNZ7PAUZMQGTCYLFC.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Metal-1O83JUVD2S64DVQT2I6SW9FNU.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/OSLog-AL4RL2EEWHD94JT1FCBPQO8ED.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreData-A6ZDH1MS8KKMGATB7IOARWEU3.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/UniformTypeIdentifiers-AW5UZO1IBBEV9EGRPXBGNKJ0M.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/OSLog-5EAUCNHBQL9A2ZXU6IDJY6UKZ.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Metal-DAZV0QX5R65TAXFGRH11D2XHJ.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/OpenGLES-1DFN2ODHACODY1I7E8KDUPC8L.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/UniformTypeIdentifiers-DU2OUQ833IT2E293CIJQBM0BF.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreLocation-8Q3AICQNEVQDJ12PS7ZV37E51.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/FileProvider-3TJFFLR8R1RKEWKHA857SBZ79.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreTransferable-20D3WAT5M2XO6IVOXLRPS98WZ.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Symbols-8S3K9PFBBE9HAWY14LUF2ZBNM.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreLocation-DQHOLY39L7S2Q6L1JTA62P1OX.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreVideo-1NU206VUZG32TAD9KOI2GAVMK.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreVideo-4T1G7UBMMHN07SUZSOL6WWSBH.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreMotion-5OC0HYLYKK9PJP7ZKXEJCCB7U.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreMotion-6VGGFFK4PR357BWLCZ8CSPX93.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/QuartzCore-CN8SAJBOOSO9GNSLBDDXEEUU5.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreMedia-BPJHSE3AOZFZVQXCCMCVOSNUW.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreImage-CHWE1ZNHRPK7ZGBCUWTR21WKJ.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/QuartzCore-22UBU8C78YKR4DTOM06XLLTPB.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreImage-CGROIXO165B4ZYT5N2ZC9XLCV.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreMedia-2G2QJZ485UPBPBE897CALFPQF.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/SwiftUICore-D5MVAF7447XVFY43D7QYHPNLR.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/SwiftUICore-BKW4WVEG1ZOC5OQVTML40R1TV.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/UIKit-AO43XY31RC4B651HJLEUU2WN5.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/UIKit-2KP3C7O35RDYQQ1AXZHODGGYS.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/SwiftUI-7QVYDHKQ8C0JB257JAMLQAQDI.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/SwiftUI-3GS38JYE6Z7L7H38GG1XSP0SK.pcm
+
+SwiftEmitModule normal x86_64 Emitting\ module\ for\ FoldContextKit (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftCompile normal x86_64 (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    
+
+SwiftCompile normal x86_64 Compiling\ PresentationRegions.swift /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Sources/FoldContextKit/PresentationRegions.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftCompile normal x86_64 /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Sources/FoldContextKit/PresentationRegions.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-SwiftPerFileCompile PresentationRegions.swift
+
+SwiftCompile normal x86_64 Compiling\ UIKitHingeDriver.swift /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Sources/FoldContextKit/UIKitHingeDriver.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftCompile normal x86_64 /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Sources/FoldContextKit/UIKitHingeDriver.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-SwiftPerFileCompile UIKitHingeDriver.swift
+
+SwiftCompile normal x86_64 Compiling\ SwiftUIObservation.swift /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Sources/FoldContextKit/SwiftUIObservation.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftCompile normal x86_64 /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Sources/FoldContextKit/SwiftUIObservation.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-SwiftPerFileCompile SwiftUIObservation.swift
+
+SwiftCompile normal x86_64 Compiling\ ObservationDelivery.swift /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Sources/FoldContextKit/ObservationDelivery.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftCompile normal x86_64 /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Sources/FoldContextKit/ObservationDelivery.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-SwiftPerFileCompile ObservationDelivery.swift
+
+SwiftCompile normal x86_64 Compiling\ UIKitObservation.swift /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Sources/FoldContextKit/UIKitObservation.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftCompile normal x86_64 /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Sources/FoldContextKit/UIKitObservation.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-SwiftPerFileCompile UIKitObservation.swift
+
+SwiftCompile normal x86_64 Compiling\ Evidence.swift /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Sources/FoldContextKit/Evidence.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftCompile normal x86_64 /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Sources/FoldContextKit/Evidence.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-SwiftPerFileCompile Evidence.swift
+
+SwiftCompile normal x86_64 Compiling\ Classification.swift /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Sources/FoldContextKit/Classification.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftCompile normal x86_64 /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Sources/FoldContextKit/Classification.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-SwiftPerFileCompile Classification.swift
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ FoldContextKit (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftCompile normal arm64 (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    
+
+SwiftDriverJobDiscovery normal x86_64 Emitting module for FoldContextKit (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftCompile normal arm64 Compiling\ SwiftUIObservation.swift /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Sources/FoldContextKit/SwiftUIObservation.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftCompile normal arm64 /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Sources/FoldContextKit/SwiftUIObservation.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-SwiftPerFileCompile SwiftUIObservation.swift
+
+SwiftDriver\ Compilation\ Requirements FoldContextKit normal x86_64 com.apple.xcode.tools.swift.compiler (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -parse-as-library -module-name FoldContextKit -Onone @/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE -DXcode -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk -target x86_64-apple-ios26.0-simulator -g -module-cache-path /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /tmp/FoldContextKitRuntimeValidation/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk/Developer/Library/Frameworks -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/FoldContextKitRuntimeValidation/SDKStatCaches.noindex/iphonesimulator27.1-24A94232-e829b21a6f8c9b70876ba0858053c04435d3147121984ba087c28d913653d626.sdkstatcache -output-file-map /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex -sdk-module-cache-path /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -package-name adapteduokit -emit-const-values -const-gather-protocols-list /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit_const_extract_protocols.json -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/DerivedSources-normal/x86_64 -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/DerivedSources/x86_64 -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit-Swift.h -working-directory /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj -experimental-emit-module-separately -disable-cmo
+
+SwiftDriverJobDiscovery normal x86_64 Compiling ObservationDelivery.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftCompile normal arm64 Compiling\ Classification.swift /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Sources/FoldContextKit/Classification.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftCompile normal arm64 /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Sources/FoldContextKit/Classification.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-SwiftPerFileCompile Classification.swift
+
+SwiftCompile normal arm64 Compiling\ UIKitHingeDriver.swift /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Sources/FoldContextKit/UIKitHingeDriver.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftCompile normal arm64 /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Sources/FoldContextKit/UIKitHingeDriver.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-SwiftPerFileCompile UIKitHingeDriver.swift
+
+SwiftDriverJobDiscovery normal x86_64 Compiling PresentationRegions.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftDriverJobDiscovery normal x86_64 Compiling Classification.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftDriverJobDiscovery normal x86_64 Compiling Evidence.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+
+Copy /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/FoldContextKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit.swiftmodule (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit.swiftmodule /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/FoldContextKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule
+
+Copy /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/FoldContextKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit.swiftdoc (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit.swiftdoc /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/FoldContextKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc
+
+Copy /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/FoldContextKit.swiftmodule/x86_64-apple-ios-simulator.abi.json /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit.abi.json (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit.abi.json /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/FoldContextKit.swiftmodule/x86_64-apple-ios-simulator.abi.json
+
+Copy /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/FoldContextKit.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit.swiftsourceinfo (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit.swiftsourceinfo /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/FoldContextKit.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo
+
+SwiftCompile normal arm64 Compiling\ ObservationDelivery.swift /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Sources/FoldContextKit/ObservationDelivery.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftCompile normal arm64 /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Sources/FoldContextKit/ObservationDelivery.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-SwiftPerFileCompile ObservationDelivery.swift
+
+SwiftCompile normal arm64 Compiling\ UIKitObservation.swift /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Sources/FoldContextKit/UIKitObservation.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftCompile normal arm64 /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Sources/FoldContextKit/UIKitObservation.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-SwiftPerFileCompile UIKitObservation.swift
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for FoldContextKit (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftCompile normal arm64 Compiling\ Evidence.swift /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Sources/FoldContextKit/Evidence.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftCompile normal arm64 /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Sources/FoldContextKit/Evidence.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-SwiftPerFileCompile Evidence.swift
+
+SwiftDriver\ Compilation\ Requirements FoldContextKit normal arm64 com.apple.xcode.tools.swift.compiler (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -parse-as-library -module-name FoldContextKit -Onone @/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE -DXcode -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk -target arm64-apple-ios26.0-simulator -g -module-cache-path /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /tmp/FoldContextKitRuntimeValidation/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk/Developer/Library/Frameworks -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/FoldContextKitRuntimeValidation/SDKStatCaches.noindex/iphonesimulator27.1-24A94232-e829b21a6f8c9b70876ba0858053c04435d3147121984ba087c28d913653d626.sdkstatcache -output-file-map /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex -sdk-module-cache-path /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -package-name adapteduokit -emit-const-values -const-gather-protocols-list /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit_const_extract_protocols.json -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/DerivedSources-normal/arm64 -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/DerivedSources/arm64 -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit-Swift.h -working-directory /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj -experimental-emit-module-separately -disable-cmo
+
+SwiftDriverJobDiscovery normal arm64 Compiling ObservationDelivery.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftCompile normal arm64 Compiling\ PresentationRegions.swift /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Sources/FoldContextKit/PresentationRegions.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftCompile normal arm64 /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Sources/FoldContextKit/PresentationRegions.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-SwiftPerFileCompile PresentationRegions.swift
+
+SwiftDriverJobDiscovery normal arm64 Compiling Classification.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftMergeGeneratedHeaders /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator/FoldContextKit-Swift.h /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit-Swift.h /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit-Swift.h (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit
+    builtin-swiftHeaderTool -arch arm64 /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit-Swift.h -arch x86_64 /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit-Swift.h -o /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator/FoldContextKit-Swift.h
+
+SwiftDriverJobDiscovery normal arm64 Compiling PresentationRegions.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+
+Copy /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/FoldContextKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit.swiftmodule (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit.swiftmodule /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/FoldContextKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule
+
+Copy /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/FoldContextKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit.swiftdoc (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit.swiftdoc /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/FoldContextKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc
+
+Copy /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/FoldContextKit.swiftmodule/arm64-apple-ios-simulator.abi.json /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit.abi.json (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit.abi.json /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/FoldContextKit.swiftmodule/arm64-apple-ios-simulator.abi.json
+
+Copy /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/FoldContextKit.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit.swiftsourceinfo (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit.swiftsourceinfo /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/FoldContextKit.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo
+
+SwiftDriver RuntimeProbe normal x86_64 com.apple.xcode.tools.swift.compiler (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name RuntimeProbe -Onone @/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe.SwiftFileList -DDEBUG -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk -target x86_64-apple-ios26.0-simulator -g -module-cache-path /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex -Xfrontend -serialize-debugging-options -index-store-path /tmp/FoldContextKitRuntimeValidation/Index.noindex/DataStore -swift-version 6 -I /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -F /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -parse-as-library -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/FoldContextKitRuntimeValidation/SDKStatCaches.noindex/iphonesimulator27.1-24A94232-e829b21a6f8c9b70876ba0858053c04435d3147121984ba087c28d913653d626.sdkstatcache -output-file-map /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex -sdk-module-cache-path /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-generated-files.hmap -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-own-target-headers.hmap -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe-0d01d5e02bde2fc42ff66da27353fb93-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-project-headers.hmap -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/DerivedSources-normal/x86_64 -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/DerivedSources/x86_64 -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe-Swift.h -working-directory /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe -experimental-emit-module-separately -disable-cmo
+
+SwiftDriver RuntimeProbe normal arm64 com.apple.xcode.tools.swift.compiler (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name RuntimeProbe -Onone @/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe.SwiftFileList -DDEBUG -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk -target arm64-apple-ios26.0-simulator -g -module-cache-path /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex -Xfrontend -serialize-debugging-options -index-store-path /tmp/FoldContextKitRuntimeValidation/Index.noindex/DataStore -swift-version 6 -I /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -F /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -parse-as-library -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/FoldContextKitRuntimeValidation/SDKStatCaches.noindex/iphonesimulator27.1-24A94232-e829b21a6f8c9b70876ba0858053c04435d3147121984ba087c28d913653d626.sdkstatcache -output-file-map /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex -sdk-module-cache-path /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-generated-files.hmap -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-own-target-headers.hmap -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe-0d01d5e02bde2fc42ff66da27353fb93-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-project-headers.hmap -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/DerivedSources-normal/arm64 -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/DerivedSources/arm64 -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe-Swift.h -working-directory /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe -experimental-emit-module-separately -disable-cmo
+
+SwiftDriverJobDiscovery normal arm64 Compiling Evidence.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_AvailabilityInternal-ERR7A7X0D7GOL1JRTT061HFW2.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/DeveloperToolsSupport-CU1YGYVRQW9GF7XYGZHBGP8NG.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/ptrcheck-7PUGBT9UCMZ5TADHBIVDD83BI.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/ptrcheck-54J8JVYP9Z7ZUDI3M84IOH4DF.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_stdarg-D236Y6VWBD0H6CJT2YQ4RU74K.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_stdbool-4HWQLHW0OLFT7PW43KKURM66M.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/ptrauth-26S5U1VCHUUGEQLY5QP5XU6JS.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_stdarg-AI3NGDZB9ZHWRGJYVT1XL7TCC.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_SwiftConcurrencyShims-ASSKQ2E2F1MG2ESW49PZG0WBZ.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/DeveloperToolsSupport-346QLWYLX7FQOV7XWD27ANUFI.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_float-F1OFA7YUT87NVYZ4CVHBXFO0Q.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/SwiftShims-3U6MTS6DR4E8HB431KF8JPUC9.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/SwiftShims-CGKODQ9XVIE0MG2LTY9C0TDY3.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_DarwinFoundation1-4XJ9BFMWS5KIQRY9H5KXLAQM8.pcm
+
+SwiftDriverJobDiscovery normal x86_64 Compiling UIKitHingeDriver.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_stddef-1Q37Y7Z14JUTQ4GHV9GB69IO8.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_AvailabilityInternal-CG0YAELIWS6U9XTAL1UMS8G9T.pcm
+
+SwiftDriverJobDiscovery normal arm64 Compiling UIKitHingeDriver.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_float-39DZ7ZU9MUMZ9TPQMKPER53VA.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_stddef-9DD543L8PK3CUQ3AFPTXDECXX.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_stdbool-4QA6RPRE94GF2RKL9IPCNNWIF.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_SwiftConcurrencyShims-3PLJOLAQ31W9D4YFFI2ZJVF11.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_DarwinFoundation1-E6W1ZEFG3Z0TEAE37L0HQ7BAL.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_limits-AJNIIJ1DVP0HH81O4023EU3J6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_DarwinFoundation2-DVINYSKXLXZSZMQA5D8OM3FRX.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/ptrauth-6UAHP1WTA9GYD9OJPDD18OZSS.pcm
+
+SwiftDriverJobDiscovery normal x86_64 Compiling UIKitObservation.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftDriverJobDiscovery normal arm64 Compiling UIKitObservation.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftDriverJobDiscovery normal arm64 Compiling SwiftUIObservation.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+
+SwiftDriver\ Compilation FoldContextKit normal arm64 com.apple.xcode.tools.swift.compiler (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -parse-as-library -module-name FoldContextKit -Onone @/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE -DXcode -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk -target arm64-apple-ios26.0-simulator -g -module-cache-path /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /tmp/FoldContextKitRuntimeValidation/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk/Developer/Library/Frameworks -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/FoldContextKitRuntimeValidation/SDKStatCaches.noindex/iphonesimulator27.1-24A94232-e829b21a6f8c9b70876ba0858053c04435d3147121984ba087c28d913653d626.sdkstatcache -output-file-map /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex -sdk-module-cache-path /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -package-name adapteduokit -emit-const-values -const-gather-protocols-list /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit_const_extract_protocols.json -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/DerivedSources-normal/arm64 -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/DerivedSources/arm64 -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit-Swift.h -working-directory /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj -experimental-emit-module-separately -disable-cmo
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_limits-9GJLGLMABEPASZZX6IHGXGDC4.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_DarwinFoundation2-EPZKTK9PO4OVJLDEFYTIKWAPN.pcm
+
+SwiftDriverJobDiscovery normal x86_64 Compiling SwiftUIObservation.swift (in target 'FoldContextKit' from project 'FoldContextKit')
+
+Ld /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/Binary/FoldContextKit.o normal arm64 (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios26.0-simulator -r -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk -O0 -Xlinker -no_warn_duplicate_libraries -F/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -F/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk/Developer/Library/Frameworks -filelist /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit.LinkFileList -nostdlib -Xlinker -object_path_lto -Xlinker /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit_lto.o -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit.swiftmodule -o /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/Binary/FoldContextKit.o
+
+SwiftDriver\ Compilation FoldContextKit normal x86_64 com.apple.xcode.tools.swift.compiler (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -parse-as-library -module-name FoldContextKit -Onone @/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE -DXcode -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk -target x86_64-apple-ios26.0-simulator -g -module-cache-path /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /tmp/FoldContextKitRuntimeValidation/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk/Developer/Library/Frameworks -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/FoldContextKitRuntimeValidation/SDKStatCaches.noindex/iphonesimulator27.1-24A94232-e829b21a6f8c9b70876ba0858053c04435d3147121984ba087c28d913653d626.sdkstatcache -output-file-map /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex -sdk-module-cache-path /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -package-name adapteduokit -emit-const-values -const-gather-protocols-list /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit_const_extract_protocols.json -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/DerivedSources-normal/x86_64 -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/DerivedSources/x86_64 -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit-Swift.h -working-directory /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbe.xcodeproj -experimental-emit-module-separately -disable-cmo
+
+Ld /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/Binary/FoldContextKit.o normal x86_64 (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target x86_64-apple-ios26.0-simulator -r -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk -O0 -Xlinker -no_warn_duplicate_libraries -F/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -F/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk/Developer/Library/Frameworks -filelist /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit.LinkFileList -nostdlib -Xlinker -object_path_lto -Xlinker /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit_lto.o -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit.swiftmodule -o /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/Binary/FoldContextKit.o
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_stdint-4QIEV0YACUOSWR1CO5M84WDCX.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/string_h-6W81VXGW91WUQR3JXKS8GJBD3.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/sys_types-6B1W83PF5JTGWZCYR6XWTORBZ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_tgmath-CHI20IKVT3EYQNJN824XZBDMT.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_stdint-DMXA0GO7TPXX8P19CFSBJRFAP.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_tgmath-QN4HDZ1MJZT9FEI2VICO7YR8.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/sys_types-13HOO8W2YBHVG9O7XJ3N3I5TN.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/string_h-EJGOVAGKQN170O762ZVE3L9AU.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_intrinsics-5T8UEKPRS6QQLN4793SIOJN5T.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_stdatomic-8E0KIBUL02QWJZ1SZQNJ82826.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_DarwinFoundation3-CIZ8IEYKRNT15BLY81LX6TCJG.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_stdatomic-EBDHI87R4ZIGAPB8PV3VUU6FT.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_DarwinFoundation3-2GTFYUFI8SHXLHNRTPSW09O78.pcm
+
+CreateUniversalBinary /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/FoldContextKit.o normal arm64\ x86_64 (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo -create /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/Binary/FoldContextKit.o /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/Binary/FoldContextKit.o -output /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/FoldContextKit.o
+
+ExtractAppIntentsMetadata (in target 'FoldContextKit' from project 'FoldContextKit')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v27.1.266.1.gZlX9K/Metal.xctoolchain --module-name FoldContextKit --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk --xcode-version 27A9275 --platform-family iOS --deployment-target 26.0 --bundle-identifier adapteduokit.FoldContextKit --output /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/FoldContextKit.appintents --target-triple arm64-apple-ios26.0-simulator --target-triple x86_64-apple-ios26.0-simulator --binary-file /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/FoldContextKit.o --dependency-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit_dependency_info.dat --dependency-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit_dependency_info.dat --stringsdata-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --stringsdata-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit.SwiftFileList --source-file-list /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit.SwiftFileList --metadata-file-list /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/FoldContextKit.DependencyMetadataFileList --static-metadata-file-list /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/FoldContextKit.DependencyStaticMetadataFileList --swift-const-vals-list /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/arm64/FoldContextKit.SwiftConstValuesFileList --swift-const-vals-list /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/FoldContextKit.build/Debug-iphonesimulator/FoldContextKit-t.build/Objects-normal/x86_64/FoldContextKit.SwiftConstValuesFileList --force --compile-time-extraction --deployment-aware-processing --no-app-shortcuts-localization
+2026-10-30 03:08:53.257 appintentsmetadataprocessor[34597:900834] Starting appintentsmetadataprocessor export
+2026-10-30 03:08:53.581 appintentsmetadataprocessor[34597:900834] Extracted no relevant App Intents symbols, skipping writing output
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_inttypes-9MR3R6KHTP3P7YZUQZV547FK2.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_intrinsics-381OW2OZH9P7JDXG6EGHMUEOG.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_Builtin_inttypes-C3Z5GTYL6VGLFVWA7N1GQAEA9.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Darwin-EG0UBGAW4L0DL0IFK2LMC9A2F.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/simd-9LWLGJOT1APRDJASXFN1A20AI.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Darwin-C91MVA13IANF0MBW2PVVYNEEI.pcm
+
+ProcessInfoPlistFile /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app/Info.plist /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/empty-RuntimeProbe.plist (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    builtin-infoPlistUtility /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/empty-RuntimeProbe.plist -producttype com.apple.product-type.application -genpkginfo /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app/Info.plist
+
+Ld /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/Binary/__preview.dylib normal x86_64 (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target x86_64-apple-ios26.0-simulator -dynamiclib -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk -Os -Xlinker -no_warn_duplicate_libraries -L/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -F/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/PackageFrameworks -F/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -install_name @rpath/RuntimeProbe.debug.dylib -Xlinker -dead_strip -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe_dependency_info.dat -o /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/Binary/__preview.dylib
+
+Ld /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/Binary/__preview.dylib normal arm64 (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios26.0-simulator -dynamiclib -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk -Os -Xlinker -no_warn_duplicate_libraries -L/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -F/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/PackageFrameworks -F/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -install_name @rpath/RuntimeProbe.debug.dylib -Xlinker -dead_strip -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe_dependency_info.dat -o /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/Binary/__preview.dylib
+
+CreateUniversalBinary /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app/__preview.dylib normal arm64\ x86_64 (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo -create /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/Binary/__preview.dylib /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/Binary/__preview.dylib -output /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app/__preview.dylib
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/simd-5447OAH1NERBENX4JAVQTSWE7.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Spatial-C8FJA17QOLUILUGE2LQZCO5UH.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/MachO-9552YODVO387BOZLSUB44TLVX.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/ObjectiveC-3QUIA8XIYB6RWXGJ979UUWR5I.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/MachO-E4F41W68W123CTBXDJUW5PL5H.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/ObjectiveC-E2UMXP1ECZ7PMB6CIZC02J81T.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/os_object-C4SVFXPCHMENYSLXKI7NXZ559.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/os_object-7FXP93LMRPF7OEKTYYY3XS77O.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/os_workgroup-17GSSBYKOSKEE4UGWABJWS7YD.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/os_workgroup-20KJH2V0EUYJ53655WPF8IT0I.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Dispatch-7FFJANGILBZGMX9ILAVG5HKMP.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Dispatch-2NH3BS2RVLDZZPPBYRZBG09S2.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/XPC-76CA9371U7WQLSX4LFN6HJLGP.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreFoundation-BA57B6Z6JUVTFMDNRM9PK08LH.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/XPC-DDP7U0JBNT287M1O7TX7GNXFR.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreFoundation-DO5A93DRG8SB1NF0SH5L5RPQX.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Spatial-61Z8LEJ2IR7AOGWQIE8I9K3H5.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/os-1WQGNSNRD0N2LHWXMMLRSOQHD.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/os-2EL42O8H5CU39O2YKH09CL5PA.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreAudioTypes-5K7UHIF3JTPQHA30OZI985YF8.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CFNetwork-4HUDARWIRBUKOKTP3P879EQ2F.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Security-6XTZPNE9MBW47638DVPWV6BK5.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreGraphics-894IMNYNUH9AU33PAFJE0VKG5.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreAudioTypes-8HIQ57UWTD8LJXK4FKVE64VIH.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreGraphics-5O9VVJRMXNEDI9IH58H8JT7AB.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Security-CROHYWNLGCP5YC9EBPLT9VQOF.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CFNetwork-68K054WDN6RJ80E97O0TWSPWZ.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreAudio-AG0B9K2IDGJ3TFFTNXF1VKQUD.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreAudio-BZSNGPE16LUGKED1UJUWDQWL9.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Foundation-CZSY03DNV9HKBNR9TLUZUIYFT.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreText-A0KDIVDNJM30VNTWBFLIJHP0L.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/ImageIO-89WG8UKZYESOP7EAUM06TS183.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Foundation-BFURRT2CNUUKSTFKFVB95U8BH.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/ImageIO-34Y1SJ0NQ3TVKR0PSX1V3UUE4.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreText-6U3KRBLKREKSLK62ITBDS5KHB.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreData-4RNCOVPYTP6HWI8FPNPVW4NWY.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/OpenGLES-7U6YXPBKY0TFFF71XOBDLGO62.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/FileProvider-4PD5AJU1P6ZZK60VZHGXEJLPO.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_LocationEssentials-7R7MLWFUKWTIT2USJWP57X09F.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/UserNotifications-CMA0ZI7QUO7TZM3MBOZHR1G15.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/UniformTypeIdentifiers-DOJU9GDPDSSD6IRO8L6GOL7V.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/OSLog-BY8TND242W92ULHTFY5AFCL3A.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/UIUtilities-1MH78381QDOCXN1EEIWJC34IE.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Symbols-8WUH9QKV4JDC4YEXNA4K3LV82.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/UserNotifications-BHO5X4TM7OGHACV6VTFAM1SM8.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/FileProvider-3AL9BASUVVH1FG969BM77DA6T.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/OpenGLES-4953FL083C3HMCHQACOQFOTW5.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/IOSurface-2DQSG2BTCT6WF0SLU3HFWTU1J.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Accessibility-D7E8QYP53GAQGRAN0UK28OJAL.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/OSLog-AURX99QCD4DD1H4C6G8HR3EWY.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/DataDetection-6VBUND7K0ELI0GP0QZ9R62GOY.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/UIUtilities-B5THKRU941KHZ4A1V6YIMOH8P.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/DataDetection-60DZUY092251V2O2ARCQYH5E7.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreTransferable-7Q8HBOKRO1R2WPSII3NL9URGH.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Accessibility-BR92FIE9GAR90MSTK37LZ8CQN.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Symbols-4QXLBJPL0UPHSUGXFYDHE8JHF.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/_LocationEssentials-17WU3X11CTORG0RI58EBLV2RN.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreTransferable-3SCRC5TKGUT8CUAL8CJY5AVJN.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/IOSurface-56LI9GSSPZP7IY7K0SS0LL2M.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreLocation-AEGUPT9AOM0I1HNBPMMUJGNKR.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/UniformTypeIdentifiers-2C7PXCY6E8C6TVZKMJ90NEOQ2.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreData-45ZFFFRA78Q4ZTU8QF8TRSFPB.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Metal-HQSU71GHFNWD7ICMV0SK8337.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreLocation-EJG4X88YKJU8LSX9PK4ERVZRA.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/Metal-9FCFJGQ8ME326RQJBB3RKMWT3.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreMotion-1AU07VXGMI49IREWWKO5C2CLA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreMotion-3WDBWGHPBGTULRO0K2V0A1L67.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreVideo-2B0GEXQ2VVD3B5MJX6VDSYQ79.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreVideo-ED4885WFUU1R0HBFKM8OI6BAJ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/QuartzCore-8TVYBR2HQZCPH0Z64ATLEHTOZ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreMedia-H3HNOWN1ASLC7Z2RWD26SERN.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreImage-5ACSC27848UP3NV5H6O5FRFHR.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreMedia-1HB9EH2OTUXRX4FWYOE84OBPB.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/QuartzCore-4KBZH5R1XAK7UKWB6NQ9TH65K.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/CoreImage-15DVZXHF63VGRL8PCRS848F4H.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/SwiftUICore-3PU4ALD4DTJ271YF6SNZ7EIX4.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/UIKit-3B7ZN5D6JP6975MBSXU4AXG7D.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/SwiftUICore-KRDED8IN2TYGCTPWRHHVC222.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/UIKit-5A85H94665YXJ1EIGY4QU6MWC.pcm
+
+SwiftExplicitDependencyGeneratePcm x86_64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/SwiftUI-4D4SIZE7J2PY3BYWBN84G3IQF.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules/SwiftUI-1XILVKJLSLZIM3ATG3VUCNCAZ.pcm
+
+SwiftEmitModule normal x86_64 Emitting\ module\ for\ RuntimeProbe (in target 'RuntimeProbe' from project 'RuntimeProbe')
+
+SwiftCompile normal x86_64 (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    
+
+SwiftCompile normal x86_64 Compiling\ RuntimeProbeApp.swift /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbeApp.swift (in target 'RuntimeProbe' from project 'RuntimeProbe')
+
+SwiftCompile normal x86_64 /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbeApp.swift (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    builtin-SwiftPerFileCompile RuntimeProbeApp.swift
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ RuntimeProbe (in target 'RuntimeProbe' from project 'RuntimeProbe')
+
+SwiftCompile normal arm64 (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    
+
+SwiftCompile normal arm64 Compiling\ RuntimeProbeApp.swift /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbeApp.swift (in target 'RuntimeProbe' from project 'RuntimeProbe')
+
+SwiftCompile normal arm64 /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe/RuntimeProbeApp.swift (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    builtin-SwiftPerFileCompile RuntimeProbeApp.swift
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for RuntimeProbe (in target 'RuntimeProbe' from project 'RuntimeProbe')
+
+SwiftDriverJobDiscovery normal x86_64 Emitting module for RuntimeProbe (in target 'RuntimeProbe' from project 'RuntimeProbe')
+
+SwiftDriver\ Compilation\ Requirements RuntimeProbe normal arm64 com.apple.xcode.tools.swift.compiler (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name RuntimeProbe -Onone @/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe.SwiftFileList -DDEBUG -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk -target arm64-apple-ios26.0-simulator -g -module-cache-path /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex -Xfrontend -serialize-debugging-options -index-store-path /tmp/FoldContextKitRuntimeValidation/Index.noindex/DataStore -swift-version 6 -I /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -F /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -parse-as-library -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/FoldContextKitRuntimeValidation/SDKStatCaches.noindex/iphonesimulator27.1-24A94232-e829b21a6f8c9b70876ba0858053c04435d3147121984ba087c28d913653d626.sdkstatcache -output-file-map /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex -sdk-module-cache-path /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-generated-files.hmap -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-own-target-headers.hmap -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe-0d01d5e02bde2fc42ff66da27353fb93-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-project-headers.hmap -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/DerivedSources-normal/arm64 -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/DerivedSources/arm64 -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe-Swift.h -working-directory /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe -experimental-emit-module-separately -disable-cmo
+
+SwiftDriver\ Compilation\ Requirements RuntimeProbe normal x86_64 com.apple.xcode.tools.swift.compiler (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name RuntimeProbe -Onone @/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe.SwiftFileList -DDEBUG -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk -target x86_64-apple-ios26.0-simulator -g -module-cache-path /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex -Xfrontend -serialize-debugging-options -index-store-path /tmp/FoldContextKitRuntimeValidation/Index.noindex/DataStore -swift-version 6 -I /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -F /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -parse-as-library -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/FoldContextKitRuntimeValidation/SDKStatCaches.noindex/iphonesimulator27.1-24A94232-e829b21a6f8c9b70876ba0858053c04435d3147121984ba087c28d913653d626.sdkstatcache -output-file-map /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex -sdk-module-cache-path /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-generated-files.hmap -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-own-target-headers.hmap -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe-0d01d5e02bde2fc42ff66da27353fb93-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-project-headers.hmap -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/DerivedSources-normal/x86_64 -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/DerivedSources/x86_64 -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe-Swift.h -working-directory /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe -experimental-emit-module-separately -disable-cmo
+
+Copy /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.swiftmodule/arm64-apple-ios-simulator.swiftmodule /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe.swiftmodule (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe.swiftmodule /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.swiftmodule/arm64-apple-ios-simulator.swiftmodule
+
+Copy /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.swiftmodule/arm64-apple-ios-simulator.swiftdoc /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe.swiftdoc (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe.swiftdoc /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.swiftmodule/arm64-apple-ios-simulator.swiftdoc
+
+Copy /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.swiftmodule/arm64-apple-ios-simulator.abi.json /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe.abi.json (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe.abi.json /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.swiftmodule/arm64-apple-ios-simulator.abi.json
+
+Copy /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe.swiftsourceinfo (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe.swiftsourceinfo /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo
+
+Copy /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.swiftmodule/x86_64-apple-ios-simulator.swiftmodule /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe.swiftmodule (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe.swiftmodule /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.swiftmodule/x86_64-apple-ios-simulator.swiftmodule
+
+SwiftMergeGeneratedHeaders /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/DerivedSources/RuntimeProbe-Swift.h /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe-Swift.h /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe-Swift.h (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    builtin-swiftHeaderTool -arch arm64 /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe-Swift.h -arch x86_64 /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe-Swift.h -o /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/DerivedSources/RuntimeProbe-Swift.h
+
+Copy /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.swiftmodule/x86_64-apple-ios-simulator.swiftdoc /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe.swiftdoc (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe.swiftdoc /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.swiftmodule/x86_64-apple-ios-simulator.swiftdoc
+
+Copy /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.swiftmodule/x86_64-apple-ios-simulator.abi.json /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe.abi.json (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe.abi.json /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.swiftmodule/x86_64-apple-ios-simulator.abi.json
+
+Copy /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe.swiftsourceinfo (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe.swiftsourceinfo /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo
+
+SwiftDriverJobDiscovery normal x86_64 Compiling RuntimeProbeApp.swift (in target 'RuntimeProbe' from project 'RuntimeProbe')
+
+SwiftDriver\ Compilation RuntimeProbe normal x86_64 com.apple.xcode.tools.swift.compiler (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name RuntimeProbe -Onone @/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe.SwiftFileList -DDEBUG -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk -target x86_64-apple-ios26.0-simulator -g -module-cache-path /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex -Xfrontend -serialize-debugging-options -index-store-path /tmp/FoldContextKitRuntimeValidation/Index.noindex/DataStore -swift-version 6 -I /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -F /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -parse-as-library -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/FoldContextKitRuntimeValidation/SDKStatCaches.noindex/iphonesimulator27.1-24A94232-e829b21a6f8c9b70876ba0858053c04435d3147121984ba087c28d913653d626.sdkstatcache -output-file-map /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex -sdk-module-cache-path /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-generated-files.hmap -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-own-target-headers.hmap -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe-0d01d5e02bde2fc42ff66da27353fb93-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-project-headers.hmap -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/DerivedSources-normal/x86_64 -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/DerivedSources/x86_64 -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe-Swift.h -working-directory /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe -experimental-emit-module-separately -disable-cmo
+
+Ld /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/Binary/RuntimeProbe.debug.dylib normal x86_64 (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target x86_64-apple-ios26.0-simulator -dynamiclib -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk -Os -Xlinker -no_warn_duplicate_libraries -L/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -L/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -F/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -F/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/PackageFrameworks -F/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -filelist /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe.LinkFileList -install_name @rpath/RuntimeProbe.debug.dylib -Xlinker -rpath -Xlinker @loader_path -Xlinker -rpath -Xlinker /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/PackageFrameworks -Xlinker -dead_strip -Xlinker -object_path_lto -Xlinker /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe_lto.o -rdynamic -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe.swiftmodule -Xlinker -alias -Xlinker _main -Xlinker ___debug_main_executable_dylib_entry_point -o /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/Binary/RuntimeProbe.debug.dylib
+
+SwiftDriverJobDiscovery normal arm64 Compiling RuntimeProbeApp.swift (in target 'RuntimeProbe' from project 'RuntimeProbe')
+
+SwiftDriver\ Compilation RuntimeProbe normal arm64 com.apple.xcode.tools.swift.compiler (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name RuntimeProbe -Onone @/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe.SwiftFileList -DDEBUG -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk -target arm64-apple-ios26.0-simulator -g -module-cache-path /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex -Xfrontend -serialize-debugging-options -index-store-path /tmp/FoldContextKitRuntimeValidation/Index.noindex/DataStore -swift-version 6 -I /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -F /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -parse-as-library -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/FoldContextKitRuntimeValidation/SDKStatCaches.noindex/iphonesimulator27.1-24A94232-e829b21a6f8c9b70876ba0858053c04435d3147121984ba087c28d913653d626.sdkstatcache -output-file-map /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe-OutputFileMap.json -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex -sdk-module-cache-path /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules -emit-dependencies -emit-module -emit-module-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe.swiftmodule -serialize-diagnostics -dependency-scan-serialize-diagnostics-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe-dependency-scan.dia -validate-clang-modules-once -clang-build-session-file /tmp/FoldContextKitRuntimeValidation/ModuleCache.noindex/Session.modulevalidation -Xcc -fmodules-prune-interval\=86400 -Xcc -fmodules-prune-after\=345600 -emit-const-values -const-gather-protocols-list /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-generated-files.hmap -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-own-target-headers.hmap -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe-0d01d5e02bde2fc42ff66da27353fb93-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-project-headers.hmap -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/DerivedSources-normal/arm64 -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/DerivedSources/arm64 -Xcc -I/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe-Swift.h -working-directory /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe -experimental-emit-module-separately -disable-cmo
+
+Ld /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/Binary/RuntimeProbe.debug.dylib normal arm64 (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios26.0-simulator -dynamiclib -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk -Os -Xlinker -no_warn_duplicate_libraries -L/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -L/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -F/tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -F/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/PackageFrameworks -F/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -filelist /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe.LinkFileList -install_name @rpath/RuntimeProbe.debug.dylib -Xlinker -rpath -Xlinker @loader_path -Xlinker -rpath -Xlinker /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/PackageFrameworks -Xlinker -dead_strip -Xlinker -object_path_lto -Xlinker /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe_lto.o -rdynamic -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe.swiftmodule -Xlinker -alias -Xlinker _main -Xlinker ___debug_main_executable_dylib_entry_point -o /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/Binary/RuntimeProbe.debug.dylib
+
+CreateUniversalBinary /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app/RuntimeProbe.debug.dylib normal arm64\ x86_64 (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo -create /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/Binary/RuntimeProbe.debug.dylib /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/Binary/RuntimeProbe.debug.dylib -output /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app/RuntimeProbe.debug.dylib
+
+ConstructStubExecutorLinkFileList /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-ExecutorLinkFileList-normal-x86_64.txt (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    construct-stub-executor-link-file-list /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/Binary/RuntimeProbe.debug.dylib /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libPreviewsJITStubExecutor_no_swift_entry_point.a /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libPreviewsJITStubExecutor.a --output /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-ExecutorLinkFileList-normal-x86_64.txt
+note: Using stub executor library with Swift entry point. (in target 'RuntimeProbe' from project 'RuntimeProbe')
+
+ConstructStubExecutorLinkFileList /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-ExecutorLinkFileList-normal-arm64.txt (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    construct-stub-executor-link-file-list /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/Binary/RuntimeProbe.debug.dylib /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libPreviewsJITStubExecutor_no_swift_entry_point.a /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libPreviewsJITStubExecutor.a --output /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-ExecutorLinkFileList-normal-arm64.txt
+note: Using stub executor library with Swift entry point. (in target 'RuntimeProbe' from project 'RuntimeProbe')
+
+Ld /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/Binary/RuntimeProbe normal x86_64 (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target x86_64-apple-ios26.0-simulator -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk -Os -Xlinker -no_warn_duplicate_libraries -L/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -F/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/PackageFrameworks -F/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -Xlinker -rpath -Xlinker @executable_path -Xlinker -rpath -Xlinker @loader_path -Xlinker -rpath -Xlinker /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/PackageFrameworks -rdynamic -Xlinker -objc_abi_version -Xlinker 2 -e ___debug_blank_executor_main -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __debug_dylib -Xlinker /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-DebugDylibPath-normal-x86_64.txt -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __debug_instlnm -Xlinker /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-DebugDylibInstallName-normal-x86_64.txt -Xlinker -filelist -Xlinker /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-ExecutorLinkFileList-normal-x86_64.txt /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/Binary/RuntimeProbe.debug.dylib -o /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/Binary/RuntimeProbe
+
+Ld /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/Binary/RuntimeProbe normal arm64 (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios26.0-simulator -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk -Os -Xlinker -no_warn_duplicate_libraries -L/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -F/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/PackageFrameworks -F/tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator -Xlinker -rpath -Xlinker @executable_path -Xlinker -rpath -Xlinker @loader_path -Xlinker -rpath -Xlinker /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/PackageFrameworks -rdynamic -Xlinker -objc_abi_version -Xlinker 2 -e ___debug_blank_executor_main -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __debug_dylib -Xlinker /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-DebugDylibPath-normal-arm64.txt -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __debug_instlnm -Xlinker /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-DebugDylibInstallName-normal-arm64.txt -Xlinker -filelist -Xlinker /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe-ExecutorLinkFileList-normal-arm64.txt /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/Binary/RuntimeProbe.debug.dylib -o /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/Binary/RuntimeProbe
+
+CreateUniversalBinary /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app/RuntimeProbe normal arm64\ x86_64 (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo -create /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/Binary/RuntimeProbe /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/Binary/RuntimeProbe -output /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app/RuntimeProbe
+
+ExtractAppIntentsMetadata (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v27.1.266.1.gZlX9K/Metal.xctoolchain --module-name RuntimeProbe --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.1.sdk --xcode-version 27A9275 --platform-family iOS --deployment-target 26.0 --bundle-identifier org.foldcontextkit.RuntimeProbe --output /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app --target-triple arm64-apple-ios26.0-simulator --target-triple x86_64-apple-ios26.0-simulator --binary-file /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app/RuntimeProbe --dependency-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe_dependency_info.dat --dependency-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe_dependency_info.dat --stringsdata-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --stringsdata-file /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe.SwiftFileList --source-file-list /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe.SwiftFileList --metadata-file-list /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe.DependencyMetadataFileList --static-metadata-file-list /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe.DependencyStaticMetadataFileList --swift-const-vals-list /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/arm64/RuntimeProbe.SwiftConstValuesFileList --swift-const-vals-list /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/Objects-normal/x86_64/RuntimeProbe.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --no-app-shortcuts-localization
+2026-10-30 03:09:28.585 appintentsmetadataprocessor[34737:902135] Starting appintentsmetadataprocessor export
+2026-10-30 03:09:28.653 appintentsmetadataprocessor[34737:902135] warning: Metadata extraction skipped, no AppIntents.framework dependency found
+
+CopySwiftLibs /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    builtin-swiftStdLibTool --copy --verbose --scan-executable /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app/RuntimeProbe.debug.dylib --scan-folder /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app/Frameworks --scan-folder /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app/PlugIns --scan-folder /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app/SystemExtensions --scan-folder /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app/Extensions --platform iphonesimulator --toolchain /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v27.1.266.1.gZlX9K/Metal.xctoolchain --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os
+Ignoring --strip-bitcode because --sign was not passed
+
+AppIntentsSSUTraining (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsnltrainingprocessor --infoplist-path /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app/Info.plist --temp-dir-path /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/ssu --bundle-id org.foldcontextkit.RuntimeProbe --product-path /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app --extracted-metadata-path /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app/Metadata.appintents --metadata-file-list /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/RuntimeProbe.build/Debug-iphonesimulator/RuntimeProbe.build/RuntimeProbe.DependencyMetadataFileList --source-file /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app/Info.plist --archive-ssu-assets
+2026-10-30 03:09:28.988 appintentsnltrainingprocessor[34744:902255] Parsing options for appintentsnltrainingprocessor
+2026-10-30 03:09:28.989 appintentsnltrainingprocessor[34744:902255] Starting AppIntents SSU YAML Generation
+2026-10-30 03:09:28.992 appintentsnltrainingprocessor[34744:902255] No AppShortcuts found - Skipping.
+
+RegisterExecutionPolicyException /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    builtin-RegisterExecutionPolicyException /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app
+
+Validate /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    builtin-validationUtility /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app -shallow-bundle -infoplist-subpath Info.plist
+
+Touch /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app (in target 'RuntimeProbe' from project 'RuntimeProbe')
+    cd /Users/estebanperezcastillejo/Developer/AdapteDuoKit/Validation/RuntimeProbe
+    /usr/bin/touch -c /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app
+
+PruneExplicitPrecompiledModules /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /tmp/FoldContextKitRuntimeValidation/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /tmp/FoldContextKitRuntimeValidation/SDKExplicitPrecompiledModules
+
+** BUILD SUCCEEDED **
+

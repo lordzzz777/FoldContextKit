@@ -1,0 +1,45 @@
+Device orientation: Portrait
+------------------------
+Application bundle identifier: org.foldcontextkit.RuntimeProbe
+Application UI orientation: Portrait
+Application, pid: 21176, label: 'RuntimeProbe'
+ Window, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+  Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+   Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+    Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+     Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+      Other, {{0.0, 62.0}, {402.0, 778.0}}, hitPoint: {201.0, 451.0}
+       Other, {{0.0, 62.0}, {402.0, 778.0}}, hitPoint: {201.0, 451.0}
+      ScrollView, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+       Other, {{0.0, -633.3}, {402.0, 1813.3}}, hitPoint: {201.0, 437.0}
+        StaticText, {{16.0, -13.7}, {316.0, 46.3}}, label: 'Escena: 7BA95486-8222-4B9C-9C5B-2933EF67D0DD
+Ventana: 2FC5822C-3D6F-4D77-9C47-37AB47470089
+Generación: 3', hitPoint: {174.0, 16.3}
+        StaticText, {{16.0, 44.7}, {335.7, 30.3}}, label: 'Identidades efímeras del observador, no identificadores de dispositivo.', hitPoint: {183.8, 59.8}
+        StaticText, {{32.0, 103.0}, {104.7, 20.3}}, label: 'Presentación', hitPoint: {84.3, 113.2}
+        StaticText, {{32.0, 129.3}, {329.0, 42.3}}, label: '402 × 874 puntos
+Fuente: uiWindowBounds · ámbito: ventana', hitPoint: {196.5, 150.5}
+        StaticText, {{32.0, 177.7}, {284.3, 14.3}}, label: 'Origen: simulator · vigencia: current · secuencia: 5', hitPoint: {174.2, 184.8}
+        StaticText, {{32.0, 198.0}, {336.0, 62.3}}, label: 'Ámbito de muestra: escena 7BA95486-8222-4B9C-9C5B-2933EF67D0DD, ventana 2FC5822C-3D6F-4D77-9C47-37AB47470089, generación 3', hitPoint: {200.0, 229.2}
+        StaticText, {{32.0, 266.3}, {243.0, 30.3}}, label: 'Vigencia contextual; no es una garantía de antigüedad temporal.', hitPoint: {153.5, 281.5}
+        StaticText, {{32.0, 340.7}, {63.7, 20.3}}, label: 'Pantalla', hitPoint: {63.8, 350.8}
+        StaticText, {{32.0, 367.0}, {322.0, 108.3}}, label: '1206 × 2622 píxeles nativos
+Fuente: UIScreen.nativeBounds · ámbito: pantalla asociada a esta escena
+Atribución: unknown. Ejes nativos, no ejes de ventana.', hitPoint: {193.0, 421.2}
+        StaticText, {{32.0, 481.3}, {284.3, 14.3}}, label: 'Origen: simulator · vigencia: current · secuencia: 5', hitPoint: {174.2, 488.5}
+        StaticText, {{32.0, 501.7}, {336.0, 62.3}}, label: 'Ámbito de muestra: escena 7BA95486-8222-4B9C-9C5B-2933EF67D0DD, ventana 2FC5822C-3D6F-4D77-9C47-37AB47470089, generación 3', hitPoint: {200.0, 532.8}
+        StaticText, {{32.0, 570.0}, {243.0, 30.3}}, label: 'Vigencia contextual; no es una garantía de antigüedad temporal.', hitPoint: {153.5, 585.2}
+        StaticText, {{32.0, 644.3}, {60.0, 20.3}}, label: 'Bisagra', hitPoint: {62.0, 654.5}
+        StaticText, {{32.0, 670.7}, {259.7, 20.3}}, label: 'API no disponible en este sistema.', hitPoint: {161.8, 680.8}
+        StaticText, {{32.0, 697.0}, {285.0, 30.3}}, label: 'Sin muestra: fuente efectiva, unidad y vigencia no disponibles.', hitPoint: {174.5, 712.2}
+        StaticText, {{16.0, 767.3}, {181.3, 20.3}}, label: 'Clasificación explicada', hitPoint: {106.7, 777.5}
+        StaticText, {{16.0, 795.7}, {192.7, 20.3}}, label: 'Capacidad: desconocida.', hitPoint: {112.3, 805.8}
+        StaticText, {{16.0, 824.0}, {251.7, 42.3}}, label: 'Modelo: información insuficiente (insufficientInformation).', hitPoint: {141.8, 845.2}
+       Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+        Other, {{0.0, 0.0}, {402.0, 102.0}}, hitPoint: {201.0, 51.0}
+       Other, {{0.0, 0.0}, {402.0, 874.0}}, hitPoint: {201.0, 437.0}
+        Other, {{0.0, 0.0}, {402.0, 102.0}}, hitPoint: {201.0, 51.0}
+       Other, {{369.0, 62.0}, {30.0, 750.0}}, label: 'Vertical scroll bar, 3 pages', value: 67%, hitPoint: {384.0, 437.0}
+        Other, {{396.0, 336.0}, {3.0, 340.7}}, hitPoint: {397.5, 506.3}
+       Other, {{369.0, 62.0}, {30.0, 750.0}}, label: 'Vertical scroll bar, 3 pages', value: 67%, hitPoint: {384.0, 437.0}
+        Other, {{396.0, 336.0}, {3.0, 340.7}}, hitPoint: {397.5, 506.3}

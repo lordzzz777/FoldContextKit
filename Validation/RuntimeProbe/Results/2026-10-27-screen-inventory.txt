@@ -1,0 +1,31 @@
+Source: xcrun simctl io <Duo simulator> enumerate
+Environment: iPhone Duo Simulator, iOS 27.1
+Date: 2026-10-27
+Excerpt transcribed from tool output; host audio routes and identifiers omitted.
+
+Screen ID: 1
+Name: LCD
+Device Name: primary
+Screen Type: Integrated
+Pixel Size: {1398, 2034}
+Preferred UI Scale: 3
+UI Orientation: Portrait
+
+Screen ID: 3
+Name: LCD-1
+Device Name: primary-1
+Screen Type: Integrated
+Pixel Size: {2007, 2853}
+Preferred UI Scale: 3
+UI Orientation: Portrait
+
+Other enumerated simulator surfaces:
+TVOut, external-0: {720, 480}
+Resizable, resizable: {7680, 4320}
+Wireless, wireless0: {720, 480}
+
+LIMITS: These are simulator surface descriptors, not UIKit measurements.
+The second integrated surface has not been attributed to an active app window.
+Preferred UI Scale is not a measurement of UIScreen.scale or nativeScale.
+Enumeration does not prove successful external display presentation or Mirroring.
+No geometry override or synthetic sample was used.

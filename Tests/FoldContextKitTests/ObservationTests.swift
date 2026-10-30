@@ -22,7 +22,8 @@ private func event(_ generation: UInt64, _ change: FoldChange) -> FoldObservatio
 
 @Test func archivalCopyDoesNotMutateCurrentEvidence() throws {
     let context = ObservationContext(sceneID: "test", windowID: "test", generation: 0)
-    let sample = try #require(HingeSample(status: .closed, angleRadians: 0, source: .uiHingeInteraction))
+    let candidate = HingeSample(status: .closed, angleRadians: 0, source: .uiHingeInteraction)
+    let sample = try #require(candidate)
     let input = FoldEvidence(context: context, presentationSize: .missing(.awaitingSample),
                              nativeScreenSize: .missing(.awaitingSample), hinge: .observed(sample, metadata:
                                 EvidenceMetadata(context: context, sequence: 1, origin: .synthetic, validity: .current)))
@@ -103,26 +104,26 @@ struct UIKitObservationTests {
     @Test func initialDeliveryNativeChangeAndDisableInsideCallback() throws {
         let scene = NSObject()
         let screen = NSObject()
-        var bounds = CGRect(x: 0, y: 0, width: 1000, height: 2000)
-        let window = UIWindow(frame: CGRect(x: 0, y: 0, width: 200, height: 400))
+        let geometry = TestScreenGeometry()
+        let window = TestWindowContainer(frame: CGRect(x: 0, y: 0, width: 200, height: 400))
         let root = UIView(frame: window.bounds)
         window.addSubview(root)
         let driver = ControlledHingeDriver()
-        driver.initialSample = try #require(HingeSample(status: .closed, angleRadians: 0, source: .uiHingeInteraction))
+        driver.initialSample = HingeSample(status: .closed, angleRadians: 0, source: .uiHingeInteraction)
         let observer = FoldContextObserver(environment: { _ in
-            FoldWindowEnvironment(scene: scene, screen: screen, isActive: true, nativeBounds: bounds)
-        }, driver: driver, origin: .synthetic)
+            FoldWindowEnvironment(scene: scene, screen: screen, isActive: true, nativeBounds: geometry.bounds)
+        }, driver: driver, origin: .synthetic, windowForView: testWindow(for:))
         defer { observer.stop() }
         observer.start(in: root)
         let initial = try #require(observer.snapshot)
         #expect(FoldClassifier.evaluate(evidence: initial, policy: .observationOnly).capability == .hingeObserved(origin: .synthetic))
         let late = driver.receive
         driver.initialSample = nil
-        bounds.size = CGSize(width: 3000, height: 4000)
+        geometry.bounds.size = CGSize(width: 3000, height: 4000)
         observer.refresh()
         #expect(try #require(observer.snapshot?.context.generation) > initial.context.generation)
         #expect(observer.snapshot?.hinge == .missing(.awaitingSample))
-        late?(try #require(HingeSample(status: .closed, angleRadians: 0, source: .uiHingeInteraction)))
+        late?(HingeSample(status: .closed, angleRadians: 0, source: .uiHingeInteraction))
         #expect(observer.snapshot?.hinge == .missing(.awaitingSample))
         observer.onChange = { [weak observer] event in
             if case .snapshot(_, .geometry) = event { observer?.isEnabled = false }
@@ -133,10 +134,10 @@ struct UIKitObservationTests {
         #expect(observer.snapshot?.hinge == .missing(.observationSuspended))
     }
 
-    @Test func unavailableAPIAndHierarchyChanges() throws {
+    @Test func unavailableAPIAndControlledHierarchyChanges() throws {
         let scene = NSObject()
         let screen = NSObject()
-        let window = UIWindow(frame: CGRect(x: 0, y: 0, width: 200, height: 400))
+        let window = TestWindowContainer(frame: CGRect(x: 0, y: 0, width: 200, height: 400))
         let root = UIView(frame: window.bounds)
         window.addSubview(root)
         let driver = ControlledHingeDriver()
@@ -144,7 +145,7 @@ struct UIKitObservationTests {
         let observer = FoldContextObserver(environment: { _ in
             FoldWindowEnvironment(scene: scene, screen: screen, isActive: true,
                                   nativeBounds: CGRect(x: 0, y: 0, width: 1000, height: 2000))
-        }, driver: driver, origin: .synthetic)
+        }, driver: driver, origin: .synthetic, windowForView: testWindow(for:))
         defer { observer.stop() }
         observer.start(in: root)
         #expect(!observer.isHingeAPIAvailable)
@@ -153,9 +154,12 @@ struct UIKitObservationTests {
         observer.lifecycleChanged(scene: NSObject(), active: false)
         #expect(observer.snapshot == active)
         root.removeFromSuperview()
+        // Synthetic containers have no UIKit window-change notification.
+        observer.refresh()
         #expect(observer.snapshot?.hinge == .missing(.observationSuspended))
         #expect(driver.receive == nil)
         window.addSubview(root)
+        observer.refresh()
         #expect(observer.snapshot?.hinge == .missing(.apiUnavailable))
     }
 
@@ -163,21 +167,19 @@ struct UIKitObservationTests {
         // Controlled environment: these tests do not claim an actual connected scene.
         let scene = NSObject()
         let screen = NSObject()
-        let first = UIWindow(frame: CGRect(x: 0, y: 0, width: 200, height: 400))
-        let second = UIWindow(frame: CGRect(x: 0, y: 0, width: 300, height: 500))
+        let first = TestWindowContainer(frame: CGRect(x: 0, y: 0, width: 200, height: 400))
+        let second = TestWindowContainer(frame: CGRect(x: 0, y: 0, width: 300, height: 500))
         let nativeBounds = CGRect(x: 0, y: 0, width: 1000, height: 2000)
-        let environment: @MainActor (UIWindow) -> FoldWindowEnvironment? = { _ in
+        let environment: @MainActor (UIView) -> FoldWindowEnvironment? = { _ in
             FoldWindowEnvironment(scene: scene, screen: screen, isActive: true, nativeBounds: nativeBounds)
         }
         let driverA = ControlledHingeDriver()
         let driverB = ControlledHingeDriver()
-        first.rootViewController = UIViewController()
-        second.rootViewController = UIViewController()
-        let a = FoldContextObserver(environment: environment, driver: driverA, origin: .synthetic)
-        let b = FoldContextObserver(environment: environment, driver: driverB, origin: .synthetic)
+        let a = FoldContextObserver(environment: environment, driver: driverA, origin: .synthetic, windowForView: testWindow(for:))
+        let b = FoldContextObserver(environment: environment, driver: driverB, origin: .synthetic, windowForView: testWindow(for:))
         defer { a.stop(); b.stop(); first.isHidden = true; second.isHidden = true }
-        let firstRoot = try #require(first.rootViewController?.view)
-        let secondRoot = try #require(second.rootViewController?.view)
+        let firstRoot = UIView(frame: first.bounds)
+        let secondRoot = UIView(frame: second.bounds)
         first.addSubview(firstRoot)
         second.addSubview(secondRoot)
         a.start(in: firstRoot)
@@ -197,12 +199,12 @@ struct UIKitObservationTests {
         let untouched = b.snapshot
         let lateDelivery = driverA.receive
         a.isEnabled = false
-        lateDelivery?(try #require(HingeSample(status: .closed, angleRadians: 0, source: .uiHingeInteraction)))
+        lateDelivery?(HingeSample(status: .closed, angleRadians: 0, source: .uiHingeInteraction))
         #expect(a.snapshot?.hinge == .missing(.observationSuspended))
         #expect(b.snapshot == untouched)
         a.isEnabled = true
         #expect(a.snapshot?.hinge == .missing(.awaitingSample))
-        driverA.receive?(try #require(HingeSample(status: .partiallyOpen, angleRadians: 1, source: .uiHingeInteraction)))
+        driverA.receive?(HingeSample(status: .partiallyOpen, angleRadians: 1, source: .uiHingeInteraction))
         if case let .observed(hinge, metadata)? = a.snapshot?.hinge {
             #expect(hinge.angleRadians == 1)
             #expect(metadata.origin == .synthetic)
@@ -228,6 +230,25 @@ struct UIKitObservationTests {
         } else { Issue.record("Expected screen pixels") }
     }
 }
+// Scene-less SwiftPM tests use synthetic containers rather than deprecated UIWindow initializers.
+@MainActor
+private final class TestWindowContainer: UIView {}
+
+@MainActor
+private func testWindow(for view: UIView) -> UIView? {
+    var current: UIView? = view
+    while let candidate = current {
+        if candidate is TestWindowContainer { return candidate }
+        current = candidate.superview
+    }
+    return nil
+}
+
+@MainActor
+private final class TestScreenGeometry {
+    var bounds = CGRect(x: 0, y: 0, width: 1000, height: 2000)
+}
+
 @MainActor
 private final class ControlledHingeDriver: FoldHingeDriver {
     var isAvailable = true

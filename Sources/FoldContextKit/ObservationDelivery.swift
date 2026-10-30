@@ -48,7 +48,8 @@ func historicalEvent(_ event: FoldObservationEvent) -> FoldObservationEvent {
         context: evidence.context,
         presentationSize: historical(evidence.presentationSize),
         nativeScreenSize: historical(evidence.nativeScreenSize),
-        hinge: historical(evidence.hinge)
+        hinge: historical(evidence.hinge),
+        layoutGeometry: historical(evidence.layoutGeometry)
     ), change: change)
 }
 

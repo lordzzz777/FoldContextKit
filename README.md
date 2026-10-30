@@ -166,7 +166,7 @@ La inferencia no es una identificación oficial ni una garantía de exclusividad
 
 ## Estado y documentación
 
-Paquete y app compilados para iOS Simulator. **25 tests del núcleo superados en Mac** y consumidor SwiftPM local ejecutado. La validación actual de la app y los tests iOS en simulador permanece bloqueada por CoreSimulator; no hay dispositivo físico disponible. No se consideran superados esos escenarios.
+Paquete y app compilados para iOS Simulator. **25 tests del núcleo superados en Mac** y consumidor SwiftPM local ejecutado. **45 casos superados en Duo Simulator con iOS 27.1**, incluidos UIKit y SwiftUI, sin fallos ni omisiones. En la app se observaron entrega inicial de bisagra, inferencia exterior, deshabilitación/reactivación y remontaje SwiftUI en simulador. También se observó suspensión al pasar a segundo plano y recepción de una muestra nueva al regresar. Quedan pendientes lectura del panel interior y posturas libro/90°; no hay dispositivo físico disponible. Detalles en la ficha técnica. Las pruebas controladas no acreditan comportamiento físico.
 
 - [Ficha técnica](Documentation/FichaTecnica.md): contratos, fuentes, regiones, límites y resultados.
 - [Checklist](Documentation/Checklist.md): trabajo completado y pendientes.

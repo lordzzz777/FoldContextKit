@@ -1,0 +1,19 @@
+Device orientation: Unknown
+------------------------
+Application bundle identifier: org.foldcontextkit.RuntimeProbe
+Application UI orientation: Portrait
+Application, pid: 61671, label: 'RuntimeProbe'
+ Window, {{115.0, 54.0}, {60.0, 87.3}}, hitPoint: {145.0, 97.6}
+  Other, {{115.0, 54.0}, {466.0, 678.0}}, hitPoint: {145.0, 97.6}
+   Other, {{115.0, 54.0}, {466.0, 678.0}}, hitPoint: {145.0, 97.6}
+    Other, {{115.0, 54.0}, {466.0, 678.0}}, hitPoint: {145.0, 97.6}
+     Other, {{115.0, 54.0}, {466.0, 678.0}}, hitPoint: {145.0, 97.6}
+      Other, {{115.0, 54.0}, {382.0, 644.0}}, hitPoint: {145.0, 97.6}
+       Other, {{115.0, 54.0}, {382.0, 644.0}}, hitPoint: {145.0, 97.6}
+      ScrollView, {{115.0, 54.0}, {466.0, 678.0}}, hitPoint: {145.0, 97.6}
+       Other, {{115.0, -3745.0}, {382.0, 4443.0}}, hitPoint: {145.0, 97.6}
+        StaticText, {{133.0, 35.3}, {346.0, 94.3}}, label: '#58 · geometry · escena 518EEC18-8259-45C4-924D-885C9B73D902 · ventana AACF3F0F-A56D-4683-A8A2-3D1DA473C8DD · generación 3
+Bisagra: Esperando primera muestra; no implica ausencia física.', hitPoint: {154.0, 91.8}
+ Window, {{0.0, 0.0}, {155.3, 226.0}}, hitPoint: {77.7, 113.0}
+  Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {77.7, 113.0}
+   Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {77.7, 113.0}

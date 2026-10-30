@@ -1,0 +1,35 @@
+Device orientation: Unknown
+------------------------
+Application bundle identifier: org.foldcontextkit.RuntimeProbe
+Application UI orientation: Portrait
+Application, pid: 61671, label: 'RuntimeProbe'
+ Window, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+  Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+   Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+    Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+     Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+      Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+       Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+      ScrollView, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+       Other, {{0.0, -4697.7}, {382.0, 5341.7}}, hitPoint: {191.0, 322.0}
+        StaticText, {{18.0, -18.7}, {346.0, 94.3}}, label: '#58 · geometry · escena 518EEC18-8259-45C4-924D-885C9B73D902 · ventana AACF3F0F-A56D-4683-A8A2-3D1DA473C8DD · generación 3
+Bisagra: Esperando primera muestra; no implica ausencia física.', hitPoint: {191.0, 37.8}
+        StaticText, {{18.0, 87.7}, {346.0, 78.3}}, label: '#57 · lifecycle · escena 518EEC18-8259-45C4-924D-885C9B73D902 · ventana AACF3F0F-A56D-4683-A8A2-3D1DA473C8DD · generación 3
+Bisagra: Observación suspendida; datos no vigentes.', hitPoint: {191.0, 126.8}
+        StaticText, {{18.0, 178.0}, {171.3, 14.3}}, label: '#56 · Fase de escena: inactive', hitPoint: {103.7, 185.2}
+        StaticText, {{18.0, 204.3}, {346.0, 78.3}}, label: '#55 · hingeStatus · escena 518EEC18-8259-45C4-924D-885C9B73D902 · ventana AACF3F0F-A56D-4683-A8A2-3D1DA473C8DD · generación 3
+Bisagra: fullyOpen, origen simulator, secuencia 4', hitPoint: {191.0, 243.5}
+        StaticText, {{18.0, 294.7}, {346.0, 94.3}}, label: '#54 · geometry · escena 518EEC18-8259-45C4-924D-885C9B73D902 · ventana AACF3F0F-A56D-4683-A8A2-3D1DA473C8DD · generación 3
+Bisagra: Esperando primera muestra; no implica ausencia física.', hitPoint: {191.0, 341.8}
+        StaticText, {{18.0, 401.0}, {346.0, 94.3}}, label: '#53 · context · escena 518EEC18-8259-45C4-924D-885C9B73D902 · ventana AACF3F0F-A56D-4683-A8A2-3D1DA473C8DD · generación 3
+Bisagra: Esperando primera muestra; no implica ausencia física.', hitPoint: {191.0, 448.2}
+        StaticText, {{18.0, 507.3}, {346.0, 94.3}}, label: '#52 · context · escena 518EEC18-8259-45C4-924D-885C9B73D902 · ventana AACF3F0F-A56D-4683-A8A2-3D1DA473C8DD · generación 2
+Bisagra: Esperando primera muestra; no implica ausencia física.', hitPoint: {191.0, 554.5}
+        StaticText, {{18.0, 613.7}, {319.3, 14.3}}, label: '#51 · Observación del entorno: esperando nuevos datos.', hitPoint: {177.7, 620.8}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 9 pages', value: 100%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 546.0}, {3.0, 70.0}}, hitPoint: {461.5, 581.0}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 9 pages', value: 100%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 546.0}, {3.0, 70.0}}, hitPoint: {461.5, 581.0}
+ Window, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+  Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+   Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}

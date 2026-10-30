@@ -1,0 +1,8 @@
+Runtime retry after successful package tests (2026-10-30, Europe/Madrid).
+Target: iPhone Duo iOS 27.1, UUID 76DA5EC9-CCCB-4FB2-B5DA-65F276D2C284.
+Installed /tmp/FoldContextKitRuntimeValidation/Build/Products/Debug-iphonesimulator/RuntimeProbe.app using simctl with escalated service access: exit 0.
+DeviceInteractionSynthesize captured SpringBoard successfully at 16:41:47, window 466 x 678 points. This is system UI, not app measurement.
+MCP activation of org.foldcontextkit.RuntimeProbe timed out, no app hierarchy received.
+Fallback simctl launch completed with exit 0 and reported org.foldcontextkit.RuntimeProbe PID 61671 when polled for cancellation. Process launch confirmed, but no app snapshot or UI hierarchy was obtained.
+No current runtime claim for first hinge delivery, observer toggles, SwiftUI remount or background/foreground. Installation alone does not validate these behaviors.
+Device interaction sessions closed. No simulator erase or global service reset.

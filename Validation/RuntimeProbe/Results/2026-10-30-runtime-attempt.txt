@@ -31,3 +31,5 @@ Build of product 'LocalConsumer' complete! (1.19s)
 FoldContextKit local import OK (synthetic input, no hardware observation)
 
 No repositorio remoto ni publicación. Runtime simulador sigue bloqueado según los intentos registrados arriba. No hardware físico disponible.
+
+CONTINUACIÓN 16:35 Europe/Madrid: RunAllTests completado. Duo Simulator iOS27.1 build24A94425 arm64, UUID76DA5EC9-CCCB-4FB2-B5DA-65F276D2C284. 45 casos, todos superados, cero fallos/omisiones; 32 funciones incluidas parametrizadas. Incluye siete funciones UIKit/SwiftUI. Registros: 2026-10-30-ios-tests.txt y 2026-10-30-ios-tests-console.log. Pruebas controladas, no observación física ni runtime de la app.

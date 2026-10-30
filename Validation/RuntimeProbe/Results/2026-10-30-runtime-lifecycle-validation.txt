@@ -1,0 +1,20 @@
+Runtime follow-up 2026-10-30 21:32–21:34 local
+Device: Duo iOS27.1 simulator 76DA5EC9-CCCB-4FB2-B5DA-65F276D2C284
+App org.foldcontextkit.RuntimeProbe, same PID61671 throughout.
+No synthetic toggle selected. No unit tests repeated. No code changed.
+
+Initial capture already contained historical #55 hingeStatus fullyOpen simulator sequence4 generation3. The action causing this precedes this session and was not controlled here. It is not an interior-size reading or physical evidence.
+Activated com.apple.springboard through public device-interaction activation; screenshot showed Home. Activated RuntimeProbe again; app returned with same PID.
+Post-return history observed:
+#74 scene inactive
+#75 lifecycle: observation suspended, not current
+#76 scene background
+#77 scene inactive
+#78 scene active
+#79 geometry: awaiting first sample
+#80 hingeStatus closed, simulator, sequence18, generation4
+SceneID518EEC18-8259-45C4-924D-885C9B73D902; windowID AACF3F0F-A56D-4683-A8A2-3D1DA473C8DD.
+Pressed manual measurement after return: UIScreen.scale3, nativeScale3, bounds466x678 points, nativeBounds1398x2034 pixels, UIWindow.bounds466x678points, role UIWindowSceneSessionRoleApplication. This is exterior data; no app interior nativeBounds was captured.
+No delivery loss reported in visible history. No crash. Device tool applicationState NotRun is session tracking (session not launcher); hierarchy confirms live PID and UI.
+Public simctl help, help io and help ui inspected. Exposed screenConfig power/geometry and screenshot but no fold-angle command. Did not substitute arbitrary geometry for folding. DeviceHub host controls not exposed by available interaction tools; interior and 90degree controlled validation remain pending.
+Raw app-only hierarchy excerpts retained to exclude unrelated SpringBoard applications. Screenshot of lifecycle retained unedited.

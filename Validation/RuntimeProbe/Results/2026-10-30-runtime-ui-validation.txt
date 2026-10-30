@@ -1,0 +1,737 @@
+2026-10-30 Runtime retry successful UI capture. Duo simulator 76DA5EC9-CCCB-4FB2-B5DA-65F276D2C284 iOS27.1. App PID61671. Synthetic mode OFF.
+Only RuntimeProbe hierarchy retained below; unrelated SpringBoard hierarchy omitted.
+MCP applicationState NotRun describes unbound session, not app state (UI and PID observed).
+
+
+CAPTURE Retry Runtime Probe-16_48_19_258-hierarchy.txt
+
+Application bundle identifier: org.foldcontextkit.RuntimeProbe
+Application UI orientation: Portrait
+Application, pid: 61671, label: 'RuntimeProbe'
+ Window, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+  Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+   Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+    Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+     Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+      Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+       Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+      ScrollView, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+       Other, {{0.0, 0.0}, {382.0, 3445.7}}, hitPoint: {191.0, 339.0}
+        StaticText, {{16.0, 16.0}, {216.7, 40.7}}, label: 'FoldContextKit', hitPoint: {124.3, 36.3}
+        StaticText, {{16.0, 80.7}, {162.7, 26.3}}, label: 'Diagnóstico local', hitPoint: {97.3, 93.8}
+        StaticText, {{16.0, 131.0}, {231.7, 14.3}}, label: 'Validación en hardware físico: pendiente.', hitPoint: {131.8, 138.2}
+        Switch, {{16.0, 169.3}, {350.0, 28.0}}, label: 'Ejemplo sintético', value: 0, hitPoint: {191.0, 183.3}
+         StaticText, {{16.0, 173.2}, {130.0, 20.3}}, label: 'Ejemplo sintético', hitPoint: {81.0, 183.3}
+         Switch, {{305.0, 169.3}, {63.0, 28.0}}, value: 0, hitPoint: {336.5, 183.3}
+        StaticText, {{16.0, 205.3}, {295.3, 42.3}}, label: 'SIMULADOR — datos del runtime, no evidencia física.', hitPoint: {163.7, 226.5}
+        StaticText, {{16.0, 271.7}, {183.3, 20.3}}, label: 'Control de entorno real', hitPoint: {107.7, 281.8}
+        StaticText, {{16.0, 300.0}, {350.0, 30.3}}, label: 'Esta lectura usa el runtime incluso si el ejemplo sintético está seleccionado.', hitPoint: {191.0, 315.2}
+        Button, {{16.0, 338.3}, {220.0, 20.3}}, label: 'Leer escalas de esta ventana', hitPoint: {126.0, 348.5}
+        StaticText, {{16.0, 366.7}, {108.0, 14.3}}, label: 'Sin lectura manual.', hitPoint: {70.0, 373.8}
+        Button, {{16.0, 389.0}, {252.7, 20.3}}, label: 'Abrir otra ventana de diagnóstico', hitPoint: {142.3, 399.2}
+        StaticText, {{16.0, 417.3}, {181.7, 14.3}}, label: 'Sistema admite varias ventanas.', hitPoint: {106.8, 424.5}
+        Other, {{16.0, 271.7}, {350.0, 160.0}}, hitPoint: {191.0, 351.7}
+        Switch, {{16.0, 455.7}, {350.0, 28.0}}, label: 'Montar observador', value: 1, hitPoint: {191.0, 469.7}
+         StaticText, {{16.0, 459.5}, {145.3, 20.3}}, label: 'Montar observador', hitPoint: {88.7, 469.7}
+         Switch, {{305.0, 455.7}, {63.0, 28.0}}, value: 1, hitPoint: {336.5, 469.7}
+        Switch, {{16.0, 507.7}, {350.0, 28.0}}, label: 'Habilitar observación', value: 1, hitPoint: {191.0, 521.7}
+         StaticText, {{16.0, 511.5}, {160.7, 20.3}}, label: 'Habilitar observación', hitPoint: {96.3, 521.7}
+         Switch, {{305.0, 507.7}, {63.0, 28.0}}, value: 1, hitPoint: {336.5, 521.7}
+        StaticText, {{16.0, 559.7}, {209.3, 20.3}}, label: 'Fase de esta escena: active', hitPoint: {120.7, 569.8}
+        StaticText, {{16.0, 604.0}, {209.7, 20.3}}, label: 'Disponibilidad y recepción', hitPoint: {120.8, 614.2}
+        StaticText, {{16.0, 632.3}, {287.0, 42.3}}, label: 'API UIHingeInteraction: disponible en este sistema.', hitPoint: {159.5, 653.5}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 6 pages', value: 0%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 62.0}, {3.0, 367.3}}, hitPoint: {461.5, 245.7}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 6 pages', value: 0%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 62.0}, {3.0, 367.3}}, hitPoint: {461.5, 245.7}
+
+
+CAPTURE Retry Runtime Probe-16_48_37_206-hierarchy.txt
+
+Application bundle identifier: org.foldcontextkit.RuntimeProbe
+Application UI orientation: Portrait
+Application, pid: 61671, label: 'RuntimeProbe'
+ Window, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+  Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+   Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+    Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+     Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+      Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+       Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+      ScrollView, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+       Other, {{0.0, -679.3}, {382.0, 3445.7}}, hitPoint: {191.0, 339.0}
+        StaticText, {{16.0, 3.3}, {307.3, 42.3}}, label: 'Observación habilitada. La recepción se muestra en Bisagra.', hitPoint: {169.7, 24.5}
+        StaticText, {{16.0, 53.7}, {328.3, 14.3}}, label: 'La disponibilidad de la API no demuestra capacidad física.', hitPoint: {180.2, 60.8}
+        StaticText, {{16.0, 92.0}, {205.7, 20.3}}, label: 'Snapshot de esta ventana', hitPoint: {118.8, 102.2}
+        StaticText, {{16.0, 124.3}, {312.0, 46.3}}, label: 'Escena: 21227874-6170-4B64-8D7B-A97EEEB8DEF3
+Ventana: 5FE4F590-5933-4177-BC91-3A3F4DBD3921
+Generación: 3', hitPoint: {172.0, 147.5}
+        StaticText, {{16.0, 182.7}, {335.7, 30.3}}, label: 'Identidades efímeras del observador, no identificadores de dispositivo.', hitPoint: {183.8, 197.8}
+        StaticText, {{32.0, 241.0}, {104.7, 20.3}}, label: 'Presentación', hitPoint: {84.3, 251.2}
+        StaticText, {{32.0, 267.3}, {207.3, 64.3}}, label: '466 × 678 puntos
+Fuente: uiWindowBounds · ámbito: ventana', hitPoint: {135.7, 299.5}
+        StaticText, {{32.0, 337.7}, {284.3, 14.3}}, label: 'Origen: simulator · vigencia: current · secuencia: 3', hitPoint: {174.2, 344.8}
+        StaticText, {{32.0, 358.0}, {311.3, 62.3}}, label: 'Ámbito de muestra: escena 21227874-6170-4B64-8D7B-A97EEEB8DEF3, ventana 5FE4F590-5933-4177-BC91-3A3F4DBD3921, generación 3', hitPoint: {187.7, 389.2}
+        StaticText, {{32.0, 426.3}, {243.0, 30.3}}, label: 'Vigencia contextual; no es una garantía de antigüedad temporal.', hitPoint: {153.5, 441.5}
+        StaticText, {{32.0, 500.7}, {63.7, 20.3}}, label: 'Pantalla', hitPoint: {63.8, 510.8}
+        StaticText, {{32.0, 527.0}, {313.7, 108.3}}, label: '1398 × 2034 píxeles nativos
+Fuente: UIScreen.nativeBounds · ámbito: pantalla asociada a esta escena
+Atribución: applicationDisplay. Ejes nativos, no ejes de ventana.', hitPoint: {188.8, 581.2}
+        StaticText, {{32.0, 641.3}, {284.3, 14.3}}, label: 'Origen: simulator · vigencia: current · secuencia: 3', hitPoint: {174.2, 648.5}
+        StaticText, {{32.0, 661.7}, {311.3, 62.3}}, label: 'Ámbito de muestra: escena 21227874-6170-4B64-8D7B-A97EEEB8DEF3, ventana 5FE4F590-5933-4177-BC91-3A3F4DBD3921, generación 3', hitPoint: {187.7, 669.8}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 6 pages', value: 24%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 170.0}, {3.0, 108.0}}, hitPoint: {461.5, 224.0}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 6 pages', value: 24%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 170.0}, {3.0, 108.0}}, hitPoint: {461.5, 224.0}
+
+
+CAPTURE Retry Runtime Probe-16_48_47_276-hierarchy.txt
+
+Application bundle identifier: org.foldcontextkit.RuntimeProbe
+Application UI orientation: Portrait
+Application, pid: 61671, label: 'RuntimeProbe'
+ Window, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+  Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+   Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+    Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+     Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+      Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+       Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+      ScrollView, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+       Other, {{0.0, -1222.7}, {382.0, 3445.7}}, hitPoint: {191.0, 339.0}
+        StaticText, {{32.0, -16.3}, {313.7, 108.3}}, label: '1398 × 2034 píxeles nativos
+Fuente: UIScreen.nativeBounds · ámbito: pantalla asociada a esta escena
+Atribución: applicationDisplay. Ejes nativos, no ejes de ventana.', hitPoint: {188.8, 46.0}
+        StaticText, {{32.0, 98.0}, {284.3, 14.3}}, label: 'Origen: simulator · vigencia: current · secuencia: 3', hitPoint: {174.2, 105.2}
+        StaticText, {{32.0, 118.3}, {311.3, 62.3}}, label: 'Ámbito de muestra: escena 21227874-6170-4B64-8D7B-A97EEEB8DEF3, ventana 5FE4F590-5933-4177-BC91-3A3F4DBD3921, generación 3', hitPoint: {187.7, 149.5}
+        StaticText, {{32.0, 186.7}, {243.0, 30.3}}, label: 'Vigencia contextual; no es una garantía de antigüedad temporal.', hitPoint: {153.5, 201.8}
+        StaticText, {{32.0, 261.0}, {178.0, 20.3}}, label: 'Geometría del sistema', hitPoint: {121.0, 271.2}
+        StaticText, {{32.0, 287.3}, {301.0, 130.3}}, label: 'Fuente: safeAreaLayoutGuide y UIView.reservedRegions · coordenadas de ventana en puntos
+Safe area: x=0.0, y=0.0, 382.0 × 644.0
+API de regiones disponible: true · divisiones: 0 · oclusiones: 0', hitPoint: {182.5, 352.5}
+        StaticText, {{32.0, 423.7}, {284.3, 14.3}}, label: 'Origen: simulator · vigencia: current · secuencia: 3', hitPoint: {174.2, 430.8}
+        StaticText, {{32.0, 444.0}, {311.3, 62.3}}, label: 'Ámbito de muestra: escena 21227874-6170-4B64-8D7B-A97EEEB8DEF3, ventana 5FE4F590-5933-4177-BC91-3A3F4DBD3921, generación 3', hitPoint: {187.7, 475.2}
+        StaticText, {{32.0, 512.3}, {243.0, 30.3}}, label: 'Vigencia contextual; no es una garantía de antigüedad temporal.', hitPoint: {153.5, 527.5}
+        StaticText, {{32.0, 586.7}, {149.0, 20.3}}, label: 'Captura de escena', hitPoint: {106.5, 596.8}
+        StaticText, {{32.0, 613.0}, {305.3, 108.3}}, label: 'Fuente: UITraitCollection.sceneCaptureState · estado: inactive. Activa puede significar grabación o reflejo; no identifica iPhone Mirroring.', hitPoint: {184.7, 645.5}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 6 pages', value: 44%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 256.7}, {3.0, 108.0}}, hitPoint: {461.5, 310.7}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 6 pages', value: 44%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 256.7}, {3.0, 108.0}}, hitPoint: {461.5, 310.7}
+
+
+CAPTURE Retry Runtime Probe-16_48_58_260-hierarchy.txt
+
+Application bundle identifier: org.foldcontextkit.RuntimeProbe
+Application UI orientation: Portrait
+Application, pid: 61671, label: 'RuntimeProbe'
+ Window, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+  Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+   Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+    Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+     Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+      Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+       Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+      ScrollView, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+       Other, {{0.0, -1777.0}, {382.0, 3445.7}}, hitPoint: {191.0, 339.0}
+        StaticText, {{32.0, 32.3}, {149.0, 20.3}}, label: 'Captura de escena', hitPoint: {106.5, 42.5}
+        StaticText, {{32.0, 58.7}, {305.3, 108.3}}, label: 'Fuente: UITraitCollection.sceneCaptureState · estado: inactive. Activa puede significar grabación o reflejo; no identifica iPhone Mirroring.', hitPoint: {184.7, 112.8}
+        StaticText, {{32.0, 173.0}, {284.3, 14.3}}, label: 'Origen: simulator · vigencia: current · secuencia: 3', hitPoint: {174.2, 180.2}
+        StaticText, {{32.0, 193.3}, {311.3, 62.3}}, label: 'Ámbito de muestra: escena 21227874-6170-4B64-8D7B-A97EEEB8DEF3, ventana 5FE4F590-5933-4177-BC91-3A3F4DBD3921, generación 3', hitPoint: {187.7, 224.5}
+        StaticText, {{32.0, 261.7}, {243.0, 30.3}}, label: 'Vigencia contextual; no es una garantía de antigüedad temporal.', hitPoint: {153.5, 276.8}
+        StaticText, {{32.0, 336.0}, {60.0, 20.3}}, label: 'Bisagra', hitPoint: {62.0, 346.2}
+        StaticText, {{32.0, 362.3}, {275.3, 86.3}}, label: 'Estado: closed
+Ángulo: 0 rad (radianes)
+Fuente: uiHingeInteraction · ámbito: jerarquía de esta ventana', hitPoint: {169.7, 405.5}
+        StaticText, {{32.0, 454.7}, {284.7, 14.3}}, label: 'Origen: simulator · vigencia: current · secuencia: 4', hitPoint: {174.3, 461.8}
+        StaticText, {{32.0, 475.0}, {311.3, 62.3}}, label: 'Ámbito de muestra: escena 21227874-6170-4B64-8D7B-A97EEEB8DEF3, ventana 5FE4F590-5933-4177-BC91-3A3F4DBD3921, generación 3', hitPoint: {187.7, 506.2}
+        StaticText, {{32.0, 543.3}, {243.0, 30.3}}, label: 'Vigencia contextual; no es una garantía de antigüedad temporal.', hitPoint: {153.5, 558.5}
+        StaticText, {{16.0, 613.7}, {181.3, 20.3}}, label: 'Clasificación explicada', hitPoint: {106.7, 623.8}
+        StaticText, {{16.0, 642.0}, {244.0, 42.3}}, label: 'Capacidad: bisagra observada · origen simulator.', hitPoint: {138.0, 660.0}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 6 pages', value: 63%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 345.0}, {3.0, 108.0}}, hitPoint: {461.5, 399.0}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 6 pages', value: 63%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 345.0}, {3.0, 108.0}}, hitPoint: {461.5, 399.0}
+
+
+CAPTURE Retry Runtime Probe-16_49_07_893-hierarchy.txt
+
+Application bundle identifier: org.foldcontextkit.RuntimeProbe
+Application UI orientation: Portrait
+Application, pid: 61671, label: 'RuntimeProbe'
+ Window, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+  Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+   Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+    Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+     Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+      Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+       Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+      ScrollView, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+       Other, {{0.0, -2322.3}, {382.0, 3445.7}}, hitPoint: {191.0, 339.0}
+        StaticText, {{32.0, -2.0}, {243.0, 30.3}}, label: 'Vigencia contextual; no es una garantía de antigüedad temporal.', hitPoint: {153.5, 14.2}
+        StaticText, {{16.0, 68.3}, {181.3, 20.3}}, label: 'Clasificación explicada', hitPoint: {106.7, 78.5}
+        StaticText, {{16.0, 96.7}, {244.0, 42.3}}, label: 'Capacidad: bisagra observada · origen simulator.', hitPoint: {138.0, 117.8}
+        StaticText, {{16.0, 147.0}, {313.3, 42.3}}, label: 'Modelo: duoInferred(origin: FoldContextKit.EvidenceOrigin.simulator)', hitPoint: {172.7, 168.2}
+        StaticText, {{16.0, 197.3}, {337.7, 42.3}}, label: 'Política: duo. Dimensiones compatibles más bisagra del mismo contexto.', hitPoint: {184.8, 218.5}
+        StaticText, {{16.0, 247.7}, {345.3, 284.3}}, label: 'Contexto de pantalla: observed(FoldContextKit.FoldDisplayContext.applicationDisplayUnresolved, metadata: FoldContextKit.EvidenceMetadata(context: FoldContextKit.ObservationContext(sceneID: "21227874-6170-4B64-8D7B-A97EEEB8DEF3", windowID: "5FE4F590-5933-4177-BC91-3A3F4DBD3921", generation: 3), sequence: 3, origin: FoldContextKit.EvidenceOrigin.simulator, validity: FoldContextKit.EvidenceValidity.current))', hitPoint: {188.7, 389.8}
+        StaticText, {{16.0, 540.0}, {126.7, 20.3}}, label: 'Pantalla: exterior', hitPoint: {79.3, 550.2}
+        StaticText, {{16.0, 568.3}, {166.3, 20.3}}, label: 'Presentación: exterior', hitPoint: {99.2, 578.5}
+        StaticText, {{16.0, 596.7}, {220.7, 20.3}}, label: 'Origen de regiones: safeArea', hitPoint: {126.3, 606.8}
+        StaticText, {{16.0, 625.0}, {304.3, 42.3}}, label: 'Regiones sin oclusiones observadas: 1 · recorte por límite: no', hitPoint: {168.2, 646.2}
+        StaticText, {{16.0, 675.3}, {344.7, 42.3}}, label: 'Regiones lógicas: 1. La distribución interior la elige la app.', hitPoint: {188.3, 676.7}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 6 pages', value: 83%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 431.7}, {3.0, 108.0}}, hitPoint: {461.5, 485.7}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 6 pages', value: 83%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 431.7}, {3.0, 108.0}}, hitPoint: {461.5, 485.7}
+
+
+CAPTURE Retry Runtime Probe-16_49_17_439-hierarchy.txt
+
+Application bundle identifier: org.foldcontextkit.RuntimeProbe
+Application UI orientation: Portrait
+Application, pid: 61671, label: 'RuntimeProbe'
+ Window, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+  Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+   Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+    Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+     Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+      Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+       Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+      ScrollView, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+       Other, {{0.0, -2801.7}, {382.0, 3445.7}}, hitPoint: {191.0, 322.0}
+        StaticText, {{16.0, -231.7}, {345.3, 284.3}}, label: 'Contexto de pantalla: observed(FoldContextKit.FoldDisplayContext.applicationDisplayUnresolved, metadata: FoldContextKit.EvidenceMetadata(context: FoldContextKit.ObservationContext(sceneID: "21227874-6170-4B64-8D7B-A97EEEB8DEF3", windowID: "5FE4F590-5933-4177-BC91-3A3F4DBD3921", generation: 3), sequence: 3, origin: FoldContextKit.EvidenceOrigin.simulator, validity: FoldContextKit.EvidenceValidity.current))', hitPoint: {188.7, 26.3}
+        StaticText, {{16.0, 60.7}, {126.7, 20.3}}, label: 'Pantalla: exterior', hitPoint: {79.3, 70.8}
+        StaticText, {{16.0, 89.0}, {166.3, 20.3}}, label: 'Presentación: exterior', hitPoint: {99.2, 99.2}
+        StaticText, {{16.0, 117.3}, {220.7, 20.3}}, label: 'Origen de regiones: safeArea', hitPoint: {126.3, 127.5}
+        StaticText, {{16.0, 145.7}, {304.3, 42.3}}, label: 'Regiones sin oclusiones observadas: 1 · recorte por límite: no', hitPoint: {168.2, 166.8}
+        StaticText, {{16.0, 196.0}, {344.7, 42.3}}, label: 'Regiones lógicas: 1. La distribución interior la elige la app.', hitPoint: {188.3, 217.2}
+        StaticText, {{16.0, 246.3}, {350.0, 30.3}}, label: 'La postura y el ángulo se muestran en Bisagra; no determinan por sí solos la distribución.', hitPoint: {191.0, 261.5}
+        StaticText, {{16.0, 284.7}, {347.3, 130.3}}, label: '• Evidencia aceptada: muestra de bisagra del contexto actual.
+• Pantalla de una escena de aplicación; identidad física y Mirroring no certificados.
+• Píxeles nativos compatibles con una pantalla de Duo.', hitPoint: {189.7, 349.8}
+        StaticText, {{16.0, 423.0}, {338.7, 46.3}}, label: 'Inferencia por evidencias, no identificación oficial. El origen simulador permanece indicado; la identidad física de una pantalla de aplicación no está certificada.', hitPoint: {185.3, 446.2}
+        StaticText, {{16.0, 493.3}, {350.0, 82.3}}, label: 'Duo se infiere combinando píxeles nativos compatibles y bisagra vigente. nil no demuestra ausencia física. Las transiciones dimensionales son complementarias.', hitPoint: {191.0, 534.5}
+        Button, {{16.0, 599.7}, {350.0, 28.3}}, label: 'Historial local: 5 entradas', hitPoint: {191.0, 613.8}
+         StaticText, {{16.0, 599.7}, {350.0, 28.3}}, label: 'Historial local: 5 entradas', hitPoint: {191.0, 613.8}
+         Image, {{358.3, 607.7}, {7.0, 12.0}}, identifier: 'collapsed', hitPoint: {361.8, 613.7}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 6 pages', value: 100%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 508.0}, {3.0, 108.0}}, hitPoint: {461.5, 562.0}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 6 pages', value: 100%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 508.0}, {3.0, 108.0}}, hitPoint: {461.5, 562.0}
+
+
+CAPTURE Retry Runtime Probe-16_49_25_301-hierarchy.txt
+
+Application bundle identifier: org.foldcontextkit.RuntimeProbe
+Application UI orientation: Portrait
+Application, pid: 61671, label: 'RuntimeProbe'
+ Window, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+  Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+   Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+    Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+     Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+      Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+       Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+      ScrollView, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+       Other, {{0.0, -2801.7}, {382.0, 3445.7}}, hitPoint: {191.0, 322.0}
+        StaticText, {{16.0, -231.7}, {345.3, 284.3}}, label: 'Contexto de pantalla: observed(FoldContextKit.FoldDisplayContext.applicationDisplayUnresolved, metadata: FoldContextKit.EvidenceMetadata(context: FoldContextKit.ObservationContext(sceneID: "21227874-6170-4B64-8D7B-A97EEEB8DEF3", windowID: "5FE4F590-5933-4177-BC91-3A3F4DBD3921", generation: 3), sequence: 3, origin: FoldContextKit.EvidenceOrigin.simulator, validity: FoldContextKit.EvidenceValidity.current))', hitPoint: {188.7, 26.3}
+        StaticText, {{16.0, 60.7}, {126.7, 20.3}}, label: 'Pantalla: exterior', hitPoint: {79.3, 70.8}
+        StaticText, {{16.0, 89.0}, {166.3, 20.3}}, label: 'Presentación: exterior', hitPoint: {99.2, 99.2}
+        StaticText, {{16.0, 117.3}, {220.7, 20.3}}, label: 'Origen de regiones: safeArea', hitPoint: {126.3, 127.5}
+        StaticText, {{16.0, 145.7}, {304.3, 42.3}}, label: 'Regiones sin oclusiones observadas: 1 · recorte por límite: no', hitPoint: {168.2, 166.8}
+        StaticText, {{16.0, 196.0}, {344.7, 42.3}}, label: 'Regiones lógicas: 1. La distribución interior la elige la app.', hitPoint: {188.3, 217.2}
+        StaticText, {{16.0, 246.3}, {350.0, 30.3}}, label: 'La postura y el ángulo se muestran en Bisagra; no determinan por sí solos la distribución.', hitPoint: {191.0, 261.5}
+        StaticText, {{16.0, 284.7}, {347.3, 130.3}}, label: '• Evidencia aceptada: muestra de bisagra del contexto actual.
+• Pantalla de una escena de aplicación; identidad física y Mirroring no certificados.
+• Píxeles nativos compatibles con una pantalla de Duo.', hitPoint: {189.7, 349.8}
+        StaticText, {{16.0, 423.0}, {338.7, 46.3}}, label: 'Inferencia por evidencias, no identificación oficial. El origen simulador permanece indicado; la identidad física de una pantalla de aplicación no está certificada.', hitPoint: {185.3, 446.2}
+        StaticText, {{16.0, 493.3}, {350.0, 82.3}}, label: 'Duo se infiere combinando píxeles nativos compatibles y bisagra vigente. nil no demuestra ausencia física. Las transiciones dimensionales son complementarias.', hitPoint: {191.0, 534.5}
+        Button, {{16.0, 599.7}, {350.0, 28.3}}, label: 'Historial local: 5 entradas', hitPoint: {191.0, 613.8}
+         StaticText, {{16.0, 599.7}, {350.0, 28.3}}, label: 'Historial local: 5 entradas', hitPoint: {191.0, 613.8}
+         Image, {{358.3, 607.7}, {7.0, 12.0}}, identifier: 'expanded', hitPoint: {361.8, 613.7}
+        StaticText, {{22.3, 628.0}, {337.3, 64.3}}, label: 'Histórico, no evidencia vigente. Máximo 32 entradas. Retiradas del historial: 0. Perdidas en entrega: 0.', hitPoint: {191.0, 653.0}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 6 pages', value: 100%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 508.0}, {3.0, 108.0}}, hitPoint: {461.5, 562.0}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 6 pages', value: 100%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 508.0}, {3.0, 108.0}}, hitPoint: {461.5, 562.0}
+
+
+CAPTURE Retry Runtime Probe-16_49_38_118-hierarchy.txt
+
+Application bundle identifier: org.foldcontextkit.RuntimeProbe
+Application UI orientation: Portrait
+Application, pid: 61671, label: 'RuntimeProbe'
+ Window, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+  Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+   Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+    Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+     Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+      Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+       Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+      ScrollView, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+       Other, {{0.0, -3237.7}, {382.0, 3881.7}}, hitPoint: {191.0, 322.0}
+        StaticText, {{16.0, -13.0}, {338.7, 46.3}}, label: 'Inferencia por evidencias, no identificación oficial. El origen simulador permanece indicado; la identidad física de una pantalla de aplicación no está certificada.', hitPoint: {185.3, 16.7}
+        StaticText, {{16.0, 57.3}, {350.0, 82.3}}, label: 'Duo se infiere combinando píxeles nativos compatibles y bisagra vigente. nil no demuestra ausencia física. Las transiciones dimensionales son complementarias.', hitPoint: {191.0, 98.5}
+        Button, {{16.0, 163.7}, {350.0, 28.3}}, label: 'Historial local: 5 entradas', hitPoint: {191.0, 177.8}
+         StaticText, {{16.0, 163.7}, {350.0, 28.3}}, label: 'Historial local: 5 entradas', hitPoint: {191.0, 177.8}
+         Image, {{354.8, 175.2}, {12.0, 7.0}}, identifier: 'expanded', hitPoint: {360.8, 178.7}
+        StaticText, {{22.3, 192.0}, {337.3, 64.3}}, label: 'Histórico, no evidencia vigente. Máximo 32 entradas. Retiradas del historial: 0. Perdidas en entrega: 0.', hitPoint: {191.0, 224.2}
+        StaticText, {{22.3, 268.3}, {314.3, 62.3}}, label: '#5 · hingeStatus · escena 21227874-6170-4B64-8D7B-A97EEEB8DEF3 · ventana 5FE4F590-5933-4177-BC91-3A3F4DBD3921 · generación 3
+Bisagra: closed, origen simulator, secuencia 4', hitPoint: {179.5, 299.5}
+        StaticText, {{22.3, 342.7}, {301.0, 78.3}}, label: '#4 · geometry · escena 21227874-6170-4B64-8D7B-A97EEEB8DEF3 · ventana 5FE4F590-5933-4177-BC91-3A3F4DBD3921 · generación 3
+Bisagra: Esperando primera muestra; no implica ausencia física.', hitPoint: {172.8, 381.8}
+        StaticText, {{22.3, 433.0}, {289.3, 78.3}}, label: '#3 · context · escena 21227874-6170-4B64-8D7B-A97EEEB8DEF3 · ventana 5FE4F590-5933-4177-BC91-3A3F4DBD3921 · generación 3
+Bisagra: Esperando primera muestra; no implica ausencia física.', hitPoint: {167.0, 472.2}
+        StaticText, {{22.3, 523.3}, {289.0, 78.3}}, label: '#2 · context · escena 21227874-6170-4B64-8D7B-A97EEEB8DEF3 · ventana 5FE4F590-5933-4177-BC91-3A3F4DBD3921 · generación 2
+Bisagra: Esperando primera muestra; no implica ausencia física.', hitPoint: {166.8, 562.5}
+        StaticText, {{22.3, 613.7}, {152.0, 14.3}}, label: '#1 · Fase de escena: active', hitPoint: {98.3, 620.8}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 7 pages', value: 100%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 520.0}, {3.0, 96.0}}, hitPoint: {461.5, 568.0}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 7 pages', value: 100%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 520.0}, {3.0, 96.0}}, hitPoint: {461.5, 568.0}
+
+
+CAPTURE Retry Runtime Probe-16_49_54_436-hierarchy.txt
+
+Application bundle identifier: org.foldcontextkit.RuntimeProbe
+Application UI orientation: Portrait
+Application, pid: 61671, label: 'RuntimeProbe'
+ Window, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+  Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+   Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+    Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+     Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+      Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+       Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+      ScrollView, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+       Other, {{0.0, 0.0}, {382.0, 3881.7}}, hitPoint: {191.0, 339.0}
+        StaticText, {{16.0, 16.0}, {216.7, 40.7}}, label: 'FoldContextKit', hitPoint: {124.3, 36.3}
+        StaticText, {{16.0, 80.7}, {162.7, 26.3}}, label: 'Diagnóstico local', hitPoint: {97.3, 93.8}
+        StaticText, {{16.0, 131.0}, {231.7, 14.3}}, label: 'Validación en hardware físico: pendiente.', hitPoint: {131.8, 138.2}
+        Switch, {{16.0, 169.3}, {350.0, 28.0}}, label: 'Ejemplo sintético', value: 0, hitPoint: {191.0, 183.3}
+         StaticText, {{16.0, 173.2}, {130.0, 20.3}}, label: 'Ejemplo sintético', hitPoint: {81.0, 183.3}
+         Switch, {{305.0, 169.3}, {63.0, 28.0}}, value: 0, hitPoint: {336.5, 183.3}
+        StaticText, {{16.0, 205.3}, {295.3, 42.3}}, label: 'SIMULADOR — datos del runtime, no evidencia física.', hitPoint: {163.7, 226.5}
+        StaticText, {{16.0, 271.7}, {183.3, 20.3}}, label: 'Control de entorno real', hitPoint: {107.7, 281.8}
+        StaticText, {{16.0, 300.0}, {350.0, 30.3}}, label: 'Esta lectura usa el runtime incluso si el ejemplo sintético está seleccionado.', hitPoint: {191.0, 315.2}
+        Button, {{16.0, 338.3}, {220.0, 20.3}}, label: 'Leer escalas de esta ventana', hitPoint: {126.0, 348.5}
+        StaticText, {{16.0, 366.7}, {108.0, 14.3}}, label: 'Sin lectura manual.', hitPoint: {70.0, 373.8}
+        Button, {{16.0, 389.0}, {252.7, 20.3}}, label: 'Abrir otra ventana de diagnóstico', hitPoint: {142.3, 399.2}
+        StaticText, {{16.0, 417.3}, {181.7, 14.3}}, label: 'Sistema admite varias ventanas.', hitPoint: {106.8, 424.5}
+        Other, {{16.0, 271.7}, {350.0, 160.0}}, hitPoint: {191.0, 351.7}
+        Switch, {{16.0, 455.7}, {350.0, 28.0}}, label: 'Montar observador', value: 1, hitPoint: {191.0, 469.7}
+         StaticText, {{16.0, 459.5}, {145.3, 20.3}}, label: 'Montar observador', hitPoint: {88.7, 469.7}
+         Switch, {{305.0, 455.7}, {63.0, 28.0}}, value: 1, hitPoint: {336.5, 469.7}
+        Switch, {{16.0, 507.7}, {350.0, 28.0}}, label: 'Habilitar observación', value: 1, hitPoint: {191.0, 521.7}
+         StaticText, {{16.0, 511.5}, {160.7, 20.3}}, label: 'Habilitar observación', hitPoint: {96.3, 521.7}
+         Switch, {{305.0, 507.7}, {63.0, 28.0}}, value: 1, hitPoint: {336.5, 521.7}
+        StaticText, {{16.0, 559.7}, {209.3, 20.3}}, label: 'Fase de esta escena: active', hitPoint: {120.7, 569.8}
+        StaticText, {{16.0, 604.0}, {209.7, 20.3}}, label: 'Disponibilidad y recepción', hitPoint: {120.8, 614.2}
+        StaticText, {{16.0, 632.3}, {287.0, 42.3}}, label: 'API UIHingeInteraction: disponible en este sistema.', hitPoint: {159.5, 653.5}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 7 pages', value: 0%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 62.0}, {3.0, 96.0}}, hitPoint: {461.5, 110.0}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 7 pages', value: 0%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 62.0}, {3.0, 96.0}}, hitPoint: {461.5, 110.0}
+
+
+CAPTURE Retry Runtime Probe-16_50_03_518-hierarchy.txt
+
+Application bundle identifier: org.foldcontextkit.RuntimeProbe
+Application UI orientation: Portrait
+Application, pid: 61671, label: 'RuntimeProbe'
+ Window, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+  Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+   Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+    Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+     Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+      Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+       Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+      ScrollView, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+       Other, {{0.0, 0.0}, {382.0, 2923.0}}, hitPoint: {191.0, 339.0}
+        StaticText, {{16.0, 16.0}, {216.7, 40.7}}, label: 'FoldContextKit', hitPoint: {124.3, 36.3}
+        StaticText, {{16.0, 80.7}, {162.7, 26.3}}, label: 'Diagnóstico local', hitPoint: {97.3, 93.8}
+        StaticText, {{16.0, 131.0}, {231.7, 14.3}}, label: 'Validación en hardware físico: pendiente.', hitPoint: {131.8, 138.2}
+        Switch, {{16.0, 169.3}, {350.0, 28.0}}, label: 'Ejemplo sintético', value: 0, hitPoint: {191.0, 183.3}
+         StaticText, {{16.0, 173.2}, {130.0, 20.3}}, label: 'Ejemplo sintético', hitPoint: {81.0, 183.3}
+         Switch, {{305.0, 169.3}, {63.0, 28.0}}, value: 0, hitPoint: {336.5, 183.3}
+        StaticText, {{16.0, 205.3}, {295.3, 42.3}}, label: 'SIMULADOR — datos del runtime, no evidencia física.', hitPoint: {163.7, 226.5}
+        StaticText, {{16.0, 271.7}, {183.3, 20.3}}, label: 'Control de entorno real', hitPoint: {107.7, 281.8}
+        StaticText, {{16.0, 300.0}, {350.0, 30.3}}, label: 'Esta lectura usa el runtime incluso si el ejemplo sintético está seleccionado.', hitPoint: {191.0, 315.2}
+        Button, {{16.0, 338.3}, {220.0, 20.3}}, label: 'Leer escalas de esta ventana', hitPoint: {126.0, 348.5}
+        StaticText, {{16.0, 366.7}, {108.0, 14.3}}, label: 'Sin lectura manual.', hitPoint: {70.0, 373.8}
+        Button, {{16.0, 389.0}, {252.7, 20.3}}, label: 'Abrir otra ventana de diagnóstico', hitPoint: {142.3, 399.2}
+        StaticText, {{16.0, 417.3}, {181.7, 14.3}}, label: 'Sistema admite varias ventanas.', hitPoint: {106.8, 424.5}
+        Other, {{16.0, 271.7}, {350.0, 160.0}}, hitPoint: {191.0, 351.7}
+        Switch, {{16.0, 455.7}, {350.0, 28.0}}, label: 'Montar observador', value: 1, hitPoint: {191.0, 469.7}
+         StaticText, {{16.0, 459.5}, {145.3, 20.3}}, label: 'Montar observador', hitPoint: {88.7, 469.7}
+         Switch, {{305.0, 455.7}, {63.0, 28.0}}, value: 1, hitPoint: {336.5, 469.7}
+        Switch, {{16.0, 507.7}, {350.0, 28.0}}, label: 'Habilitar observación', value: 0, hitPoint: {191.0, 521.7}
+         StaticText, {{16.0, 511.5}, {160.7, 20.3}}, label: 'Habilitar observación', hitPoint: {96.3, 521.7}
+         Switch, {{305.0, 507.7}, {63.0, 28.0}}, value: 0, hitPoint: {336.5, 521.7}
+        StaticText, {{16.0, 559.7}, {209.3, 20.3}}, label: 'Fase de esta escena: active', hitPoint: {120.7, 569.8}
+        StaticText, {{16.0, 604.0}, {209.7, 20.3}}, label: 'Disponibilidad y recepción', hitPoint: {120.8, 614.2}
+        StaticText, {{16.0, 632.3}, {287.0, 42.3}}, label: 'API UIHingeInteraction: disponible en este sistema.', hitPoint: {159.5, 653.5}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 5 pages', value: 0%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 62.0}, {3.0, 96.0}}, hitPoint: {461.5, 110.0}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 5 pages', value: 0%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 62.0}, {3.0, 96.0}}, hitPoint: {461.5, 110.0}
+
+
+CAPTURE Retry Runtime Probe-16_50_11_270-hierarchy.txt
+
+Application bundle identifier: org.foldcontextkit.RuntimeProbe
+Application UI orientation: Portrait
+Application, pid: 61671, label: 'RuntimeProbe'
+ Window, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+  Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+   Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+    Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+     Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+      Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+       Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+      ScrollView, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+       Other, {{0.0, -554.3}, {382.0, 2923.0}}, hitPoint: {191.0, 339.0}
+        StaticText, {{16.0, 5.3}, {209.3, 20.3}}, label: 'Fase de esta escena: active', hitPoint: {120.7, 15.5}
+        StaticText, {{16.0, 49.7}, {209.7, 20.3}}, label: 'Disponibilidad y recepción', hitPoint: {120.8, 59.8}
+        StaticText, {{16.0, 78.0}, {287.0, 42.3}}, label: 'API UIHingeInteraction: disponible en este sistema.', hitPoint: {159.5, 99.2}
+        StaticText, {{16.0, 128.3}, {206.3, 20.3}}, label: 'Observación deshabilitada.', hitPoint: {119.2, 138.5}
+        StaticText, {{16.0, 156.7}, {328.3, 14.3}}, label: 'La disponibilidad de la API no demuestra capacidad física.', hitPoint: {180.2, 163.8}
+        StaticText, {{16.0, 195.0}, {205.7, 20.3}}, label: 'Snapshot de esta ventana', hitPoint: {118.8, 205.2}
+        StaticText, {{16.0, 227.3}, {312.0, 46.3}}, label: 'Escena: 21227874-6170-4B64-8D7B-A97EEEB8DEF3
+Ventana: 5FE4F590-5933-4177-BC91-3A3F4DBD3921
+Generación: 3', hitPoint: {172.0, 250.5}
+        StaticText, {{16.0, 285.7}, {335.7, 30.3}}, label: 'Identidades efímeras del observador, no identificadores de dispositivo.', hitPoint: {183.8, 300.8}
+        StaticText, {{32.0, 344.0}, {104.7, 20.3}}, label: 'Presentación', hitPoint: {84.3, 354.2}
+        StaticText, {{32.0, 370.3}, {244.3, 42.3}}, label: 'Observación suspendida; datos no vigentes.', hitPoint: {154.2, 391.5}
+        StaticText, {{32.0, 418.7}, {285.0, 30.3}}, label: 'Sin muestra: fuente efectiva, unidad y vigencia no disponibles.', hitPoint: {174.5, 433.8}
+        StaticText, {{32.0, 493.0}, {63.7, 20.3}}, label: 'Pantalla', hitPoint: {63.8, 503.2}
+        StaticText, {{32.0, 519.3}, {244.3, 42.3}}, label: 'Observación suspendida; datos no vigentes.', hitPoint: {154.2, 540.5}
+        StaticText, {{32.0, 567.7}, {285.0, 30.3}}, label: 'Sin muestra: fuente efectiva, unidad y vigencia no disponibles.', hitPoint: {174.5, 582.8}
+        StaticText, {{32.0, 642.0}, {178.0, 20.3}}, label: 'Geometría del sistema', hitPoint: {121.0, 652.2}
+        StaticText, {{32.0, 668.3}, {244.3, 42.3}}, label: 'Observación suspendida; datos no vigentes.', hitPoint: {154.2, 673.2}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 5 pages', value: 24%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 166.0}, {3.0, 127.0}}, hitPoint: {461.5, 229.5}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 5 pages', value: 24%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 166.0}, {3.0, 127.0}}, hitPoint: {461.5, 229.5}
+
+
+CAPTURE Retry Runtime Probe-16_50_22_241-hierarchy.txt
+
+Application bundle identifier: org.foldcontextkit.RuntimeProbe
+Application UI orientation: Portrait
+Application, pid: 61671, label: 'RuntimeProbe'
+ Window, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+  Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+   Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+    Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+     Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+      Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+       Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+      ScrollView, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+       Other, {{0.0, 0.0}, {382.0, 2923.0}}, hitPoint: {191.0, 339.0}
+        StaticText, {{16.0, 16.0}, {216.7, 40.7}}, label: 'FoldContextKit', hitPoint: {124.3, 36.3}
+        StaticText, {{16.0, 80.7}, {162.7, 26.3}}, label: 'Diagnóstico local', hitPoint: {97.3, 93.8}
+        StaticText, {{16.0, 131.0}, {231.7, 14.3}}, label: 'Validación en hardware físico: pendiente.', hitPoint: {131.8, 138.2}
+        Switch, {{16.0, 169.3}, {350.0, 28.0}}, label: 'Ejemplo sintético', value: 0, hitPoint: {191.0, 183.3}
+         StaticText, {{16.0, 173.2}, {130.0, 20.3}}, label: 'Ejemplo sintético', hitPoint: {81.0, 183.3}
+         Switch, {{305.0, 169.3}, {63.0, 28.0}}, value: 0, hitPoint: {336.5, 183.3}
+        StaticText, {{16.0, 205.3}, {295.3, 42.3}}, label: 'SIMULADOR — datos del runtime, no evidencia física.', hitPoint: {163.7, 226.5}
+        StaticText, {{16.0, 271.7}, {183.3, 20.3}}, label: 'Control de entorno real', hitPoint: {107.7, 281.8}
+        StaticText, {{16.0, 300.0}, {350.0, 30.3}}, label: 'Esta lectura usa el runtime incluso si el ejemplo sintético está seleccionado.', hitPoint: {191.0, 315.2}
+        Button, {{16.0, 338.3}, {220.0, 20.3}}, label: 'Leer escalas de esta ventana', hitPoint: {126.0, 348.5}
+        StaticText, {{16.0, 366.7}, {108.0, 14.3}}, label: 'Sin lectura manual.', hitPoint: {70.0, 373.8}
+        Button, {{16.0, 389.0}, {252.7, 20.3}}, label: 'Abrir otra ventana de diagnóstico', hitPoint: {142.3, 399.2}
+        StaticText, {{16.0, 417.3}, {181.7, 14.3}}, label: 'Sistema admite varias ventanas.', hitPoint: {106.8, 424.5}
+        Other, {{16.0, 271.7}, {350.0, 160.0}}, hitPoint: {191.0, 351.7}
+        Switch, {{16.0, 455.7}, {350.0, 28.0}}, label: 'Montar observador', value: 1, hitPoint: {191.0, 469.7}
+         StaticText, {{16.0, 459.5}, {145.3, 20.3}}, label: 'Montar observador', hitPoint: {88.7, 469.7}
+         Switch, {{305.0, 455.7}, {63.0, 28.0}}, value: 1, hitPoint: {336.5, 469.7}
+        Switch, {{16.0, 507.7}, {350.0, 28.0}}, label: 'Habilitar observación', value: 0, hitPoint: {191.0, 521.7}
+         StaticText, {{16.0, 511.5}, {160.7, 20.3}}, label: 'Habilitar observación', hitPoint: {96.3, 521.7}
+         Switch, {{305.0, 507.7}, {63.0, 28.0}}, value: 0, hitPoint: {336.5, 521.7}
+        StaticText, {{16.0, 559.7}, {209.3, 20.3}}, label: 'Fase de esta escena: active', hitPoint: {120.7, 569.8}
+        StaticText, {{16.0, 604.0}, {209.7, 20.3}}, label: 'Disponibilidad y recepción', hitPoint: {120.8, 614.2}
+        StaticText, {{16.0, 632.3}, {287.0, 42.3}}, label: 'API UIHingeInteraction: disponible en este sistema.', hitPoint: {159.5, 653.5}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 5 pages', value: 0%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 62.0}, {3.0, 127.0}}, hitPoint: {461.5, 125.5}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 5 pages', value: 0%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 62.0}, {3.0, 127.0}}, hitPoint: {461.5, 125.5}
+
+
+CAPTURE Retry Runtime Probe-16_50_27_593-hierarchy.txt
+
+Application bundle identifier: org.foldcontextkit.RuntimeProbe
+Application UI orientation: Portrait
+Application, pid: 61671, label: 'RuntimeProbe'
+ Window, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+  Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+   Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+    Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+     Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+      Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+       Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+      ScrollView, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+       Other, {{0.0, 0.0}, {382.0, 4173.3}}, hitPoint: {191.0, 339.0}
+        StaticText, {{16.0, 16.0}, {216.7, 40.7}}, label: 'FoldContextKit', hitPoint: {124.3, 36.3}
+        StaticText, {{16.0, 80.7}, {162.7, 26.3}}, label: 'Diagnóstico local', hitPoint: {97.3, 93.8}
+        StaticText, {{16.0, 131.0}, {231.7, 14.3}}, label: 'Validación en hardware físico: pendiente.', hitPoint: {131.8, 138.2}
+        Switch, {{16.0, 169.3}, {350.0, 28.0}}, label: 'Ejemplo sintético', value: 0, hitPoint: {191.0, 183.3}
+         StaticText, {{16.0, 173.2}, {130.0, 20.3}}, label: 'Ejemplo sintético', hitPoint: {81.0, 183.3}
+         Switch, {{305.0, 169.3}, {63.0, 28.0}}, value: 0, hitPoint: {336.5, 183.3}
+        StaticText, {{16.0, 205.3}, {295.3, 42.3}}, label: 'SIMULADOR — datos del runtime, no evidencia física.', hitPoint: {163.7, 226.5}
+        StaticText, {{16.0, 271.7}, {183.3, 20.3}}, label: 'Control de entorno real', hitPoint: {107.7, 281.8}
+        StaticText, {{16.0, 300.0}, {350.0, 30.3}}, label: 'Esta lectura usa el runtime incluso si el ejemplo sintético está seleccionado.', hitPoint: {191.0, 315.2}
+        Button, {{16.0, 338.3}, {220.0, 20.3}}, label: 'Leer escalas de esta ventana', hitPoint: {126.0, 348.5}
+        StaticText, {{16.0, 366.7}, {108.0, 14.3}}, label: 'Sin lectura manual.', hitPoint: {70.0, 373.8}
+        Button, {{16.0, 389.0}, {252.7, 20.3}}, label: 'Abrir otra ventana de diagnóstico', hitPoint: {142.3, 399.2}
+        StaticText, {{16.0, 417.3}, {181.7, 14.3}}, label: 'Sistema admite varias ventanas.', hitPoint: {106.8, 424.5}
+        Other, {{16.0, 271.7}, {350.0, 160.0}}, hitPoint: {191.0, 351.7}
+        Switch, {{16.0, 455.7}, {350.0, 28.0}}, label: 'Montar observador', value: 1, hitPoint: {191.0, 469.7}
+         StaticText, {{16.0, 459.5}, {145.3, 20.3}}, label: 'Montar observador', hitPoint: {88.7, 469.7}
+         Switch, {{305.0, 455.7}, {63.0, 28.0}}, value: 1, hitPoint: {336.5, 469.7}
+        Switch, {{16.0, 507.7}, {350.0, 28.0}}, label: 'Habilitar observación', value: 1, hitPoint: {191.0, 521.7}
+         StaticText, {{16.0, 511.5}, {160.7, 20.3}}, label: 'Habilitar observación', hitPoint: {96.3, 521.7}
+         Switch, {{305.0, 507.7}, {63.0, 28.0}}, value: 1, hitPoint: {336.5, 521.7}
+        StaticText, {{16.0, 559.7}, {209.3, 20.3}}, label: 'Fase de esta escena: active', hitPoint: {120.7, 569.8}
+        StaticText, {{16.0, 604.0}, {209.7, 20.3}}, label: 'Disponibilidad y recepción', hitPoint: {120.8, 614.2}
+        StaticText, {{16.0, 632.3}, {287.0, 42.3}}, label: 'API UIHingeInteraction: disponible en este sistema.', hitPoint: {159.5, 653.5}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 7 pages', value: 0%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 62.0}, {3.0, 127.0}}, hitPoint: {461.5, 125.5}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 7 pages', value: 0%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 62.0}, {3.0, 127.0}}, hitPoint: {461.5, 125.5}
+
+
+CAPTURE Retry Runtime Probe-16_50_33_093-hierarchy.txt
+
+Application bundle identifier: org.foldcontextkit.RuntimeProbe
+Application UI orientation: Portrait
+Application, pid: 61671, label: 'RuntimeProbe'
+ Window, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+  Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+   Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+    Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+     Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+      ScrollView, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+       Other, {{0.0, 0.0}, {382.0, 1720.3}}, hitPoint: {191.0, 339.0}
+        StaticText, {{16.0, 16.0}, {216.7, 40.7}}, label: 'FoldContextKit', hitPoint: {124.3, 36.3}
+        StaticText, {{16.0, 80.7}, {162.7, 26.3}}, label: 'Diagnóstico local', hitPoint: {97.3, 93.8}
+        StaticText, {{16.0, 131.0}, {231.7, 14.3}}, label: 'Validación en hardware físico: pendiente.', hitPoint: {131.8, 138.2}
+        Switch, {{16.0, 169.3}, {350.0, 28.0}}, label: 'Ejemplo sintético', value: 0, hitPoint: {191.0, 183.3}
+         StaticText, {{16.0, 173.2}, {130.0, 20.3}}, label: 'Ejemplo sintético', hitPoint: {81.0, 183.3}
+         Switch, {{305.0, 169.3}, {63.0, 28.0}}, value: 0, hitPoint: {336.5, 183.3}
+        StaticText, {{16.0, 205.3}, {295.3, 42.3}}, label: 'SIMULADOR — datos del runtime, no evidencia física.', hitPoint: {163.7, 226.5}
+        StaticText, {{16.0, 271.7}, {183.3, 20.3}}, label: 'Control de entorno real', hitPoint: {107.7, 281.8}
+        StaticText, {{16.0, 300.0}, {350.0, 30.3}}, label: 'Esta lectura usa el runtime incluso si el ejemplo sintético está seleccionado.', hitPoint: {191.0, 315.2}
+        Button, {{16.0, 338.3}, {220.0, 20.3}}, label: 'Leer escalas de esta ventana', hitPoint: {126.0, 348.5}
+        StaticText, {{16.0, 366.7}, {108.0, 14.3}}, label: 'Sin lectura manual.', hitPoint: {70.0, 373.8}
+        Button, {{16.0, 389.0}, {252.7, 20.3}}, label: 'Abrir otra ventana de diagnóstico', hitPoint: {142.3, 399.2}
+        StaticText, {{16.0, 417.3}, {181.7, 14.3}}, label: 'Sistema admite varias ventanas.', hitPoint: {106.8, 424.5}
+        Other, {{16.0, 271.7}, {350.0, 160.0}}, hitPoint: {191.0, 351.7}
+        Switch, {{16.0, 455.7}, {350.0, 28.0}}, label: 'Montar observador', value: 0, hitPoint: {191.0, 469.7}
+         StaticText, {{16.0, 459.5}, {145.3, 20.3}}, label: 'Montar observador', hitPoint: {88.7, 469.7}
+         Switch, {{305.0, 455.7}, {63.0, 28.0}}, value: 0, hitPoint: {336.5, 469.7}
+        Switch, {{16.0, 507.7}, {350.0, 28.0}}, label: 'Habilitar observación', value: 1, hitPoint: {191.0, 521.7}
+         StaticText, {{16.0, 511.5}, {160.7, 20.3}}, label: 'Habilitar observación', hitPoint: {96.3, 521.7}
+         Switch, {{305.0, 507.7}, {63.0, 28.0}}, value: 1, hitPoint: {336.5, 521.7}
+        StaticText, {{16.0, 559.7}, {209.3, 20.3}}, label: 'Fase de esta escena: active', hitPoint: {120.7, 569.8}
+        StaticText, {{16.0, 604.0}, {209.7, 20.3}}, label: 'Disponibilidad y recepción', hitPoint: {120.8, 614.2}
+        StaticText, {{16.0, 632.3}, {287.0, 42.3}}, label: 'API UIHingeInteraction: disponible en este sistema.', hitPoint: {159.5, 653.5}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 3 pages', value: 0%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 62.0}, {3.0, 127.0}}, hitPoint: {461.5, 125.5}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 3 pages', value: 0%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 62.0}, {3.0, 127.0}}, hitPoint: {461.5, 125.5}
+
+
+CAPTURE Retry Runtime Probe-16_50_40_793-hierarchy.txt
+
+Application bundle identifier: org.foldcontextkit.RuntimeProbe
+Application UI orientation: Portrait
+Application, pid: 61671, label: 'RuntimeProbe'
+ Window, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+  Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+   Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+    Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+     Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+      Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+       Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+      ScrollView, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+       Other, {{0.0, 0.0}, {382.0, 4613.3}}, hitPoint: {191.0, 339.0}
+        StaticText, {{16.0, 16.0}, {216.7, 40.7}}, label: 'FoldContextKit', hitPoint: {124.3, 36.3}
+        StaticText, {{16.0, 80.7}, {162.7, 26.3}}, label: 'Diagnóstico local', hitPoint: {97.3, 93.8}
+        StaticText, {{16.0, 131.0}, {231.7, 14.3}}, label: 'Validación en hardware físico: pendiente.', hitPoint: {131.8, 138.2}
+        Switch, {{16.0, 169.3}, {350.0, 28.0}}, label: 'Ejemplo sintético', value: 0, hitPoint: {191.0, 183.3}
+         StaticText, {{16.0, 173.2}, {130.0, 20.3}}, label: 'Ejemplo sintético', hitPoint: {81.0, 183.3}
+         Switch, {{305.0, 169.3}, {63.0, 28.0}}, value: 0, hitPoint: {336.5, 183.3}
+        StaticText, {{16.0, 205.3}, {295.3, 42.3}}, label: 'SIMULADOR — datos del runtime, no evidencia física.', hitPoint: {163.7, 226.5}
+        StaticText, {{16.0, 271.7}, {183.3, 20.3}}, label: 'Control de entorno real', hitPoint: {107.7, 281.8}
+        StaticText, {{16.0, 300.0}, {350.0, 30.3}}, label: 'Esta lectura usa el runtime incluso si el ejemplo sintético está seleccionado.', hitPoint: {191.0, 315.2}
+        Button, {{16.0, 338.3}, {220.0, 20.3}}, label: 'Leer escalas de esta ventana', hitPoint: {126.0, 348.5}
+        StaticText, {{16.0, 366.7}, {108.0, 14.3}}, label: 'Sin lectura manual.', hitPoint: {70.0, 373.8}
+        Button, {{16.0, 389.0}, {252.7, 20.3}}, label: 'Abrir otra ventana de diagnóstico', hitPoint: {142.3, 399.2}
+        StaticText, {{16.0, 417.3}, {181.7, 14.3}}, label: 'Sistema admite varias ventanas.', hitPoint: {106.8, 424.5}
+        Other, {{16.0, 271.7}, {350.0, 160.0}}, hitPoint: {191.0, 351.7}
+        Switch, {{16.0, 455.7}, {350.0, 28.0}}, label: 'Montar observador', value: 1, hitPoint: {191.0, 469.7}
+         StaticText, {{16.0, 459.5}, {145.3, 20.3}}, label: 'Montar observador', hitPoint: {88.7, 469.7}
+         Switch, {{305.0, 455.7}, {63.0, 28.0}}, value: 1, hitPoint: {336.5, 469.7}
+        Switch, {{16.0, 507.7}, {350.0, 28.0}}, label: 'Habilitar observación', value: 1, hitPoint: {191.0, 521.7}
+         StaticText, {{16.0, 511.5}, {160.7, 20.3}}, label: 'Habilitar observación', hitPoint: {96.3, 521.7}
+         Switch, {{305.0, 507.7}, {63.0, 28.0}}, value: 1, hitPoint: {336.5, 521.7}
+        StaticText, {{16.0, 559.7}, {209.3, 20.3}}, label: 'Fase de esta escena: active', hitPoint: {120.7, 569.8}
+        StaticText, {{16.0, 604.0}, {209.7, 20.3}}, label: 'Disponibilidad y recepción', hitPoint: {120.8, 614.2}
+        StaticText, {{16.0, 632.3}, {287.0, 42.3}}, label: 'API UIHingeInteraction: disponible en este sistema.', hitPoint: {159.5, 653.5}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 8 pages', value: 0%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 62.0}, {3.0, 127.0}}, hitPoint: {461.5, 125.5}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 8 pages', value: 0%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 62.0}, {3.0, 127.0}}, hitPoint: {461.5, 125.5}
+
+
+CAPTURE Retry Runtime Probe-16_50_49_784-hierarchy.txt
+
+Application bundle identifier: org.foldcontextkit.RuntimeProbe
+Application UI orientation: Portrait
+Application, pid: 61671, label: 'RuntimeProbe'
+ Window, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+  Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+   Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+    Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+     Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+      Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+       Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+      ScrollView, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+       Other, {{0.0, -3969.3}, {382.0, 4613.3}}, hitPoint: {191.0, 322.0}
+        StaticText, {{19.3, -23.3}, {320.0, 62.3}}, label: '#10 · hingeStatus · escena 21227874-6170-4B64-8D7B-A97EEEB8DEF3 · ventana 5FE4F590-5933-4177-BC91-3A3F4DBD3921 · generación 3
+Bisagra: closed, origen simulator, secuencia 6', hitPoint: {179.3, 19.5}
+        StaticText, {{19.3, 51.0}, {301.0, 78.3}}, label: '#9 · geometry · escena 21227874-6170-4B64-8D7B-A97EEEB8DEF3 · ventana 5FE4F590-5933-4177-BC91-3A3F4DBD3921 · generación 3
+Bisagra: Esperando primera muestra; no implica ausencia física.', hitPoint: {169.8, 90.2}
+        StaticText, {{19.3, 141.3}, {155.0, 14.3}}, label: '#8 · Reactivación solicitada', hitPoint: {96.8, 148.5}
+        StaticText, {{19.3, 167.7}, {300.0, 62.3}}, label: '#7 · lifecycle · escena 21227874-6170-4B64-8D7B-A97EEEB8DEF3 · ventana 5FE4F590-5933-4177-BC91-3A3F4DBD3921 · generación 3
+Bisagra: Observación suspendida; datos no vigentes.', hitPoint: {169.3, 198.8}
+        StaticText, {{19.3, 242.0}, {148.7, 14.3}}, label: '#6 · Suspensión solicitada', hitPoint: {93.7, 249.2}
+        StaticText, {{19.3, 268.3}, {314.3, 62.3}}, label: '#5 · hingeStatus · escena 21227874-6170-4B64-8D7B-A97EEEB8DEF3 · ventana 5FE4F590-5933-4177-BC91-3A3F4DBD3921 · generación 3
+Bisagra: closed, origen simulator, secuencia 4', hitPoint: {176.5, 299.5}
+        StaticText, {{19.3, 342.7}, {301.0, 78.3}}, label: '#4 · geometry · escena 21227874-6170-4B64-8D7B-A97EEEB8DEF3 · ventana 5FE4F590-5933-4177-BC91-3A3F4DBD3921 · generación 3
+Bisagra: Esperando primera muestra; no implica ausencia física.', hitPoint: {169.8, 381.8}
+        StaticText, {{19.3, 433.0}, {289.3, 78.3}}, label: '#3 · context · escena 21227874-6170-4B64-8D7B-A97EEEB8DEF3 · ventana 5FE4F590-5933-4177-BC91-3A3F4DBD3921 · generación 3
+Bisagra: Esperando primera muestra; no implica ausencia física.', hitPoint: {164.0, 472.2}
+        StaticText, {{19.3, 523.3}, {289.0, 78.3}}, label: '#2 · context · escena 21227874-6170-4B64-8D7B-A97EEEB8DEF3 · ventana 5FE4F590-5933-4177-BC91-3A3F4DBD3921 · generación 2
+Bisagra: Esperando primera muestra; no implica ausencia física.', hitPoint: {163.8, 562.5}
+        StaticText, {{19.3, 613.7}, {152.0, 14.3}}, label: '#1 · Fase de escena: active', hitPoint: {95.3, 620.8}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 8 pages', value: 100%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 535.3}, {3.0, 80.7}}, hitPoint: {461.5, 575.7}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 8 pages', value: 100%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 535.3}, {3.0, 80.7}}, hitPoint: {461.5, 575.7}
+
+
+CAPTURE Retry Runtime Probe-16_51_03_375-hierarchy.txt
+
+Application bundle identifier: org.foldcontextkit.RuntimeProbe
+Application UI orientation: Portrait
+Application, pid: 61671, label: 'RuntimeProbe'
+ Window, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+  Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+   Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+    Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+     Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+      Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+       Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+      ScrollView, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+       Other, {{0.0, -3480.0}, {382.0, 4613.3}}, hitPoint: {191.0, 339.0}
+        StaticText, {{19.3, 4.0}, {343.3, 78.3}}, label: '#16 · hingeStatus · escena C086004B-DCD5-41A5-8690-F19CAE8A59B8 · ventana 286CCEB1-542B-48CF-94B8-6580C9874B6A · generación 3
+Bisagra: closed, origen simulator, secuencia 4', hitPoint: {191.0, 43.2}
+        StaticText, {{19.3, 94.3}, {343.3, 94.3}}, label: '#15 · geometry · escena C086004B-DCD5-41A5-8690-F19CAE8A59B8 · ventana 286CCEB1-542B-48CF-94B8-6580C9874B6A · generación 3
+Bisagra: Esperando primera muestra; no implica ausencia física.', hitPoint: {191.0, 141.5}
+        StaticText, {{19.3, 200.7}, {343.3, 94.3}}, label: '#14 · context · escena C086004B-DCD5-41A5-8690-F19CAE8A59B8 · ventana 286CCEB1-542B-48CF-94B8-6580C9874B6A · generación 3
+Bisagra: Esperando primera muestra; no implica ausencia física.', hitPoint: {191.0, 247.8}
+        StaticText, {{19.3, 307.0}, {343.3, 94.3}}, label: '#13 · context · escena C086004B-DCD5-41A5-8690-F19CAE8A59B8 · ventana 286CCEB1-542B-48CF-94B8-6580C9874B6A · generación 2
+Bisagra: Esperando primera muestra; no implica ausencia física.', hitPoint: {191.0, 354.2}
+        StaticText, {{19.3, 413.3}, {134.0, 14.3}}, label: '#12 · Montaje solicitado', hitPoint: {86.3, 420.5}
+        StaticText, {{19.3, 439.7}, {260.7, 14.3}}, label: '#11 · Desmontaje solicitado; snapshot retirado', hitPoint: {149.7, 446.8}
+        StaticText, {{19.3, 466.0}, {320.0, 62.3}}, label: '#10 · hingeStatus · escena 21227874-6170-4B64-8D7B-A97EEEB8DEF3 · ventana 5FE4F590-5933-4177-BC91-3A3F4DBD3921 · generación 3
+Bisagra: closed, origen simulator, secuencia 6', hitPoint: {179.3, 497.2}
+        StaticText, {{19.3, 540.3}, {301.0, 78.3}}, label: '#9 · geometry · escena 21227874-6170-4B64-8D7B-A97EEEB8DEF3 · ventana 5FE4F590-5933-4177-BC91-3A3F4DBD3921 · generación 3
+Bisagra: Esperando primera muestra; no implica ausencia física.', hitPoint: {169.8, 579.5}
+        StaticText, {{19.3, 630.7}, {155.0, 14.3}}, label: '#8 · Reactivación solicitada', hitPoint: {96.8, 637.8}
+        StaticText, {{19.3, 657.0}, {300.0, 62.3}}, label: '#7 · lifecycle · escena 21227874-6170-4B64-8D7B-A97EEEB8DEF3 · ventana 5FE4F590-5933-4177-BC91-3A3F4DBD3921 · generación 3
+Bisagra: Observación suspendida; datos no vigentes.', hitPoint: {169.3, 667.5}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 8 pages', value: 88%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 477.0}, {3.0, 80.7}}, hitPoint: {461.5, 517.3}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 8 pages', value: 88%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 477.0}, {3.0, 80.7}}, hitPoint: {461.5, 517.3}
+
+
+CAPTURE Retry Runtime Probe-16_51_23_898-hierarchy.txt
+
+Application bundle identifier: org.foldcontextkit.RuntimeProbe
+Application UI orientation: Portrait
+Application, pid: 61671, label: 'RuntimeProbe'
+ Window, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+  Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+   Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+    Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+     Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+      Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+       Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+      ScrollView, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+       Other, {{0.0, -3480.0}, {382.0, 4613.3}}, hitPoint: {191.0, 339.0}
+        StaticText, {{19.3, 4.0}, {343.3, 78.3}}, label: '#16 · hingeStatus · escena C086004B-DCD5-41A5-8690-F19CAE8A59B8 · ventana 286CCEB1-542B-48CF-94B8-6580C9874B6A · generación 3
+Bisagra: closed, origen simulator, secuencia 4', hitPoint: {191.0, 43.2}
+        StaticText, {{19.3, 94.3}, {343.3, 94.3}}, label: '#15 · geometry · escena C086004B-DCD5-41A5-8690-F19CAE8A59B8 · ventana 286CCEB1-542B-48CF-94B8-6580C9874B6A · generación 3
+Bisagra: Esperando primera muestra; no implica ausencia física.', hitPoint: {191.0, 141.5}
+        StaticText, {{19.3, 200.7}, {343.3, 94.3}}, label: '#14 · context · escena C086004B-DCD5-41A5-8690-F19CAE8A59B8 · ventana 286CCEB1-542B-48CF-94B8-6580C9874B6A · generación 3
+Bisagra: Esperando primera muestra; no implica ausencia física.', hitPoint: {191.0, 247.8}
+        StaticText, {{19.3, 307.0}, {343.3, 94.3}}, label: '#13 · context · escena C086004B-DCD5-41A5-8690-F19CAE8A59B8 · ventana 286CCEB1-542B-48CF-94B8-6580C9874B6A · generación 2
+Bisagra: Esperando primera muestra; no implica ausencia física.', hitPoint: {191.0, 354.2}
+        StaticText, {{19.3, 413.3}, {134.0, 14.3}}, label: '#12 · Montaje solicitado', hitPoint: {86.3, 420.5}
+        StaticText, {{19.3, 439.7}, {260.7, 14.3}}, label: '#11 · Desmontaje solicitado; snapshot retirado', hitPoint: {149.7, 446.8}
+        StaticText, {{19.3, 466.0}, {320.0, 62.3}}, label: '#10 · hingeStatus · escena 21227874-6170-4B64-8D7B-A97EEEB8DEF3 · ventana 5FE4F590-5933-4177-BC91-3A3F4DBD3921 · generación 3
+Bisagra: closed, origen simulator, secuencia 6', hitPoint: {179.3, 497.2}
+        StaticText, {{19.3, 540.3}, {301.0, 78.3}}, label: '#9 · geometry · escena 21227874-6170-4B64-8D7B-A97EEEB8DEF3 · ventana 5FE4F590-5933-4177-BC91-3A3F4DBD3921 · generación 3
+Bisagra: Esperando primera muestra; no implica ausencia física.', hitPoint: {169.8, 579.5}
+        StaticText, {{19.3, 630.7}, {155.0, 14.3}}, label: '#8 · Reactivación solicitada', hitPoint: {96.8, 637.8}
+        StaticText, {{19.3, 657.0}, {300.0, 62.3}}, label: '#7 · lifecycle · escena 21227874-6170-4B64-8D7B-A97EEEB8DEF3 · ventana 5FE4F590-5933-4177-BC91-3A3F4DBD3921 · generación 3
+Bisagra: Observación suspendida; datos no vigentes.', hitPoint: {169.3, 667.5}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 8 pages', value: 88%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 477.0}, {3.0, 80.7}}, hitPoint: {461.5, 517.3}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 8 pages', value: 88%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 477.0}, {3.0, 80.7}}, hitPoint: {461.5, 517.3}
+
+
+CAPTURE Retry Runtime Probe-16_51_48_796-hierarchy.txt
+
+Application bundle identifier: org.foldcontextkit.RuntimeProbe
+Application UI orientation: Portrait
+Application, pid: 61671, label: 'RuntimeProbe'
+ Window, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+  Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+   Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+    Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+     Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+      Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+       Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+      ScrollView, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+       Other, {{0.0, -3480.0}, {382.0, 4613.3}}, hitPoint: {191.0, 339.0}
+        StaticText, {{19.3, 4.0}, {343.3, 78.3}}, label: '#16 · hingeStatus · escena C086004B-DCD5-41A5-8690-F19CAE8A59B8 · ventana 286CCEB1-542B-48CF-94B8-6580C9874B6A · generación 3
+Bisagra: closed, origen simulator, secuencia 4', hitPoint: {191.0, 43.2}
+        StaticText, {{19.3, 94.3}, {343.3, 94.3}}, label: '#15 · geometry · escena C086004B-DCD5-41A5-8690-F19CAE8A59B8 · ventana 286CCEB1-542B-48CF-94B8-6580C9874B6A · generación 3
+Bisagra: Esperando primera muestra; no implica ausencia física.', hitPoint: {191.0, 141.5}
+        StaticText, {{19.3, 200.7}, {343.3, 94.3}}, label: '#14 · context · escena C086004B-DCD5-41A5-8690-F19CAE8A59B8 · ventana 286CCEB1-542B-48CF-94B8-6580C9874B6A · generación 3
+Bisagra: Esperando primera muestra; no implica ausencia física.', hitPoint: {191.0, 247.8}
+        StaticText, {{19.3, 307.0}, {343.3, 94.3}}, label: '#13 · context · escena C086004B-DCD5-41A5-8690-F19CAE8A59B8 · ventana 286CCEB1-542B-48CF-94B8-6580C9874B6A · generación 2
+Bisagra: Esperando primera muestra; no implica ausencia física.', hitPoint: {191.0, 354.2}
+        StaticText, {{19.3, 413.3}, {134.0, 14.3}}, label: '#12 · Montaje solicitado', hitPoint: {86.3, 420.5}
+        StaticText, {{19.3, 439.7}, {260.7, 14.3}}, label: '#11 · Desmontaje solicitado; snapshot retirado', hitPoint: {149.7, 446.8}
+        StaticText, {{19.3, 466.0}, {320.0, 62.3}}, label: '#10 · hingeStatus · escena 21227874-6170-4B64-8D7B-A97EEEB8DEF3 · ventana 5FE4F590-5933-4177-BC91-3A3F4DBD3921 · generación 3
+Bisagra: closed, origen simulator, secuencia 6', hitPoint: {179.3, 497.2}
+        StaticText, {{19.3, 540.3}, {301.0, 78.3}}, label: '#9 · geometry · escena 21227874-6170-4B64-8D7B-A97EEEB8DEF3 · ventana 5FE4F590-5933-4177-BC91-3A3F4DBD3921 · generación 3
+Bisagra: Esperando primera muestra; no implica ausencia física.', hitPoint: {169.8, 579.5}
+        StaticText, {{19.3, 630.7}, {155.0, 14.3}}, label: '#8 · Reactivación solicitada', hitPoint: {96.8, 637.8}
+        StaticText, {{19.3, 657.0}, {300.0, 62.3}}, label: '#7 · lifecycle · escena 21227874-6170-4B64-8D7B-A97EEEB8DEF3 · ventana 5FE4F590-5933-4177-BC91-3A3F4DBD3921 · generación 3
+Bisagra: Observación suspendida; datos no vigentes.', hitPoint: {169.3, 667.5}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 8 pages', value: 88%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 477.0}, {3.0, 80.7}}, hitPoint: {461.5, 517.3}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 8 pages', value: 88%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 477.0}, {3.0, 80.7}}, hitPoint: {461.5, 517.3}
+
+
+RESULT: initial awaiting then closed0rad seq4; 466x678points and1398x2034nativepixels; duoInferred simulator exterior. Capture inactive. Disable lifecycle suspended; enable awaiting then closed seq6. Unmount snapshot removed; remount fresh observer IDs awaiting then closed seq4. Two Home button attempts left app visible and no new scene lifecycle observed, therefore background/foreground NOT validated. simctl launch returned existingPID61671. No physical fold changes performed.
+VISUAL: content uses382pt width within466pt window; status indicators at right. Text readable, no confirmed overlap; safe area reported382x644 at0,0. Cause of inset layout not determined.

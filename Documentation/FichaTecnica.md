@@ -16,8 +16,8 @@ El usuario autorizó ahora ejecutar pruebas antes de preparar la distribución. 
 | RuntimeProbe, xcodebuild para simulador | Compilación correcta; aviso de metadatos AppIntents omitidos sin dependencia |
 | Reglas puras, contratos y buffering independiente de UIKit | 25 tests Swift Testing superados en Mac, sin fallos |
 | Consumidor SwiftPM independiente | Compila y ejecuta: local import OK, entrada sintética |
-| RunAllTests en destino iOS | Bloqueado; cancelado por el asistente sin resultados completos |
-| App en Duo Simulator | No se pudo instalar/abrir; captura del logo Apple, conexión rechazada y timeout |
+| RunAllTests en Duo Simulator 27.1, arm64 | 45 casos superados, 0 fallos, 0 omitidos; 32 funciones con parametrización |
+| App en Duo Simulator | Interfaz y escena activa observadas; entrega inicial de bisagra, deshabilitación/reactivación, desmontaje/remontaje SwiftUI y background/foreground comprobados |
 | Control iPhone 17 y recuperación del Duo sin borrar datos | Acceso bloqueado; no observación runtime nueva |
 | Dispositivo físico | No disponible; no observado |
 
@@ -25,9 +25,15 @@ Se añadieron siete funciones de test en PresentationTests.swift: inferencia y p
 
 El motor predeterminado de SwiftPM quedó bloqueado. El motor alternativo `--build-system native`, con cachés en /tmp, completó los tests y la importación local. Esa opción emite un aviso de obsolescencia; se conserva como solución local de validación, no se exige al consumidor ni se modifica el manifiesto.
 
-La validación en simulador requerida aún no está cerrada. CoreSimulator rechazó la conexión y el intento dirigido de shutdown; no se borraron dispositivos ni se reiniciaron servicios globales. Será necesario recuperar el servicio de simulación (reiniciar Xcode/Simulator o el Mac si persiste) antes de repetir los tests iOS y el ciclo de vida real. No se presentan los 38 casos históricos como resultado de esta revisión.
+La ejecución del 30 de octubre a las 16:35 completó los tests iOS en Duo Simulator 27.1 (build 24A94425). Incluye siete funciones UIKit/SwiftUI de montaje, desmontaje, cancelación, aislamiento por ventana y buffering. Son pruebas controladas; no acreditan entregas físicas de bisagra ni una escena real conectada. Los fallos previos de CoreSimulator quedan como historial, superados para esta ejecución. La validación runtime de la app se registra por separado: [reintento de instalación y arranque](../Validation/RuntimeProbe/Results/2026-10-30-runtime-retry.txt). Resultado completo: [tests iOS](../Validation/RuntimeProbe/Results/2026-10-30-ios-tests.txt) y [consola](../Validation/RuntimeProbe/Results/2026-10-30-ios-tests-console.log).
 
-Evidencias: [registro de intentos y resultados](../Validation/RuntimeProbe/Results/2026-10-30-runtime-attempt.txt), [build de app](../Validation/RuntimeProbe/Results/2026-10-30-app-build.log), [captura de arranque](../Validation/RuntimeProbe/Results/2026-10-30-duo-boot.png). No se ha publicado nada en GitHub.
+Reintento visual del 30 de octubre completado: modo sintético desactivado, escena activa, ventana 466 × 678 puntos, nativeBounds 1398 × 2034 píxeles, captura inactiva y bisagra UIKit closed a 0 radianes. El historial muestra espera inicial seguida de muestra sin exigir abrir/cerrar. Resultado: duoInferred(origin: simulator), panel exterior y contexto applicationDisplayUnresolved; no certifica identidad física.
+
+Deshabilitar produjo suspensión; reactivar volvió a espera y muestra closed. Desmontar retiró el snapshot y remontar creó un contexto efímero nuevo con entrega automática. Los dos comandos Home iniciales no cambiaron la fase. En el ensayo posterior de las 21:32–21:34 se activó SpringBoard y se regresó al mismo proceso: inactive → suspensión → background → inactive → active → espera de muestra → bisagra closed. Background/foreground queda observado en esta revisión. No se observaron panel interior ni posturas libro/90° en este ensayo. Registro: [jerarquías runtime](../Validation/RuntimeProbe/Results/2026-10-30-runtime-ui-validation.txt); capturas de [bisagra](../Validation/RuntimeProbe/Results/2026-10-30-runtime-hinge.png) y [clasificación](../Validation/RuntimeProbe/Results/2026-10-30-runtime-classification.png).
+
+Continuación del ciclo de vida: [registro](../Validation/RuntimeProbe/Results/2026-10-30-runtime-lifecycle-validation.txt) y [captura](../Validation/RuntimeProbe/Results/2026-10-30-runtime-lifecycle.png). La lectura manual al regresar confirmó scale/nativeScale 3, ventana 466 × 678 puntos y nativeBounds 1398 × 2034 píxeles. El historial anterior incluía fullyOpen, pero no se controló la acción causante ni se obtuvo una medida interior de la app: no acredita ese ensayo. La ayuda pública de simctl consultada no expuso un control de ángulo. Apple sí documenta controles de apertura/plegado en [Device Hub](https://developer.apple.com/videos/play/tech-talks/111461/); las herramientas de interacción disponibles no acceden a esos controles del Mac. No se sustituyó plegado por geometría arbitraria.
+
+Evidencias: [registro de intentos y resultados](../Validation/RuntimeProbe/Results/2026-10-30-runtime-attempt.txt), [build de app](../Validation/RuntimeProbe/Results/2026-10-30-app-build.log), [captura del arranque fallido anterior](../Validation/RuntimeProbe/Results/2026-10-30-duo-boot.png). Los resultados de esta validación quedan locales, sin nuevo commit ni push.
 
 
 ### Contextos ambiguos — resolución de tratamiento

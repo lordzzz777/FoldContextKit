@@ -1,0 +1,397 @@
+Test FoldContextKit
+  Launch actions
+    Launch FoldContextKitTests
+      notice:Platform: iOS Simulator
+      notice:Device Identifier: 76DA5EC9-CCCB-4FB2-B5DA-65F276D2C284
+      notice:Operating System Version: 27.1 (24A94425)
+      notice:Model: iPhone (iPhone19,4)
+      notice:Target Architecture: arm64
+    
+      Installing built products
+        notice:Installing on iPhone Duo
+        notice:Successfully installed
+      
+      Launching FoldContextKitTests
+        notice:Launching FoldContextKitTests
+        notice:Launching from /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Xcode/Agents/xctest
+        notice:Launching suspended and the launcher is responsible for resuming.
+        notice:Successfully launched FoldContextKitTests
+        notice:Process with pid 61091 launched
+        notice:Console logging policy: Synchronously obtain os_logs via libLogRedirect, and read stdio from File Descriptors
+        notice:Resumed target process.
+      
+  Generating coverage report
+    notice:Unable to load coverage tools for toolchain 'com.apple.dt.toolchain.Metal.32023.921.5': Error Domain=XCTHLLVMCoverageToolsErrorDomain Code=2 "libLTO.dylib is not present in the toolchain at path /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v27.1.266.1.gZlX9K/Metal.xctoolchain" UserInfo={NSLocalizedDescription=libLTO.dylib is not present in the toolchain at path /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v27.1.266.1.gZlX9K/Metal.xctoolchain}
+  
+    Downloading profiles from iPhone Duo
+      notice:Downloading profiles for xctest command-line tool from 1 directory
+    
+    Merging 1 profile using llvm-profdata (2100.3.34.2.0)
+    
+    Pre-processing target built products
+    
+    Processing source file data
+      notice:Archived line-level coverage for 12 file(s):
+    
+    Generating target entries
+      notice:Generating entry for target FoldContextKit
+      notice:Generating entry for target FoldContextKitTests
+    
+  Test target FoldContextKitTests
+    xctest (61091)
+      [ConsoleFoundation] Initialization successfulTest Suite 'All tests' started at 2026-10-30 16:35:52.880.
+      Test Suite 'All tests' passed at 2026-10-30 16:35:52.884.
+      	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.004) seconds
+      ◇ Test run started.
+      ↳ Testing Library Version: 2084
+      ↳ Target Platform: arm64-apple-ios17.0-simulator
+      ◇ Test occlusionsAreExcludedWithoutLosingUnobscuredArea() started.
+      ◇ Test layoutChoiceDoesNotFollowHingeAngle() started.
+      ◇ Test syntheticCombinationNeedsNoInitialTransition(_:) started.
+      ◇ Test fragmentedRegionsAreBoundedAndRemainOutsideOcclusions() started.
+      ◇ Suite UIKitObservationTests started.
+      ◇ Test missingDataDoesNotCollapseIntoOneState() started.
+      ◇ Test historicalSamplesCannotActAsCurrentEvidence() started.
+      ◇ Test pointsCannotSubstituteForNativePixels(_:) started.
+      ◇ Test boundedBufferPreservesDiscreteEventsAndReportsOverflow() started.
+      ◇ Test hingeWithoutDimensionsObservesCapabilityOnly(_:) started.
+      ◇ Test missingHingeNeverMeansPhysicalAbsence(_:) started.
+      ◇ Test staleOrForeignGeometryCannotSupplySafeRegions() started.
+      ◇ Test transitionIsDependentAndNeverPromotesModel() started.
+      ◇ Test screenAttributionBlocksInference(_:) started.
+      ◇ Test contradictoryDimensionsBlockInference() started.
+      ◇ Test duoInferenceAndPanelRespectEvidenceAndRotation() started.
+      ◇ Test measuredDivisionOverridesEqualHalvesAndKeepsMargins() started.
+      ◇ Test captureAndExternalContextsBlockDuoInference() started.
+      ◇ Test policyIsExplicitAndObservationOnlyCannotInfer() started.
+      ◇ Test archivalCopyDoesNotMutateCurrentEvidence() started.
+      ◇ Test historicalEvidenceRetainsItsOwnWindowAndGeneration() started.
+      ◇ Test rejectsInvalidMeasurements() started.
+      ◇ Test sceneWindowAndGenerationMismatchesAreRejected() started.
+      ◇ Test invalidHistoryAddsNoTransitionAndDoesNotOverrideCurrentEvidence() started.
+      ◇ Test rotationMatchesButDoesNotBecomeATransition() started.
+      ◇ Test case passing 1 argument source → .uiWindowBounds to pointsCannotSubstituteForNativePixels(_:) started.
+      ◇ Test nonsyntheticSourcesCannotProduceSyntheticInference(_:) started.
+      ◇ Test case passing 1 argument source → .uiViewBounds to pointsCannotSubstituteForNativePixels(_:) started.
+      ◇ Test case passing 1 argument source → .swiftUIGeometry to pointsCannotSubstituteForNativePixels(_:) started.
+      ​◇ Test case passing 1 argument status → .unknown to hingeWithoutDimensionsObservesCapabilityOnly(_:) started.
+      ​◇ Test case passing 1 argument status → .closed to hingeWithoutDimensionsObservesCapabilityOnly(_:) started.
+      ​◇ Test case passing 1 argument status → .partiallyOpen to hingeWithoutDimensionsObservesCapabilityOnly(_:) started.
+      ​◇ Test case passing 1 argument status → .fullyOpen to hingeWithoutDimensionsObservesCapabilityOnly(_:) started.
+      ​◇ Test case passing 1 argument reason → .apiUnavailable to missingHingeNeverMeansPhysicalAbsence(_:) started.
+      ​◇ Test case passing 1 argument reason → .awaitingSample to missingHingeNeverMeansPhysicalAbsence(_:) started.
+      ​◇ Test case passing 1 argument reason → .observationSuspended to missingHingeNeverMeansPhysicalAbsence(_:) started.
+      ​◇ Test case passing 1 argument reason → .unavailableInContext to missingHingeNeverMeansPhysicalAbsence(_:) started.
+      ​​◇ Test case passing 1 argument attribution → .unknown to screenAttributionBlocksInference(_:) started.
+      ◇ Test case passing 1 argument attribution → .externalDisplay to screenAttributionBlocksInference(_:) started.
+      ​◇ Test case passing 1 argument attribution → .mirrored to screenAttributionBlocksInference(_:) started.
+      ​​◇ Test case passing 1 argument source → .uiHingeInteraction to syntheticCombinationNeedsNoInitialTransition(_:) started.
+      ​​◇ Test case passing 1 argument source → .swiftUIHingeChange to syntheticCombinationNeedsNoInitialTransition(_:) started.
+      ​◇ Test case passing 1 argument origin → .system to nonsyntheticSourcesCannotProduceSyntheticInference(_:) started.
+      ​◇ Test case passing 1 argument origin → .simulator to nonsyntheticSourcesCannotProduceSyntheticInference(_:) started.
+      ​◇ Test case passing 1 argument origin → .unknown to nonsyntheticSourcesCannotProduceSyntheticInference(_:) started.
+      ​✔ Test missingDataDoesNotCollapseIntoOneState() passed after 0.006 seconds.
+      ✔ Test historicalSamplesCannotActAsCurrentEvidence() passed after 0.006 seconds.
+      ◇ Test detachedStartDeliversAndStopRemovesProbe() started.
+      ✔ Test transitionIsDependentAndNeverPromotesModel() passed after 0.007 seconds.
+      ✔ Test layoutChoiceDoesNotFollowHingeAngle() passed after 0.007 seconds.
+      ✔ Test contradictoryDimensionsBlockInference() passed after 0.007 seconds.
+      ✔ Test duoInferenceAndPanelRespectEvidenceAndRotation() passed after 0.007 seconds.
+      ✔ Test measuredDivisionOverridesEqualHalvesAndKeepsMargins() passed after 0.008 seconds.
+      ✔ Test archivalCopyDoesNotMutateCurrentEvidence() passed after 0.008 seconds.
+      ✔ Test historicalEvidenceRetainsItsOwnWindowAndGeneration() passed after 0.008 seconds.
+      ✔ Test rejectsInvalidMeasurements() passed after 0.008 seconds.
+      ✔ Test captureAndExternalContextsBlockDuoInference() passed after 0.008 seconds.
+      ✔ Test sceneWindowAndGenerationMismatchesAreRejected() passed after 0.008 seconds.
+      ✔ Test policyIsExplicitAndObservationOnlyCannotInfer() passed after 0.009 seconds.
+      ✔ Test nonsyntheticSourcesCannotProduceSyntheticInference(_:) with 3 test cases passed after 0.007 seconds.
+      ✔ Test syntheticCombinationNeedsNoInitialTransition(_:) with 2 test cases passed after 0.008 seconds.
+      ✔ Test missingHingeNeverMeansPhysicalAbsence(_:) with 4 test cases passed after 0.007 seconds.
+      ✔ Test screenAttributionBlocksInference(_:) with 3 test cases passed after 0.007 seconds.
+      ✔ Test pointsCannotSubstituteForNativePixels(_:) with 3 test cases passed after 0.006 seconds.
+      ✔ Test boundedBufferPreservesDiscreteEventsAndReportsOverflow() passed after 0.010 seconds.
+      ✔ Test invalidHistoryAddsNoTransitionAndDoesNotOverrideCurrentEvidence() passed after 0.010 seconds.
+      ✔ Test staleOrForeignGeometryCannotSupplySafeRegions() passed after 0.010 seconds.
+      ✔ Test fragmentedRegionsAreBoundedAndRemainOutsideOcclusions() passed after 0.010 seconds.
+      ✔ Test rotationMatchesButDoesNotBecomeATransition() passed after 0.010 seconds.
+      ✔ Test hingeWithoutDimensionsObservesCapabilityOnly(_:) with 4 test cases passed after 0.006 seconds.
+      ✔ Test occlusionsAreExcludedWithoutLosingUnobscuredArea() passed after 0.015 seconds.
+      ✔ Test detachedStartDeliversAndStopRemovesProbe() passed after 0.300 seconds.
+      ◇ Test releaseCleansUpWithoutRetainCycle() started.
+      ✔ Test releaseCleansUpWithoutRetainCycle() passed after 0.001 seconds.
+    
+      Writing diagnostic log for test runner launch.
+        /Users/estebanperezcastillejo/Library/Developer/Xcode/DerivedData/FoldContextKit-bebxouzfvasaxheowlqqfafnazbs/Logs/Test/Test-FoldContextKit-2026.10.30_16-35-45-+0100.xcresult/Staging/1_Test/Diagnostics/FoldContextKitTests-1F7C96B1-0456-4C18-9D27-056B0F32416A-Configuration-Test Scheme Action-Iteration-1/FoldContextKitTests-F16915C7-446D-4F0C-9C2F-38516641752E/Session-FoldContextKitTests-2026-10-30_163547-g7pTT1.log:notice:/Users/estebanperezcastillejo/Library/Developer/Xcode/DerivedData/FoldContextKit-bebxouzfvasaxheowlqqfafnazbs/Logs/Test/Test-FoldContextKit-2026.10.30_16-35-45-+0100.xcresult/Staging/1_Test/Diagnostics/FoldContextKitTests-1F7C96B1-0456-4C18-9D27-056B0F32416A-Configuration-Test Scheme Action-Iteration-1/FoldContextKitTests-F16915C7-446D-4F0C-9C2F-38516641752E/Session-FoldContextKitTests-2026-10-30_163547-g7pTT1.log
+      
+      Run test suite All tests
+        Summary: Test Suite 'All tests' passed at 2026-10-30 16:35:52.884.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.004) seconds
+
+        [ConsoleFoundation] Initialization successfulTest Suite 'All tests' started at 2026-10-30 16:35:52.880.
+        Test Suite 'All tests' passed at 2026-10-30 16:35:52.884.
+        	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.004) seconds
+      
+      Run test suite UIKitObservationTests
+        Summary: ✔ Test releaseCleansUpWithoutRetainCycle() passed after 0.001 seconds.
+
+        ◇ Test run started.
+        ↳ Testing Library Version: 2084
+        ↳ Target Platform: arm64-apple-ios17.0-simulator
+        ◇ Test occlusionsAreExcludedWithoutLosingUnobscuredArea() started.
+        ✔ Test policyIsExplicitAndObservationOnlyCannotInfer() passed after 0.009 seconds.
+        ✔ Test syntheticCombinationNeedsNoInitialTransition(_:) with 2 test cases passed after 0.008 seconds.
+        ✔ Test missingHingeNeverMeansPhysicalAbsence(_:) with 4 test cases passed after 0.007 seconds.
+        ✔ Test screenAttributionBlocksInference(_:) with 3 test cases passed after 0.007 seconds.
+        ✔ Test pointsCannotSubstituteForNativePixels(_:) with 3 test cases passed after 0.006 seconds.
+        ✔ Test boundedBufferPreservesDiscreteEventsAndReportsOverflow() passed after 0.010 seconds.
+        ✔ Test invalidHistoryAddsNoTransitionAndDoesNotOverrideCurrentEvidence() passed after 0.010 seconds.
+        ✔ Test staleOrForeignGeometryCannotSupplySafeRegions() passed after 0.010 seconds.
+        ✔ Test fragmentedRegionsAreBoundedAndRemainOutsideOcclusions() passed after 0.010 seconds.
+        ✔ Test rotationMatchesButDoesNotBecomeATransition() passed after 0.010 seconds.
+        ✔ Test hingeWithoutDimensionsObservesCapabilityOnly(_:) with 4 test cases passed after 0.006 seconds.
+        ✔ Test occlusionsAreExcludedWithoutLosingUnobscuredArea() passed after 0.015 seconds.
+        ✔ Test detachedStartDeliversAndStopRemovesProbe() passed after 0.300 seconds.
+        ◇ Test releaseCleansUpWithoutRetainCycle() started.
+        ✔ Test releaseCleansUpWithoutRetainCycle() passed after 0.001 seconds.
+      
+        Run test case detachedStartDeliversAndStopRemovesProbe()
+          Summary: ✔ Test syntheticCombinationNeedsNoInitialTransition(_:) with 2 test cases passed after 0.008 seconds.
+
+          ✔ Test policyIsExplicitAndObservationOnlyCannotInfer() passed after 0.009 seconds.
+          ✔ Test syntheticCombinationNeedsNoInitialTransition(_:) with 2 test cases passed after 0.008 seconds.
+        
+        Run test case releaseCleansUpWithoutRetainCycle()
+          Summary: ✔ Test screenAttributionBlocksInference(_:) with 3 test cases passed after 0.007 seconds.
+
+          ✔ Test missingHingeNeverMeansPhysicalAbsence(_:) with 4 test cases passed after 0.007 seconds.
+          ✔ Test screenAttributionBlocksInference(_:) with 3 test cases passed after 0.007 seconds.
+        
+        Run test case swiftUICoordinatorFirstDeliveryAndDismantle()
+          Summary: ✔ Test boundedBufferPreservesDiscreteEventsAndReportsOverflow() passed after 0.010 seconds.
+
+          ✔ Test pointsCannotSubstituteForNativePixels(_:) with 3 test cases passed after 0.006 seconds.
+          ✔ Test boundedBufferPreservesDiscreteEventsAndReportsOverflow() passed after 0.010 seconds.
+        
+        Run test case swiftUIDeliveryReportsOverflowAndKeepsDiscreteOrder()
+          Summary: ✔ Test staleOrForeignGeometryCannotSupplySafeRegions() passed after 0.010 seconds.
+
+          ✔ Test invalidHistoryAddsNoTransitionAndDoesNotOverrideCurrentEvidence() passed after 0.010 seconds.
+          ✔ Test staleOrForeignGeometryCannotSupplySafeRegions() passed after 0.010 seconds.
+        
+        Run test case initialDeliveryNativeChangeAndDisableInsideCallback()
+          Summary: ✔ Test rotationMatchesButDoesNotBecomeATransition() passed after 0.010 seconds.
+
+          ✔ Test fragmentedRegionsAreBoundedAndRemainOutsideOcclusions() passed after 0.010 seconds.
+          ✔ Test rotationMatchesButDoesNotBecomeATransition() passed after 0.010 seconds.
+        
+        Run test case unavailableAPIAndControlledHierarchyChanges()
+          Summary: ✔ Test occlusionsAreExcludedWithoutLosingUnobscuredArea() passed after 0.015 seconds.
+
+          ✔ Test hingeWithoutDimensionsObservesCapabilityOnly(_:) with 4 test cases passed after 0.006 seconds.
+          ✔ Test occlusionsAreExcludedWithoutLosingUnobscuredArea() passed after 0.015 seconds.
+        
+        Run test case windowsLifecycleGeometryAndIsolation()
+          Summary: ◇ Test releaseCleansUpWithoutRetainCycle() started.
+
+          ✔ Test detachedStartDeliversAndStopRemovesProbe() passed after 0.300 seconds.
+          ◇ Test releaseCleansUpWithoutRetainCycle() started.
+        
+      Run test case occlusionsAreExcludedWithoutLosingUnobscuredArea()
+        Summary: ✔ Test nonsyntheticSourcesCannotProduceSyntheticInference(_:) with 3 test cases passed after 0.007 seconds.
+
+        ◇ Test layoutChoiceDoesNotFollowHingeAngle() started.
+        ✔ Test nonsyntheticSourcesCannotProduceSyntheticInference(_:) with 3 test cases passed after 0.007 seconds.
+      
+      Run test case fragmentedRegionsAreBoundedAndRemainOutsideOcclusions()
+        Summary: ✔ Test sceneWindowAndGenerationMismatchesAreRejected() passed after 0.008 seconds.
+
+        ◇ Test syntheticCombinationNeedsNoInitialTransition(_:) started.
+        ✔ Test sceneWindowAndGenerationMismatchesAreRejected() passed after 0.008 seconds.
+      
+      Run test case missingDataDoesNotCollapseIntoOneState()
+        Summary: ◇ Test boundedBufferPreservesDiscreteEventsAndReportsOverflow() started.
+
+        ◇ Test fragmentedRegionsAreBoundedAndRemainOutsideOcclusions() started.
+        ◇ Test boundedBufferPreservesDiscreteEventsAndReportsOverflow() started.
+      
+      Run test case historicalSamplesCannotActAsCurrentEvidence()
+        Summary: ◇ Test hingeWithoutDimensionsObservesCapabilityOnly(_:) started.
+
+        ◇ Suite UIKitObservationTests started.
+        ◇ Test hingeWithoutDimensionsObservesCapabilityOnly(_:) started.
+      
+      Run test case pointsCannotSubstituteForNativePixels(_:)
+        Summary: ​
+        ◇ Test missingDataDoesNotCollapseIntoOneState() started.
+      
+      Run test case layoutChoiceDoesNotFollowHingeAngle()
+        Summary: ​
+        ◇ Test historicalSamplesCannotActAsCurrentEvidence() started.
+      
+      Run test case pointsCannotSubstituteForNativePixels(_:)
+        Summary: ​
+        ◇ Test pointsCannotSubstituteForNativePixels(_:) started.
+      
+      Run test case boundedBufferPreservesDiscreteEventsAndReportsOverflow()
+        Summary: ✔ Test archivalCopyDoesNotMutateCurrentEvidence() passed after 0.008 seconds.
+
+        ◇ Test missingHingeNeverMeansPhysicalAbsence(_:) started.
+        ✔ Test archivalCopyDoesNotMutateCurrentEvidence() passed after 0.008 seconds.
+      
+      Run test case pointsCannotSubstituteForNativePixels(_:)
+        Summary: ◇ Test transitionIsDependentAndNeverPromotesModel() started.
+
+        ◇ Test staleOrForeignGeometryCannotSupplySafeRegions() started.
+        ◇ Test transitionIsDependentAndNeverPromotesModel() started.
+      
+      Run test case hingeWithoutDimensionsObservesCapabilityOnly(_:)
+        Summary: ◇ Test contradictoryDimensionsBlockInference() started.
+
+        ◇ Test screenAttributionBlocksInference(_:) started.
+        ◇ Test contradictoryDimensionsBlockInference() started.
+      
+      Run test case hingeWithoutDimensionsObservesCapabilityOnly(_:)
+        Summary: ◇ Test measuredDivisionOverridesEqualHalvesAndKeepsMargins() started.
+
+        ◇ Test duoInferenceAndPanelRespectEvidenceAndRotation() started.
+        ◇ Test measuredDivisionOverridesEqualHalvesAndKeepsMargins() started.
+      
+      Run test case hingeWithoutDimensionsObservesCapabilityOnly(_:)
+        Summary: ◇ Test policyIsExplicitAndObservationOnlyCannotInfer() started.
+
+        ◇ Test captureAndExternalContextsBlockDuoInference() started.
+        ◇ Test policyIsExplicitAndObservationOnlyCannotInfer() started.
+      
+      Run test case hingeWithoutDimensionsObservesCapabilityOnly(_:)
+        Summary: ◇ Test historicalEvidenceRetainsItsOwnWindowAndGeneration() started.
+◇ Test rejectsInvalidMeasurements() started.
+
+        ◇ Test archivalCopyDoesNotMutateCurrentEvidence() started.
+        ◇ Test historicalEvidenceRetainsItsOwnWindowAndGeneration() started.
+        ◇ Test rejectsInvalidMeasurements() started.
+      
+      Run test case missingHingeNeverMeansPhysicalAbsence(_:)
+        Summary: ◇ Test invalidHistoryAddsNoTransitionAndDoesNotOverrideCurrentEvidence() started.
+
+        ◇ Test sceneWindowAndGenerationMismatchesAreRejected() started.
+        ◇ Test invalidHistoryAddsNoTransitionAndDoesNotOverrideCurrentEvidence() started.
+      
+      Run test case missingHingeNeverMeansPhysicalAbsence(_:)
+        Summary: ◇ Test case passing 1 argument source → .uiWindowBounds to pointsCannotSubstituteForNativePixels(_:) started.
+
+        ◇ Test rotationMatchesButDoesNotBecomeATransition() started.
+        ◇ Test case passing 1 argument source → .uiWindowBounds to pointsCannotSubstituteForNativePixels(_:) started.
+      
+      Run test case missingHingeNeverMeansPhysicalAbsence(_:)
+        Summary: ◇ Test case passing 1 argument source → .uiViewBounds to pointsCannotSubstituteForNativePixels(_:) started.
+
+        ◇ Test nonsyntheticSourcesCannotProduceSyntheticInference(_:) started.
+        ◇ Test case passing 1 argument source → .uiViewBounds to pointsCannotSubstituteForNativePixels(_:) started.
+      
+      Run test case missingHingeNeverMeansPhysicalAbsence(_:)
+        Summary: ​
+        ◇ Test case passing 1 argument source → .swiftUIGeometry to pointsCannotSubstituteForNativePixels(_:) started.
+      
+      Run test case staleOrForeignGeometryCannotSupplySafeRegions()
+        Summary: ✔ Test rejectsInvalidMeasurements() passed after 0.008 seconds.
+
+        ◇ Test case passing 1 argument status → .unknown to hingeWithoutDimensionsObservesCapabilityOnly(_:) started.
+        ✔ Test rejectsInvalidMeasurements() passed after 0.008 seconds.
+      
+      Run test case transitionIsDependentAndNeverPromotesModel()
+        Summary: ◇ Test case passing 1 argument status → .partiallyOpen to hingeWithoutDimensionsObservesCapabilityOnly(_:) started.
+
+        ◇ Test case passing 1 argument status → .closed to hingeWithoutDimensionsObservesCapabilityOnly(_:) started.
+        ◇ Test case passing 1 argument status → .partiallyOpen to hingeWithoutDimensionsObservesCapabilityOnly(_:) started.
+      
+      Run test case screenAttributionBlocksInference(_:)
+        Summary: ​
+      
+      Run test case screenAttributionBlocksInference(_:)
+        Summary: ​
+        ◇ Test case passing 1 argument status → .fullyOpen to hingeWithoutDimensionsObservesCapabilityOnly(_:) started.
+      
+      Run test case screenAttributionBlocksInference(_:)
+        Summary: ◇ Test case passing 1 argument reason → .awaitingSample to missingHingeNeverMeansPhysicalAbsence(_:) started.
+
+        ◇ Test case passing 1 argument reason → .apiUnavailable to missingHingeNeverMeansPhysicalAbsence(_:) started.
+        ◇ Test case passing 1 argument reason → .awaitingSample to missingHingeNeverMeansPhysicalAbsence(_:) started.
+      
+      Run test case duoInferenceAndPanelRespectEvidenceAndRotation()
+        Summary: ​
+      
+      Run test case contradictoryDimensionsBlockInference()
+        Summary: ​
+        ◇ Test case passing 1 argument reason → .observationSuspended to missingHingeNeverMeansPhysicalAbsence(_:) started.
+      
+      Run test case measuredDivisionOverridesEqualHalvesAndKeepsMargins()
+        Summary: ◇ Test case passing 1 argument attribution → .unknown to screenAttributionBlocksInference(_:) started.
+
+        ◇ Test case passing 1 argument reason → .unavailableInContext to missingHingeNeverMeansPhysicalAbsence(_:) started.
+        ◇ Test case passing 1 argument attribution → .unknown to screenAttributionBlocksInference(_:) started.
+      
+      Run test case captureAndExternalContextsBlockDuoInference()
+        Summary: ◇ Test case passing 1 argument source → .swiftUIHingeChange to syntheticCombinationNeedsNoInitialTransition(_:) started.
+
+        ◇ Test case passing 1 argument source → .swiftUIHingeChange to syntheticCombinationNeedsNoInitialTransition(_:) started.
+      
+      Run test case archivalCopyDoesNotMutateCurrentEvidence()
+        Summary: ​
+        ◇ Test case passing 1 argument attribution → .externalDisplay to screenAttributionBlocksInference(_:) started.
+      
+      Run test case historicalEvidenceRetainsItsOwnWindowAndGeneration()
+        Summary: ​
+        ◇ Test case passing 1 argument attribution → .mirrored to screenAttributionBlocksInference(_:) started.
+      
+      Run test case rejectsInvalidMeasurements()
+        Summary: ◇ Test case passing 1 argument source → .uiHingeInteraction to syntheticCombinationNeedsNoInitialTransition(_:) started.
+
+        ◇ Test case passing 1 argument source → .uiHingeInteraction to syntheticCombinationNeedsNoInitialTransition(_:) started.
+      
+      Run test case syntheticCombinationNeedsNoInitialTransition(_:)
+        Summary: ​
+      
+      Run test case sceneWindowAndGenerationMismatchesAreRejected()
+        Summary: ​
+        ◇ Test case passing 1 argument origin → .system to nonsyntheticSourcesCannotProduceSyntheticInference(_:) started.
+      
+      Run test case invalidHistoryAddsNoTransitionAndDoesNotOverrideCurrentEvidence()
+        Summary: ✔ Test historicalEvidenceRetainsItsOwnWindowAndGeneration() passed after 0.008 seconds.
+
+        ✔ Test historicalEvidenceRetainsItsOwnWindowAndGeneration() passed after 0.008 seconds.
+      
+      Run test case syntheticCombinationNeedsNoInitialTransition(_:)
+        Summary: ✔ Test missingDataDoesNotCollapseIntoOneState() passed after 0.006 seconds.
+
+        ◇ Test case passing 1 argument origin → .simulator to nonsyntheticSourcesCannotProduceSyntheticInference(_:) started.
+        ✔ Test missingDataDoesNotCollapseIntoOneState() passed after 0.006 seconds.
+      
+      Run test case policyIsExplicitAndObservationOnlyCannotInfer()
+        Summary: ​
+        ◇ Test case passing 1 argument origin → .unknown to nonsyntheticSourcesCannotProduceSyntheticInference(_:) started.
+      
+      Run test case rotationMatchesButDoesNotBecomeATransition()
+        Summary: ✔ Test captureAndExternalContextsBlockDuoInference() passed after 0.008 seconds.
+
+        ✔ Test historicalSamplesCannotActAsCurrentEvidence() passed after 0.006 seconds.
+        ✔ Test captureAndExternalContextsBlockDuoInference() passed after 0.008 seconds.
+      
+      Run test case nonsyntheticSourcesCannotProduceSyntheticInference(_:)
+        Summary: ✔ Test transitionIsDependentAndNeverPromotesModel() passed after 0.007 seconds.
+
+        ◇ Test detachedStartDeliversAndStopRemovesProbe() started.
+        ✔ Test transitionIsDependentAndNeverPromotesModel() passed after 0.007 seconds.
+      
+      Run test case nonsyntheticSourcesCannotProduceSyntheticInference(_:)
+        Summary: ✔ Test contradictoryDimensionsBlockInference() passed after 0.007 seconds.
+
+        ✔ Test layoutChoiceDoesNotFollowHingeAngle() passed after 0.007 seconds.
+        ✔ Test contradictoryDimensionsBlockInference() passed after 0.007 seconds.
+      
+      Run test case nonsyntheticSourcesCannotProduceSyntheticInference(_:)
+        Summary: ✔ Test measuredDivisionOverridesEqualHalvesAndKeepsMargins() passed after 0.008 seconds.
+
+        ✔ Test duoInferenceAndPanelRespectEvidenceAndRotation() passed after 0.007 seconds.
+        ✔ Test measuredDivisionOverridesEqualHalvesAndKeepsMargins() passed after 0.008 seconds.
+      
+** TEST FINISHED **

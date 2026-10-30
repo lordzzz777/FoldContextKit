@@ -1,0 +1,38 @@
+Device orientation: Unknown
+------------------------
+Application bundle identifier: org.foldcontextkit.RuntimeProbe
+Application UI orientation: Portrait
+Application, pid: 61671, label: 'RuntimeProbe'
+ Window, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+  Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+   Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+    Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+     Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+      ScrollView, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+       Other, {{0.0, -3526.7}, {382.0, 5814.0}}, hitPoint: {191.0, 339.0}
+        StaticText, {{18.0, -39.0}, {337.3, 64.3}}, label: 'Histórico, no evidencia vigente. Máximo 32 entradas. Retiradas del historial: 0. Perdidas en entrega: 0.', hitPoint: {186.7, 12.7}
+        StaticText, {{18.0, 37.3}, {346.0, 78.3}}, label: '#80 · hingeStatus · escena 518EEC18-8259-45C4-924D-885C9B73D902 · ventana AACF3F0F-A56D-4683-A8A2-3D1DA473C8DD · generación 4
+Bisagra: closed, origen simulator, secuencia 18', hitPoint: {191.0, 76.5}
+        StaticText, {{18.0, 127.7}, {346.0, 94.3}}, label: '#79 · geometry · escena 518EEC18-8259-45C4-924D-885C9B73D902 · ventana AACF3F0F-A56D-4683-A8A2-3D1DA473C8DD · generación 4
+Bisagra: Esperando primera muestra; no implica ausencia física.', hitPoint: {191.0, 174.8}
+        StaticText, {{18.0, 234.0}, {160.7, 14.3}}, label: '#78 · Fase de escena: active', hitPoint: {98.3, 241.2}
+        StaticText, {{18.0, 260.3}, {170.3, 14.3}}, label: '#77 · Fase de escena: inactive', hitPoint: {103.2, 267.5}
+        StaticText, {{18.0, 286.7}, {194.0, 14.3}}, label: '#76 · Fase de escena: background', hitPoint: {115.0, 293.8}
+        StaticText, {{18.0, 313.0}, {346.0, 78.3}}, label: '#75 · lifecycle · escena 518EEC18-8259-45C4-924D-885C9B73D902 · ventana AACF3F0F-A56D-4683-A8A2-3D1DA473C8DD · generación 4
+Bisagra: Observación suspendida; datos no vigentes.', hitPoint: {191.0, 352.2}
+        StaticText, {{18.0, 403.3}, {170.3, 14.3}}, label: '#74 · Fase de escena: inactive', hitPoint: {103.2, 410.5}
+        StaticText, {{18.0, 429.7}, {346.0, 78.3}}, label: '#73 · hingeAngle · escena 518EEC18-8259-45C4-924D-885C9B73D902 · ventana AACF3F0F-A56D-4683-A8A2-3D1DA473C8DD · generación 4
+Bisagra: closed, origen simulator, secuencia 16', hitPoint: {191.0, 468.8}
+        StaticText, {{18.0, 520.0}, {346.0, 78.3}}, label: '#72 · geometry · escena 518EEC18-8259-45C4-924D-885C9B73D902 · ventana AACF3F0F-A56D-4683-A8A2-3D1DA473C8DD · generación 4
+Bisagra: closed, origen simulator, secuencia 14', hitPoint: {191.0, 559.2}
+        StaticText, {{18.0, 610.3}, {346.0, 78.3}}, label: '#71 · hingeStatus · escena 518EEC18-8259-45C4-924D-885C9B73D902 · ventana AACF3F0F-A56D-4683-A8A2-3D1DA473C8DD · generación 4
+Bisagra: closed, origen simulator, secuencia 14', hitPoint: {191.0, 644.2}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 10 pages', value: 68%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 396.0}, {3.0, 64.3}}, hitPoint: {461.5, 428.2}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 10 pages', value: 68%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 396.0}, {3.0, 64.3}}, hitPoint: {461.5, 428.2}
+      Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+       Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+ Window, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+  Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+   Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}

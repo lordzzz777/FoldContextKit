@@ -1,0 +1,47 @@
+Device orientation: Unknown
+------------------------
+Application bundle identifier: org.foldcontextkit.RuntimeProbe
+Application UI orientation: Portrait
+Application, pid: 61671, label: 'RuntimeProbe'
+ Window, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+  Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+   Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+    Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+     Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+      Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+       Other, {{0.0, 0.0}, {382.0, 644.0}}, hitPoint: {191.0, 322.0}
+      ScrollView, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+       Other, {{0.0, 0.0}, {382.0, 5814.0}}, hitPoint: {191.0, 339.0}
+        StaticText, {{16.0, 16.0}, {216.7, 40.7}}, label: 'FoldContextKit', hitPoint: {124.3, 36.3}
+        StaticText, {{16.0, 80.7}, {162.7, 26.3}}, label: 'Diagnóstico local', hitPoint: {97.3, 93.8}
+        StaticText, {{16.0, 131.0}, {231.7, 14.3}}, label: 'Validación en hardware físico: pendiente.', hitPoint: {131.8, 138.2}
+        Switch, {{16.0, 169.3}, {350.0, 28.0}}, label: 'Ejemplo sintético', value: 0, hitPoint: {191.0, 183.3}
+         StaticText, {{16.0, 173.2}, {130.0, 20.3}}, label: 'Ejemplo sintético', hitPoint: {81.0, 183.3}
+         Switch, {{305.0, 169.3}, {63.0, 28.0}}, value: 0, hitPoint: {336.5, 183.3}
+        StaticText, {{16.0, 205.3}, {295.3, 42.3}}, label: 'SIMULADOR — datos del runtime, no evidencia física.', hitPoint: {163.7, 226.5}
+        StaticText, {{16.0, 271.7}, {183.3, 20.3}}, label: 'Control de entorno real', hitPoint: {107.7, 281.8}
+        StaticText, {{16.0, 300.0}, {350.0, 30.3}}, label: 'Esta lectura usa el runtime incluso si el ejemplo sintético está seleccionado.', hitPoint: {191.0, 315.2}
+        Button, {{16.0, 338.3}, {220.0, 20.3}}, label: 'Leer escalas de esta ventana', hitPoint: {126.0, 348.5}
+        StaticText, {{16.0, 366.7}, {343.7, 94.3}}, label: 'UIScreen.scale: 3.0 · nativeScale: 3.0 (factores sin unidad)
+UIScreen.bounds: 466.0 × 678.0 puntos
+UIScreen.nativeBounds: 1398.0 × 2034.0 píxeles
+UIWindow.bounds: 466.0 × 678.0 puntos
+Rol UISceneSession: UIWindowSceneSessionRoleApplication
+Lectura manual histórica; pulsar de nuevo para actualizar.', hitPoint: {187.8, 413.8}
+        Button, {{16.0, 469.0}, {252.7, 20.3}}, label: 'Abrir otra ventana de diagnóstico', hitPoint: {142.3, 479.2}
+        StaticText, {{16.0, 497.3}, {181.7, 14.3}}, label: 'Sistema admite varias ventanas.', hitPoint: {106.8, 504.5}
+        Other, {{16.0, 271.7}, {350.0, 240.0}}, hitPoint: {191.0, 391.7}
+        Switch, {{16.0, 535.7}, {350.0, 28.0}}, label: 'Montar observador', value: 1, hitPoint: {191.0, 549.7}
+         StaticText, {{16.0, 539.5}, {145.3, 20.3}}, label: 'Montar observador', hitPoint: {88.7, 549.7}
+         Switch, {{305.0, 535.7}, {63.0, 28.0}}, value: 1, hitPoint: {336.5, 549.7}
+        Switch, {{16.0, 587.7}, {350.0, 28.0}}, label: 'Habilitar observación', value: 1, hitPoint: {191.0, 601.7}
+         StaticText, {{16.0, 591.5}, {160.7, 20.3}}, label: 'Habilitar observación', hitPoint: {96.3, 601.7}
+         Switch, {{305.0, 587.7}, {63.0, 28.0}}, value: 1, hitPoint: {336.5, 601.7}
+        StaticText, {{16.0, 639.7}, {209.3, 20.3}}, label: 'Fase de esta escena: active', hitPoint: {120.7, 649.8}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 10 pages', value: 0%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 62.0}, {3.0, 65.0}}, hitPoint: {461.5, 94.5}
+       Other, {{433.0, 59.0}, {30.0, 560.0}}, label: 'Vertical scroll bar, 10 pages', value: 0%, hitPoint: {448.0, 339.0}
+        Other, {{460.0, 62.0}, {3.0, 65.0}}, hitPoint: {461.5, 94.5}
+ Window, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+  Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}
+   Other, {{0.0, 0.0}, {466.0, 678.0}}, hitPoint: {233.0, 339.0}

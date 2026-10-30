@@ -6,8 +6,9 @@
 - [x] Compilar RuntimeProbe para simulador.
 - [x] Ejecutar 25 tests Swift Testing del núcleo en Mac, incluidos siete nuevos de inferencia y presentación.
 - [x] Compilar y ejecutar consumidor SwiftPM independiente.
-- [ ] Completar tests iOS en simulador: ejecución bloqueada/cancelada, sin resultado completo.
-- [ ] Completar runtime de app en Duo: CoreSimulator inaccesible, arranque detenido y timeout; recuperación dirigida sin borrado no completada.
+- [x] Ejecutar tests iOS en Duo Simulator 27.1: 45 casos superados, sin fallos ni omisiones (32 funciones, incluidas parametrizadas).
+- [x] Observar app con escena activa, entrega inicial de bisagra, deshabilitación/reactivación y desmontaje/remontaje automático SwiftUI en Duo Simulator.
+- [x] Observar background/foreground de esta revisión: salida a SpringBoard y retorno en el mismo proceso; suspensión, espera y nueva muestra de bisagra registradas.
 
 Las marcas anteriores de «sin tests» corresponden a instrucciones históricas, sustituidas por la autorización actual. No confundir tests de reglas en Mac con observación de hardware o de escenas iOS. Evidencias y alcance en [ficha técnica](FichaTecnica.md#validacion-30-octubre).
 
@@ -27,7 +28,7 @@ Las marcas anteriores de «sin tests» corresponden a instrucciones históricas,
 - [x] Mantener límite explícito: captura no identifica iPhone Mirroring; windowApplication no certifica pantalla integrada.
 - [x] Incorporar licencia libre MIT autorizada.
 - [ ] Distinguir de forma universal Mirroring y pantallas externas interactivas: sin contrato público suficiente en la integración actual.
-- [ ] Validación posterior de los cambios; no ejecutada por petición del usuario.
+- [x] Compilación y reglas de regiones/captura validadas; observación runtime se registra en la validación actual.
 
 ## Presentación exterior e interior
 
@@ -36,7 +37,7 @@ Las marcas anteriores de «sin tests» corresponden a instrucciones históricas,
 - [x] Mantener postura de bisagra y distribución de la app separadas.
 - [x] Proporcionar regiones lógicas en puntos con contexto, origen y vigencia de ventana.
 - [x] Documentar integración UIKit/SwiftUI en README, sin crear documentación adicional.
-- [ ] Validación posterior; sin tests ni compilaciones por petición del usuario.
+- [x] Compilación y reglas de presentación validadas con entradas controladas; no acredita panel interior real.
 
 ## Implementación de inferencia solicitada
 
@@ -44,7 +45,7 @@ Las marcas anteriores de «sin tests» corresponden a instrucciones históricas,
 - [x] Separar candidato dimensional, Duo inferido e información insuficiente, conservando origen.
 - [x] Conectar observador, app y ejemplos UIKit/SwiftUI del README.
 - [x] Mantener transición opcional, contexto por ventana y rechazo de fuentes incompatibles.
-- [ ] Validación posterior de esta implementación; no ejecutada por indicación del usuario.
+- [x] Inferencia validada con entradas controladas en la suite actual; no acredita exclusividad del modelo.
 
 Las etapas inferiores son el registro histórico. La decisión anterior de no habilitar inferencia queda sustituida por esta implementación, sin convertir sus resultados previos en validación del código nuevo.
 

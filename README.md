@@ -10,12 +10,15 @@ Sin dependencias externas, Combine, telemetría ni permisos adicionales. Licenci
 
 Requisitos: **Swift 6.4**, **iOS/iPadOS 26 o posterior**. Las APIs de bisagra y regiones reservadas requieren **27.1**; en versiones anteriores se informa de su indisponibilidad. El núcleo también admite macOS 26.
 
-El paquete todavía no está publicado en GitHub. Puedes instalarlo localmente:
+Repositorio: [lordzzz777/FoldContextKit](https://github.com/lordzzz777/FoldContextKit).
 
 1. Abre tu app en Xcode.
-2. Selecciona **File → Add Package Dependencies… → Add Local…**.
-3. Elige la carpeta que contiene el `Package.swift` de FoldContextKit.
-4. Añade el producto **FoldContextKit** al target de tu app.
+2. Selecciona **File → Add Package Dependencies…**.
+3. Introduce `https://github.com/lordzzz777/FoldContextKit.git`.
+4. Selecciona la regla **Branch** y escribe **main**; todavía no hay una versión etiquetada.
+5. Añade el producto **FoldContextKit** al target de tu app.
+
+También puedes usar **Add Local…** y seleccionar la carpeta que contiene el `Package.swift` para trabajar con una copia local.
 
 Después importa el módulo:
 
@@ -23,7 +26,7 @@ Después importa el módulo:
 import FoldContextKit
 ```
 
-Cuando exista el repositorio en GitHub, podrás añadir su URL desde **Add Package Dependencies…**. No hay todavía una URL ni una versión publicada que instalar.
+La rama `main` contiene el desarrollo actual; no se presenta como una versión estable. Los límites de validación se detallan al final de este README.
 
 ### 2. Usar con SwiftUI
 

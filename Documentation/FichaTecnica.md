@@ -4,6 +4,15 @@ Documentación consolidada el 29 de octubre de 2026. Reúne los contratos, decis
 
 ## Estado vigente
 
+### Segunda ventana con el dispositivo abierto — 31 de octubre
+
+RuntimeProbe ofrece «Abrir segunda ventana» usando `openWindow(id: "diagnostic")`. Se habilita cuando `supportsMultipleWindows` es verdadero y esta escena está activa, con observador montado/habilitado, modo sintético desactivado y muestra de bisagra vigente del mismo contexto y origen sistema/simulador en fullyOpen o partiallyOpen. Cada instancia de WindowGroup mantiene snapshot, historial y observador propios. iOS decide la colocación; no se garantiza presentación simultánea lado a lado ni se cierran ventanas automáticamente al plegar. La biblioteca no abre ventanas del consumidor: esta acción pertenece a la app. Compilación, instalación y arranque correctos. En simulador cerrado se observó el botón deshabilitado, con modo sintético desactivado y observación activa. [Registro runtime](../Validation/RuntimeProbe/Results/2026-10-31-window-runtime.txt). Comprobación de apertura de dos escenas en abierto pendiente.
+
+### Diagnóstico de posturas — 31 de octubre
+
+RuntimeProbe permite activar `FOLD_CONTEXT_DIAGNOSTICS=1` al lanzarla. Escribe en stdout cada evento real recibido, con fecha, snapshot completo, metadatos y evaluación `.duo`. Es una opción local de la app de validación, desactivada por defecto; no añade telemetría ni modifica la biblioteca. Permite conservar lecturas aunque la herramienta de captura seleccione la pantalla exterior apagada. La app compila correctamente para iOS Simulator. La existencia de este registro no valida una postura: deben constar las muestras efectivamente recibidas.
+
+
 <a id="validacion-30-octubre"></a>
 
 ### Validación autorizada el 30 de octubre

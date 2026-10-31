@@ -32,7 +32,7 @@ private struct DiagnosticView: View {
                 Text("Diagnóstico local").font(.title2)
                 Text("Validación en hardware físico: pendiente.").font(.caption)
                 ModeSection(synthetic: $synthetic)
-                WindowInspectionSection()
+                WindowInspectionSection(canOpenSecondWindow: canOpenSecondWindow)
                 Toggle("Montar observador", isOn: $mounted).disabled(synthetic)
                 Toggle("Habilitar observación", isOn: $enabled).disabled(synthetic)
                 Text("Fase de esta escena: \(String(describing: scenePhase))")
@@ -81,7 +81,28 @@ private struct DiagnosticView: View {
         }
     }
 
+    private var canOpenSecondWindow: Bool {
+        guard !synthetic, mounted, enabled, scenePhase == .active,
+              let snapshot,
+              case let .observed(hinge, metadata) = snapshot.hinge,
+              metadata.context == snapshot.context,
+              metadata.validity == .current,
+              metadata.origin == .system || metadata.origin == .simulator else {
+            return false
+        }
+        return hinge.status == .fullyOpen || hinge.status == .partiallyOpen
+    }
+
     private func receive(_ event: FoldObservationEvent) {
+        // Opt-in local diagnostics let simulator validation inspect both displays
+        // without relying on which display the screenshot tool captures.
+        if ProcessInfo.processInfo.environment["FOLD_CONTEXT_DIAGNOSTICS"] == "1" {
+            var line = "FOLD_CONTEXT_EVENT \(Date().ISO8601Format()) \(String(reflecting: event))"
+            if case let .snapshot(value, _) = event {
+                line += " assessment=\(String(reflecting: FoldClassifier.evaluate(evidence: value, policy: .duo)))"
+            }
+            FileHandle.standardOutput.write(Data((line + "\n").utf8))
+        }
         switch event {
         case let .overflow(count):
             lost += count
@@ -281,6 +302,7 @@ private func reasonDescription(_ reason: AssessmentReason) -> String {
 
 /// Manual diagnostic reading tied to this window, never a global screen selector.
 private struct WindowInspectionSection: View {
+    let canOpenSecondWindow: Bool
     @Environment(\.openWindow) private var openWindow
     @Environment(\.supportsMultipleWindows) private var supportsMultipleWindows
     @State private var anchor = UIView()
@@ -299,9 +321,17 @@ private struct WindowInspectionSection: View {
                 reading = "UIScreen.scale: \(screen.scale) · nativeScale: \(screen.nativeScale) (factores sin unidad)\nUIScreen.bounds: \(screen.bounds.width) × \(screen.bounds.height) puntos\nUIScreen.nativeBounds: \(screen.nativeBounds.width) × \(screen.nativeBounds.height) píxeles\nUIWindow.bounds: \(window.bounds.width) × \(window.bounds.height) puntos\nRol UISceneSession: \(scene.session.role.rawValue)\nLectura manual histórica; pulsar de nuevo para actualizar."
             }
             Text(reading).font(.caption).textSelection(.enabled)
-            Button("Abrir otra ventana de diagnóstico") { openWindow(id: "diagnostic") }
-                .disabled(!supportsMultipleWindows)
-            Text(supportsMultipleWindows ? "Sistema admite varias ventanas." : "Varias ventanas no disponibles en este contexto.").font(.caption)
+            Button("Abrir segunda ventana") {
+                guard canOpenSecondWindow, supportsMultipleWindows else { return }
+                openWindow(id: "diagnostic")
+            }
+            .disabled(!canOpenSecondWindow || !supportsMultipleWindows)
+            Text(!supportsMultipleWindows
+                 ? "El sistema no permite varias ventanas en este contexto."
+                 : canOpenSecondWindow
+                 ? "Cada ventana observa su propia escena. iOS decide su colocación."
+                 : "Abre o entreabre el dispositivo con la observación activa para abrir otra ventana.")
+                .font(.caption)
         }
         .background(WindowInspectionAnchor(view: anchor))
     }

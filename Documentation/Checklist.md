@@ -1,5 +1,11 @@
 # Etapas verificables
 
+## Segunda ventana — 31 de octubre
+
+- [x] Habilitar «Abrir segunda ventana» con bisagra abierta/entreabierta vigente y soporte multiwindow del sistema, conservando estado por escena.
+- [x] Compilar e instalar RuntimeProbe; observar botón deshabilitado con bisagra cerrada.
+- [ ] Observar dos escenas independientes abiertas mediante el botón; la colocación depende de iOS.
+
 ## Validación actual — 30 de octubre
 
 - [x] Compilar paquete y targets de pruebas para iOS Simulator con BuildProject.

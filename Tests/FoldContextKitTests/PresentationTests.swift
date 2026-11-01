@@ -14,8 +14,8 @@ private struct PresentationFixture {
                   attribution: ScreenAttribution = .applicationDisplay,
                   hingePresent: Bool = true, geometry: FoldLayoutGeometry? = nil,
                   geometryMetadata: EvidenceMetadata? = nil) throws -> FoldEvidence {
-        let w = interior ? 1878 : 1398
-        let h = interior ? 2670 : 2034
+        let w = interior ? 2007 : 1398
+        let h = interior ? 2853 : 2034
         let pixels = try #require(PixelSize(width: rotated ? h : w, height: rotated ? w : h))
         let points = try #require(PointSize(width: 800, height: 600))
         let hinge = try #require(HingeSample(status: .partiallyOpen, angleRadians: .pi / 2, source: .uiHingeInteraction))
@@ -162,4 +162,53 @@ private struct PresentationFixture {
             #expect(r.x + r.width <= cut.frame.x || r.x >= cut.frame.x + cut.frame.width)
         }
     }
+}
+
+// Regression for the recorded simulator interior size. These are controlled
+// rule tests; runtime posture validation is recorded separately.
+@Test(arguments: [HingeStatus.closed, .partiallyOpen, .fullyOpen])
+func recordedSimulatorInteriorPreservesPostureAndLayout(status: HingeStatus) throws {
+    let f = PresentationFixture()
+    let base = try f.evidence(geometry: f.geometry())
+    let hinge = try #require(HingeSample(status: status,
+        angleRadians: status == .closed ? 0 : status == .fullyOpen ? .pi : .pi / 2,
+        source: .uiHingeInteraction))
+    let input = FoldEvidence(context: base.context, presentationSize: base.presentationSize,
+        nativeScreenSize: base.nativeScreenSize,
+        hinge: .observed(hinge, metadata: f.metadata), layoutGeometry: base.layoutGeometry)
+    for layout in [FoldInteriorLayout.extended, .divided(axis: .horizontal), .divided(axis: .vertical)] {
+        let result = FoldClassifier.evaluate(evidence: input, interiorLayout: layout)
+        #expect(result.model == .duoInferred(origin: .simulator))
+        #expect(result.presentation.display == .interior)
+        #expect(result.presentation.hinge == input.hinge)
+        #expect(result.presentation.regions.count == (layout == .extended ? 1 : 2))
+    }
+}
+
+@Test(arguments: [EvidenceOrigin.system, .simulator])
+func simulatorInteriorProfileDoesNotExpandPhysicalProfile(origin: EvidenceOrigin) throws {
+    let f = PresentationFixture()
+    let metadata = EvidenceMetadata(context: f.context, sequence: 1, origin: origin, validity: .current)
+    let hinge = try #require(HingeSample(status: .fullyOpen, angleRadians: .pi, source: .uiHingeInteraction))
+    for rotated in [false, true] {
+        let pixels = try #require(PixelSize(width: rotated ? 2853 : 2007, height: rotated ? 2007 : 2853))
+        let input = FoldEvidence(context: f.context, presentationSize: .missing(.awaitingSample),
+            nativeScreenSize: .observed(NativeScreenSize(pixels: pixels,
+                attribution: .applicationDisplay, captureState: .inactive), metadata: metadata),
+            hinge: .observed(hinge, metadata: metadata))
+        let result = FoldClassifier.evaluate(evidence: input)
+        #expect(result.model == (origin == .simulator ? .duoInferred(origin: .simulator) : .insufficientInformation))
+        #expect(result.presentation.display == (origin == .simulator ? .interior : .unknown))
+    }
+}
+
+@Test func originalInteriorProfileRemainsCompatible() throws {
+    let f = PresentationFixture()
+    let pixels = try #require(PixelSize(width: 1878, height: 2670))
+    let hinge = try #require(HingeSample(status: .fullyOpen, angleRadians: .pi, source: .uiHingeInteraction))
+    let input = FoldEvidence(context: f.context, presentationSize: .missing(.awaitingSample),
+        nativeScreenSize: .observed(NativeScreenSize(pixels: pixels, attribution: .applicationDisplay,
+            captureState: .inactive), metadata: f.metadata),
+        hinge: .observed(hinge, metadata: f.metadata))
+    #expect(FoldClassifier.evaluate(evidence: input).presentation.display == .interior)
 }

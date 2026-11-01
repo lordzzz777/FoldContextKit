@@ -1,0 +1,95 @@
+Building for debugging...
+[1 / 23]
+[2 / 13] FoldContextKitTests-product
+[4 / 15] FoldContextKitTests-product
+[7 / 13] FoldContextKitTests-product
+[9 / 13] FoldContextKitTests-product
+[11 / 13] FoldContextKitTests-product
+Build complete! (3,59 s)
+Test Suite 'All tests' started at 2026-11-01 14:25:11.040.
+Test Suite 'All tests' passed at 2026-11-01 14:25:11.044.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.004) seconds
+􀟈  Test run started.
+􀄵  Testing Library Version: 2403
+􀄵  Target Platform: arm64e-apple-macos14.0
+􀟈  Test occlusionsAreExcludedWithoutLosingUnobscuredArea() started.
+􀟈  Test historicalEvidenceRetainsItsOwnWindowAndGeneration() started.
+􀟈  Test missingHingeNeverMeansPhysicalAbsence(_:) started.
+􀟈  Test syntheticCombinationNeedsNoInitialTransition(_:) started.
+􀟈  Test archivalCopyDoesNotMutateCurrentEvidence() started.
+􀟈  Test layoutChoiceDoesNotFollowHingeAngle() started.
+􀟈  Test simulatorInteriorProfileDoesNotExpandPhysicalProfile(origin:) started.
+􀟈  Test recordedSimulatorInteriorPreservesPostureAndLayout(status:) started.
+􀟈  Test captureAndExternalContextsBlockDuoInference() started.
+􀟈  Test policyIsExplicitAndObservationOnlyCannotInfer() started.
+􀟈  Test rotationMatchesButDoesNotBecomeATransition() started.
+􀟈  Test fragmentedRegionsAreBoundedAndRemainOutsideOcclusions() started.
+􀟈  Test historicalSamplesCannotActAsCurrentEvidence() started.
+􀟈  Test transitionIsDependentAndNeverPromotesModel() started.
+􀟈  Test nonsyntheticSourcesCannotProduceSyntheticInference(_:) started.
+􀟈  Test rejectsInvalidMeasurements() started.
+􀟈  Test duoInferenceAndPanelRespectEvidenceAndRotation() started.
+􀟈  Test originalInteriorProfileRemainsCompatible() started.
+􀟈  Test pointsCannotSubstituteForNativePixels(_:) started.
+􀟈  Test hingeWithoutDimensionsObservesCapabilityOnly(_:) started.
+􀟈  Test missingDataDoesNotCollapseIntoOneState() started.
+􀟈  Test measuredDivisionOverridesEqualHalvesAndKeepsMargins() started.
+􀟈  Test sceneWindowAndGenerationMismatchesAreRejected() started.
+􀟈  Test invalidHistoryAddsNoTransitionAndDoesNotOverrideCurrentEvidence() started.
+􀟈  Test contradictoryDimensionsBlockInference() started.
+􀟈  Test boundedBufferPreservesDiscreteEventsAndReportsOverflow() started.
+􀟈  Test case passing 1 argument source → .uiHingeInteraction to syntheticCombinationNeedsNoInitialTransition(_:) started.
+􀟈  Test staleOrForeignGeometryCannotSupplySafeRegions() started.
+􀟈  Test case passing 1 argument reason → .awaitingSample to missingHingeNeverMeansPhysicalAbsence(_:) started.
+􀟈  Test case passing 1 argument source → .swiftUIHingeChange to syntheticCombinationNeedsNoInitialTransition(_:) started.
+􀟈  Test case passing 1 argument reason → .apiUnavailable to missingHingeNeverMeansPhysicalAbsence(_:) started.
+􀟈  Test case passing 1 argument reason → .observationSuspended to missingHingeNeverMeansPhysicalAbsence(_:) started.
+􀟈  Test screenAttributionBlocksInference(_:) started.
+􀟈  Test case passing 1 argument reason → .unavailableInContext to missingHingeNeverMeansPhysicalAbsence(_:) started.
+􀟈  Test case passing 1 argument status → .closed to recordedSimulatorInteriorPreservesPostureAndLayout(status:) started.
+􀟈  Test case passing 1 argument origin → .system to simulatorInteriorProfileDoesNotExpandPhysicalProfile(origin:) started.
+􀟈  Test case passing 1 argument status → .partiallyOpen to recordedSimulatorInteriorPreservesPostureAndLayout(status:) started.
+􀟈  Test case passing 1 argument origin → .simulator to simulatorInteriorProfileDoesNotExpandPhysicalProfile(origin:) started.
+􀟈  Test case passing 1 argument status → .fullyOpen to recordedSimulatorInteriorPreservesPostureAndLayout(status:) started.
+􀟈  Test case passing 1 argument origin → .system to nonsyntheticSourcesCannotProduceSyntheticInference(_:) started.
+􀟈  Test case passing 1 argument origin → .simulator to nonsyntheticSourcesCannotProduceSyntheticInference(_:) started.
+􀟈  Test case passing 1 argument source → .uiWindowBounds to pointsCannotSubstituteForNativePixels(_:) started.
+􀟈  Test case passing 1 argument origin → .unknown to nonsyntheticSourcesCannotProduceSyntheticInference(_:) started.
+􀟈  Test case passing 1 argument source → .uiViewBounds to pointsCannotSubstituteForNativePixels(_:) started.
+􀟈  Test case passing 1 argument source → .swiftUIGeometry to pointsCannotSubstituteForNativePixels(_:) started.
+􀟈  Test case passing 1 argument status → .unknown to hingeWithoutDimensionsObservesCapabilityOnly(_:) started.
+􀟈  Test case passing 1 argument status → .partiallyOpen to hingeWithoutDimensionsObservesCapabilityOnly(_:) started.
+􀟈  Test case passing 1 argument status → .fullyOpen to hingeWithoutDimensionsObservesCapabilityOnly(_:) started.
+􀟈  Test case passing 1 argument attribution → .unknown to screenAttributionBlocksInference(_:) started.
+􀟈  Test case passing 1 argument attribution → .externalDisplay to screenAttributionBlocksInference(_:) started.
+􀟈  Test case passing 1 argument attribution → .mirrored to screenAttributionBlocksInference(_:) started.
+􁁛  Test occlusionsAreExcludedWithoutLosingUnobscuredArea() passed after 0.001 seconds.
+􁁛  Test syntheticCombinationNeedsNoInitialTransition(_:) with 2 test cases passed after 0.001 seconds.
+􁁛  Test layoutChoiceDoesNotFollowHingeAngle() passed after 0.001 seconds.
+􁁛  Test policyIsExplicitAndObservationOnlyCannotInfer() passed after 0.001 seconds.
+􁁛  Test rotationMatchesButDoesNotBecomeATransition() passed after 0.001 seconds.
+􁁛  Test rejectsInvalidMeasurements() passed after 0.001 seconds.
+􁁛  Test captureAndExternalContextsBlockDuoInference() passed after 0.001 seconds.
+􁁛  Test transitionIsDependentAndNeverPromotesModel() passed after 0.001 seconds.
+􁁛  Test historicalSamplesCannotActAsCurrentEvidence() passed after 0.001 seconds.
+􁁛  Test originalInteriorProfileRemainsCompatible() passed after 0.001 seconds.
+􁁛  Test nonsyntheticSourcesCannotProduceSyntheticInference(_:) with 3 test cases passed after 0.001 seconds.
+􁁛  Test pointsCannotSubstituteForNativePixels(_:) with 3 test cases passed after 0.001 seconds.
+􁁛  Test duoInferenceAndPanelRespectEvidenceAndRotation() passed after 0.001 seconds.
+􁁛  Test missingDataDoesNotCollapseIntoOneState() passed after 0.001 seconds.
+􁁛  Test measuredDivisionOverridesEqualHalvesAndKeepsMargins() passed after 0.001 seconds.
+􁁛  Test contradictoryDimensionsBlockInference() passed after 0.001 seconds.
+􁁛  Test sceneWindowAndGenerationMismatchesAreRejected() passed after 0.001 seconds.
+􁁛  Test boundedBufferPreservesDiscreteEventsAndReportsOverflow() passed after 0.001 seconds.
+􁁛  Test screenAttributionBlocksInference(_:) with 3 test cases passed after 0.001 seconds.
+􁁛  Test invalidHistoryAddsNoTransitionAndDoesNotOverrideCurrentEvidence() passed after 0.001 seconds.
+􁁛  Test missingHingeNeverMeansPhysicalAbsence(_:) with 4 test cases passed after 0.002 seconds.
+􁁛  Test simulatorInteriorProfileDoesNotExpandPhysicalProfile(origin:) with 2 test cases passed after 0.001 seconds.
+􁁛  Test historicalEvidenceRetainsItsOwnWindowAndGeneration() passed after 0.002 seconds.
+􀟈  Test case passing 1 argument status → .closed to hingeWithoutDimensionsObservesCapabilityOnly(_:) started.
+􁁛  Test recordedSimulatorInteriorPreservesPostureAndLayout(status:) with 3 test cases passed after 0.002 seconds.
+􁁛  Test hingeWithoutDimensionsObservesCapabilityOnly(_:) with 4 test cases passed after 0.001 seconds.
+􁁛  Test staleOrForeignGeometryCannotSupplySafeRegions() passed after 0.001 seconds.
+􁁛  Test archivalCopyDoesNotMutateCurrentEvidence() passed after 0.002 seconds.
+􁁛  Test fragmentedRegionsAreBoundedAndRemainOutsideOcclusions() passed after 0.002 seconds.
+􁁛  Test run with 28 tests in 0 suites passed after 0.002 seconds.

@@ -139,10 +139,13 @@ public enum FoldClassifier {
 
 
 
-    private static func duoDisplay(_ size: PixelSize) -> FoldDisplay {
+    private static func duoDisplay(_ size: PixelSize, origin: EvidenceOrigin) -> FoldDisplay {
         switch (min(size.width, size.height), max(size.width, size.height)) {
         case (1398, 2034): .exterior
         case (1878, 2670): .interior
+        // Recorded nativeBounds from Duo Simulator 27.1. Do not promote a
+        // simulator-specific profile into an unverified physical-device profile.
+        case (2007, 2853) where origin == .simulator: .interior
         default: .unknown
         }
     }
@@ -165,7 +168,7 @@ public enum FoldClassifier {
         var origin: EvidenceOrigin?
         if case let .duoInferred(inferredOrigin) = model,
            case let .observed(screen, _) = evidence.nativeScreenSize {
-            display = duoDisplay(screen.pixels)
+            display = duoDisplay(screen.pixels, origin: inferredOrigin)
             origin = inferredOrigin
         }
         let mode: FoldPresentationMode
@@ -247,8 +250,8 @@ public enum FoldClassifier {
                                 unobscuredRegionsTruncated: unobscured.truncated)
     }
 
-    private static func matchesDuo(_ size: PixelSize) -> Bool {
-        duoDisplay(size) != .unknown
+    private static func matchesDuo(_ size: PixelSize, origin: EvidenceOrigin) -> Bool {
+        duoDisplay(size, origin: origin) != .unknown
     }
 
     private static func inferDuo(
@@ -282,7 +285,7 @@ public enum FoldClassifier {
             reasons.append(.sceneCaptureUnknown)
             return result(.insufficientInformation)
         }
-        guard matchesDuo(screen.pixels) else {
+        guard matchesDuo(screen.pixels, origin: metadata.origin) else {
             reasons.append(.dimensionsDoNotMatch)
             return result(.insufficientInformation)
         }
@@ -298,7 +301,7 @@ public enum FoldClassifier {
                 } else if old.attribution != screen.attribution {
                     reasons.append(.screenAttributionUnsupported(.previousScreen, old.attribution))
                 } else if oldMetadata.sequence < metadata.sequence,
-                          matchesDuo(old.pixels), !sameDimensions(old.pixels, screen.pixels) {
+                          matchesDuo(old.pixels, origin: oldMetadata.origin), !sameDimensions(old.pixels, screen.pixels) {
                     reasons.append(.compatibleDimensionTransition)
                 } else {
                     reasons.append(.transitionNotComparable)

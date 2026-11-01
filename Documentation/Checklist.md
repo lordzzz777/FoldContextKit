@@ -1,12 +1,29 @@
 # Etapas verificables
 
+## Validación sin dispositivo físico — 1 de noviembre
+
+**Entrega solicitada completada en simulador.** La matriz inferior conserva escenarios generales de investigación fuera de esta entrega.
+
+- [x] Corregir perfil interior 2007 × 2853 limitado al origen simulator; mantener perfil previo.
+- [x] Pruebas de regresión para postura, rotación y separación de perfiles de sistema/simulador.
+- [x] 28 funciones de tests Mac y 37 funciones / 53 casos iOS, sin fallos ni omisiones; app compilada.
+- [x] Observar arranque abierto e inferencia interior con fullyOpen π en Duo Simulator 27.1.
+- [x] Observar dos escenas independientes lado a lado creadas mediante FoldNewWindowButton.
+- [x] Observar transición a partiallyOpen, inferencia interior y división activa en ambas escenas.
+- [x] Arranque directo entreabierto sin gesto previo, rotación interior y regreso al exterior al cerrar.
+- [x] Transición a 90°, arranque directo y salida: partiallyOpen a π/2 y fullyOpen a π observados en runtime, sin entradas sintéticas. Option + clic físico en el control Partially Open permite obtener 90° en este entorno. [Evidencia](../Validation/RuntimeProbe/Results/2026-11-01-completion-90-validation.txt).
+- [x] Inspeccionar controles nativos: Split View lado a lado, sin tres círculos observados; se documenta la limitación de plataforma.
+- [x] Observar rechazo contextual de nueva escena en vertical y éxito tras rotar a horizontal, sin añadir restricciones propias por orientación.
+
+No se requiere dispositivo físico para esta entrega. Los ensayos físicos quedan fuera del alcance disponible. Detalles y logs en el estado vigente de la ficha técnica.
+
 ## Activación de ventanas en FoldContextKit — 1 de noviembre
 
 - [x] API UIKit de solicitud explícita con escena de origen y errores del sistema.
 - [x] Acción nativa y botón SwiftUI reutilizable, sin puerta basada en ángulo o modelo.
 - [x] Integrar RuntimeProbe y documentar configuración/enrutamiento del consumidor.
 - [x] Compilar paquete/app y superar 47 casos en simulador, incluidos 2 nuevos de activación.
-- [ ] Observar creación de dos escenas independientes con el adaptador nativo y confirmar su presentación.
+- [x] Observar creación de dos escenas independientes con el adaptador nativo: lado a lado en Duo Simulator 27.1, validación del 1 de noviembre.
 
 Las condiciones de apertura basadas en bisagra de la sección del 31 de octubre quedan sustituidas por la acción nativa anterior.
 
@@ -146,8 +163,8 @@ Ejecutar por separado en simulador y dispositivos físicos; registrar versiones 
 | Apertura/cierre y cambios parciales de ángulo | Pendiente | Pendiente | Pendiente |
 | Arranque en modo libro, sin transición previa | Pendiente | Pendiente | Pendiente |
 | Transición a modo libro y salida de esa postura | Pendiente | Pendiente | Pendiente |
-| Arranque abierto a 90°, sin transición previa | Pendiente | Pendiente | Pendiente |
-| Transición a 90° y salida de esa postura | Pendiente | Pendiente | Pendiente |
+| Arranque abierto a 90°, sin transición previa | Entradas controladas a π/2 | Observado 1/11: partiallyOpen, π/2, interior | Fuera del alcance |
+| Transición a 90° y salida de esa postura | Entradas controladas | Observado 1/11: cerrado → π/2; π/2 → fullyOpen π | Fuera del alcance |
 | Rotación y resize sin plegado | Reglas sintéticas | Intento de rotación: app permaneció vertical; resize pendiente | Pendiente |
 | Multitarea y varias ventanas/escenas | Pendiente | Pendiente | Pendiente |
 | iPad mini y otros dispositivos sin bisagra | Pendiente | Pendiente | Pendiente |
@@ -158,7 +175,7 @@ Ejecutar por separado en simulador y dispositivos físicos; registrar versiones 
 
 Si un escenario no está disponible en una plataforma de prueba, registrar «no aplicable/no disponible» con motivo, sin marcarlo probado.
 
-### Protocolo pendiente: modo libro y apertura a 90°
+### Protocolo de observación: modo libro y apertura a 90°
 
 - **Modo libro:** colocar el dispositivo parcialmente abierto en postura de lectura. Registrar la postura conocida por el operador y el ángulo comunicado, sin fijar un ángulo universal para «libro». Dos páginas o regiones visuales no implican dos pantallas, ventanas o escenas independientes: registrar lo que realmente expongan las APIs públicas.
 - **Apertura a 90°:** registrar por separado el ángulo objetivo del ensayo (90°, π/2 radianes) y el valor recibido. No exigir igualdad exacta ni establecer tolerancias sin evidencia. Un dato ausente o un estado unknown se conserva como tal.
@@ -167,7 +184,7 @@ Si un escenario no está disponible en una plataforma de prueba, registrar «no 
 - Comprobar ambas orientaciones cuando el entorno lo permita. No deducir postura, cantidad de pantallas ni identidad del modelo solo a partir del ángulo o las dimensiones.
 - Separar resultados de entradas sintéticas, runtime del simulador y dispositivo físico. El fixture actual de 1 radián no valida modo libro ni 90°. Si el simulador no permite configurar una postura, registrar esa limitación y mantener pendiente la observación física.
 
-Estos ensayos no incorporan perfiles de producción ni un layout de dos páginas. La política de la app continúa siendo observationOnly.
+Este protocolo procede de la investigación inicial. El estado vigente de esta entrega y la política duo implementada se describen al principio de este documento y de la ficha técnica; no se deducen de las casillas históricas.
 
 
 Registro futuro por caso: identificador local del ensayo, entorno, versión, escenario, condición conocida por el operador, eventos recibidos, origen/unidades, resultado esperado, resultado obtenido, motivos, falso positivo/falso negativo/información insuficiente y pasos de reproducción. No recoger identificadores personales. El ensayo RuntimeProbe registra observaciones de integración, no tasas de identificación. No hay tasas calculadas; no afirmar cero errores.

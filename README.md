@@ -141,6 +141,8 @@ Para suspender temporalmente, usa `observer.isEnabled = false`. Para releer geom
 
 En iOS, FoldContextKit incluye `FoldNewWindowButton` para SwiftUI y `FoldWindowActivation` para UIKit. Usan la activación nativa de escenas; no abren ventanas automáticamente al plegar ni convierten la multitarea de iOS en un escritorio macOS. La disponibilidad y colocación dependen del sistema, no de la clasificación Duo ni solo de su bisagra.
 
+En Duo, la presentación verificada es **Split View lado a lado**. Los tres controles de ventana de iPadOS/macOS no forman parte de la API de esta biblioteca ni se han observado en Duo Simulator. Apple explica la multitarea y la disponibilidad dinámica de escenas en [Multiple displays and scenes on iPhone Duo](https://developer.apple.com/videos/play/tech-talks/111464/).
+
 Configura soporte de múltiples escenas en tu app (`UIApplicationSceneManifest` → `UIApplicationSupportsMultipleScenes = YES`). La app también debe decidir qué escena recibe cada actividad. Ejemplo SwiftUI con un grupo dedicado:
 
 ```swift
@@ -222,7 +224,13 @@ La inferencia no es una identificación oficial ni una garantía de exclusividad
 
 ## Estado y documentación
 
-Paquete y app compilados para iOS Simulator. **25 tests del núcleo superados en Mac** y consumidor SwiftPM local ejecutado. **47 casos superados en iOS Simulator**, sin fallos ni omisiones: cubren UIKit, SwiftUI y dos pruebas nuevas de activación de ventanas. En la app se observaron entrega inicial de bisagra, inferencia exterior, deshabilitación/reactivación y remontaje SwiftUI en simulador. También se observó suspensión al pasar a segundo plano y recepción de una muestra nueva al regresar. La lectura interior se obtuvo: 2007 × 2853 píxeles nativos con bisagra fullyOpen en simulador. Difiere del perfil interior implementado (1878 × 2670), por lo que allí el modelo queda desconocido. Quedan pendientes posturas libro/90° y la apertura efectiva de dos escenas con el nuevo botón; no hay dispositivo físico disponible. Detalles en la ficha técnica. Las pruebas controladas no acreditan comportamiento físico.
+Entrega del 1 de noviembre validada sin dispositivo físico: **28 funciones de pruebas en Mac** y **37 funciones / 53 casos en Duo Simulator 27.1**, sin fallos ni omisiones. RuntimeProbe compila y el consumidor SwiftPM independiente importa y ejecuta el paquete.
+
+Se observaron pantalla exterior al cerrar, interior completamente abierta, postura libro/entreabierta, arranque directo entreabierto, rotación y **transición, arranque directo y salida de 90°**. El registro a 90° contiene `partiallyOpen` y `angleRadians = 1.5707963267948966`; al abrir completamente recibe `fullyOpen` y π. La clasificación interior se mantiene y las divisiones activas del sistema se actualizan.
+
+El perfil interior **2007 × 2853** se acepta exclusivamente con origen simulator; se mantiene compatible el perfil previo 1878 × 2670. Se observaron dos escenas independientes lado a lado abiertas con `FoldNewWindowButton`. En este entorno una solicitud en vertical fue rechazada y la misma acción funcionó tras rotar a horizontal; la biblioteca respeta la disponibilidad del sistema.
+
+La presentación comprobada es Split View; no se observaron tres controles de ventana de escritorio. La validación física queda fuera del alcance disponible y no bloquea esta entrega. Los resultados del simulador no acreditan hardware físico. Registros y reproducción en la ficha técnica.
 
 - [Ficha técnica](Documentation/FichaTecnica.md): contratos, fuentes, regiones, límites y resultados.
 - [Checklist](Documentation/Checklist.md): trabajo completado y pendientes.

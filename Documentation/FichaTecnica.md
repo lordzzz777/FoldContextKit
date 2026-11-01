@@ -4,6 +4,22 @@ Documentación consolidada el 29 de octubre de 2026. Reúne los contratos, decis
 
 ## Estado vigente
 
+### Entrega completada en simulador — 1 de noviembre
+
+Completado el alcance solicitado sin dispositivo físico: clasificación exterior/interior, bisagra cerrada/entreabierta/abierta, arranque directo en esas posturas, rotación, regreso al exterior al cerrar y activación de dos escenas independientes lado a lado. Los escenarios generales de investigación de apartados históricos no amplían este alcance.
+
+Se acepta 2007 × 2853 (también con ejes intercambiados) como perfil interior **solo con origen simulator**, basado en lecturas de Duo Simulator 27.1. Se mantiene compatible 1878 × 2670. La inferencia exige captura inactiva, atribución admisible, contexto vigente y bisagra del mismo origen. No se amplía el perfil físico con medidas del simulador. La cantidad de regiones de contenido o escenas no identifica la cantidad de pantallas físicas.
+
+Validación: 28 funciones Swift Testing superadas en Mac; 37 funciones / 53 casos contando parámetros superados en Duo Simulator 27.1, cero fallos y cero omisiones. RuntimeProbe compila y el consumidor SwiftPM independiente importa y ejecuta el paquete. SDK iOS 27.2, Swift 6.4.2. Los builds emiten un aviso de extracción de App Intents sin dependencia de AppIntents; no afecta al resultado.
+
+**90° verificados en runtime.** Option + clic físico en el icono Partially Open de Device Hub produjo partiallyOpen a π/2; los intentos previos por índice AX no habían obtenido esa postura. Se terminó y relanzó RuntimeProbe manteniendo el ángulo: la primera muestra de bisagra registrada es partiallyOpen con `angleRadians = 1.5707963267948966`, origen simulator, modelo duoInferred e interior. Ventana 951 × 669 puntos, pantalla 2007 × 2853 píxeles, captura inactive y una división activa. Al pulsar Open, conserva la inferencia y termina en fullyOpen a `3.141592653589793`, sin divisiones activas. Se acredita arranque directo, transición a 90° y salida. [Protocolo y contexto](../Validation/RuntimeProbe/Results/2026-11-01-completion-90-validation.txt) · [stdout original del arranque y apertura](../Validation/RuntimeProbe/Results/2026-11-01-completion-90-runtime.log).
+
+También se observó arranque directo entreabierto a 2.230143 radianes, rotación manteniendo inferencia y regreso al exterior 1398 × 2034 al cerrar, conservando escena/ventana con nueva generación. [Inspección anterior](../Validation/RuntimeProbe/Results/2026-11-01-completion-followup.txt); su limitación angular queda sustituida por la validación a 90° anterior.
+
+FoldNewWindowButton creó dos escenas simultáneas lado a lado, ventanas de 469 × 669 puntos, con contextos independientes e inferencia interior. En una comprobación vertical el sistema rechazó la acción; funcionó tras rotar a horizontal. Es un resultado del entorno, no una restricción añadida por la biblioteca. No se observaron tres círculos de escritorio: la presentación verificada es Split View. Apple describe la multitarea y la disponibilidad de escenas en el panel interior en [Leverage multiple displays and scenes on iPhone Duo](https://developer.apple.com/videos/play/tech-talks/111464/). La biblioteca solicita escenas y conserva errores; no dibuja ni garantiza controles o colocación del sistema.
+
+Evidencia restante: [runtime de dos escenas](../Validation/RuntimeProbe/Results/2026-11-01-completion-runtime.log), [tests Mac](../Validation/RuntimeProbe/Results/2026-11-01-completion-mac-tests.log), [tests iOS](../Validation/RuntimeProbe/Results/2026-11-01-completion-ios-tests.log), [resumen iOS](../Validation/RuntimeProbe/Results/2026-11-01-completion-ios-summary.json), [compilación](../Validation/RuntimeProbe/Results/2026-11-01-completion-app-build.log). La documentación inferior conserva las fechas y límites de la investigación; sus pendientes no sustituyen este estado vigente. Hardware físico fuera del alcance disponible, sin atribuirle los resultados del simulador. No se ha publicado una versión remota.
+
 ### Activación de ventanas en la biblioteca — 1 de noviembre
 
 Implementados `FoldWindowActivation.request(from:userActivity:onError:)`, `makeAction(title:from:userActivity:onFailure:)` y el adaptador SwiftUI `FoldNewWindowButton`. Sustituyen el botón local condicionado por la bisagra: la acción nativa `UIWindowScene.ActivationAction` gestiona la disponibilidad contextual del sistema. La solicitud explícita usa `UIApplication.activateSceneSession(for:errorHandler:)`, con `UISceneSessionActivationRequest` y `options.requestingScene` de la escena que la origina. No consulta ventanas globales ni modifica el clasificador.
@@ -20,6 +36,8 @@ Fuentes: [acción nativa](https://developer.apple.com/documentation/uikit/uiwind
 ### Lectura interior obtenida — 1 de noviembre
 
 Se registra por primera vez en la app una muestra actual del panel interior de Duo Simulator 27.1: `UIWindow.bounds = 951 × 669 puntos`, `UIScreen.nativeBounds = 2007 × 2853 píxeles`, bisagra UIKit `fullyOpen`, ángulo 3.141592653589793 radianes, origen simulator, captura inactive y atribución applicationDisplay. Las medidas conservan los ejes de cada API; no se calcularon desde pulgadas ni desde capturas. El registro runtime enlazado arriba contiene snapshot y metadatos originales.
+
+Continuación del registro (00:40 UTC): la misma ventana cambió de 951 × 669 a 669 × 951 puntos y volvió a 951 × 669, manteniendo nativeBounds 2007 × 2853 y fullyOpen π radianes. Se acredita variación de ejes de ventana interior en simulador; los gestos ocurrieron antes de esta inspección y no se atribuyen al asistente. No acredita múltiples ventanas. Las muestras originales están en el mismo registro runtime.
 
 El clasificador informa capacidad hingeObserved y modelo insufficientInformation por dimensionsDoNotMatch. El perfil interior implementado compara 1878 × 2670 píxeles; la lectura obtenida difiere. Se registra esta abstención conocida en simulador, sin inventar una tasa de errores ni ampliar el perfil automáticamente. Cumple el ensayo de obtener la lectura interior, pero no acredita la identificación interior ni posturas entreabierta/90° o hardware físico. Sustituye las afirmaciones históricas inferiores de que no había lectura interior.
 

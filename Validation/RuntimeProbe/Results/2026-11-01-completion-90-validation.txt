@@ -1,0 +1,30 @@
+2026-11-01 — Cierre de validación de postura a 90°
+Entorno: Device Hub, Duo Simulator iOS 27.1, 76DA5EC9-CCCB-4FB2-B5DA-65F276D2C284.
+Consumidor RuntimeProbe compilado con SDK iOS 27.2 y Swift 6.4.2.
+
+Reproducción observada:
+1. Con Duo cerrado, pulsación física con Option en el icono Partially Open.
+   Se usó cua_repl click por coordenadas del control visible con key=alt;
+   el clic por índice de accesibilidad no había producido el mismo resultado.
+   Las coordenadas dependen del tamaño de la ventana y no deben fijarse en un test.
+2. Device Hub entregó partiallyOpen a 1.570796 radianes en la app.
+   Escena 0D4336F2-5648-4B2F-A78D-4F054BC50A65,
+   ventana A6228279-9128-4D21-985B-5EF013C0D25F, generación 5.
+   951 × 669 puntos; 2007 × 2853 píxeles nativos; 1 división activa.
+   Captura inactive; origen simulator; modelo duoInferred; pantalla interior.
+   La primera transición se acredita por inspección AX de Device Hub.
+3. Se terminó y relanzó RuntimeProbe sin alterar la postura a 90°.
+   Nueva escena BAD4A7E0-566D-40C9-B151-E60D73FDE7E5,
+   nueva ventana CDCB353D-5491-4CEF-8C2D-7FF73CD97F5E, generación 3.
+   Se recibió partiallyOpen, angleRadians=1.5707963267948966 (pi/2),
+   modelo duoInferred(simulator), pantalla interior. Geometría con 1 división.
+   Este arranque y la salida siguiente tienen registro stdout original:
+   2026-11-01-completion-90-runtime.log.
+4. Pulsar Open mantuvo la clasificación durante los ángulos intermedios y llegó
+   a fullyOpen, angleRadians=3.141592653589793 (pi), con 0 divisiones activas.
+   La identidad de escena/ventana se mantuvo durante esa apertura.
+
+Resultado: transición a 90°, arranque directo a 90° y salida de esa postura observados
+sin entradas sintéticas. No es validación de dispositivo físico.
+Este registro sustituye la limitación angular anotada en completion-followup.txt.
+No se exige correspondencia universal entre estado y ángulo ni se añaden umbrales.

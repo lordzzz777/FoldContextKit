@@ -1,0 +1,50 @@
+2026-11-01 — Continuación de validación con Device Hub
+Fuente: inspección de accesibilidad y capturas de Device Hub mediante cua_repl.
+Registro narrativo transcrito de los resultados de la herramienta; no es stdout de RuntimeProbe.
+El intento de consola /tmp/foldcontext-partial-start.log quedó vacío y no se usa como evidencia.
+
+1. Arranque directo entreabierto:
+   Se terminó RuntimeProbe y se lanzó de nuevo manteniendo el preset Partially Open.
+   Se observó la nueva escena 0D4336F2-5648-4B2F-A78D-4F054BC50A65,
+   ventana A6228279-9128-4D21-985B-5EF013C0D25F, generación 3.
+   Presentación: 951 × 669 puntos, secuencia de geometría 1.
+   Pantalla: 2007 × 2853 píxeles nativos, applicationDisplay, captura inactive.
+   Bisagra inicial: partiallyOpen, 2.230143 radianes, origen simulator, current, secuencia 2.
+   Geometría: 1 división activa, 0 oclusiones.
+   Modelo: duoInferred(simulator); pantalla interior.
+   No se movió la bisagra tras el relanzamiento para obtener esa primera muestra.
+
+2. Rotación entreabierta:
+   951 × 669 → 669 × 951 puntos, píxeles nativos sin cambio.
+   División activa conservada, modelo y pantalla interior conservados.
+
+3. Apertura completa y activación de escenas:
+   fullyOpen, 3.141593 radianes. En vertical, ventana 669 × 951:
+   pulsar Abrir segunda ventana devolvió el mensaje genérico de rechazo/indisponibilidad.
+   Tras rotar a horizontal, ventana 951 × 669: pulsar la misma acción abrió dos escenas
+   simultáneas lado a lado, ventanas 469 × 669.
+   Escena original: 0D4336F2-5648-4B2F-A78D-4F054BC50A65.
+   Nueva escena: 4A476C55-FD88-4EAF-9A73-8F8E1DBEA435.
+   Nueva ventana: 4A23178B-AE42-4B5B-B595-3B7E62ADC355.
+   No se observaron controles de tres círculos en ninguna de estas presentaciones.
+   La variación vertical/horizontal se registra como resultado de este entorno,
+   no como regla universal ni como motivo para añadir una puerta por orientación.
+
+4. Cierre desde dos escenas:
+   Escena original conservada, ventana original conservada, generación 4.
+   Presentación: 466 × 678 puntos; pantalla 1398 × 2034 píxeles.
+   Bisagra: closed, muestra durante el cierre 0.107951 radianes.
+   Modelo duoInferred(simulator); pantalla y presentación exterior.
+   Una región lógica de safe area, 0 divisiones y 0 oclusiones.
+   No se exige ángulo exactamente cero para interpretar el estado closed del sistema.
+
+5. Ángulo exacto de 90°:
+   No ejecutado en runtime. El preset Partially Open entrega ~127.8°.
+   Los controles accesibles expuestos ofrecen Closed / Partially Open / Open.
+   Las ayudas públicas simctl ui/io consultadas no ofrecen ajuste angular.
+   Los intentos de mostrar ajuste fino con Option no expusieron un deslizador operable.
+   Los tests controlados cubren partiallyOpen con pi/2, pero no acreditan una postura runtime a 90°.
+
+Referencia oficial: https://developer.apple.com/videos/play/tech-talks/111464/
+Duo admite Split View y nuevas escenas desde el panel interior; no se promete escritorio macOS.
+Sin dispositivo físico disponible; ensayos físicos fuera del alcance.

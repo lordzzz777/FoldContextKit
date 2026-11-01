@@ -19,7 +19,7 @@ import Testing
 @MainActor
 @Test func activationActionDoesNotRetainSourceOrCreateActivityEarly() {
     var source: UIView? = UIView()
-    weak var weakSource = source
+    weak let weakSource = source
     var activityCreated = false
     var action: UIWindowScene.ActivationAction?
     if let source {

@@ -201,16 +201,61 @@ Abre [RuntimeProbe.xcodeproj](Validation/RuntimeProbe/RuntimeProbe.xcodeproj), s
 
 La app es un consumidor local del observador y de `FoldNewWindowButton`. La biblioteca proporciona ese control de activación, pero no selecciona el contenido ni la navegación de tus ventanas.
 
-### Capturas del simulador
+### Galería de funciones
 
-**Capturas históricas de Duo Simulator 27.1, del 27/10/2026.** Muestran la app de diagnóstico anterior a las últimas funciones de inferencia y regiones; no acreditan su funcionamiento actual ni hardware físico.
+Capturas de **RuntimeProbe en Duo Simulator 27.1, del 01/11/2026**, con el ejemplo sintético desactivado. Son imágenes reales de la app de diagnóstico consumiendo FoldContextKit. La interfaz de tu app la diseñas tú; estas capturas no acreditan un dispositivo físico.
 
-<p>
-  <img src="Documentation/Images/runtime-simulator-overview-2026-10-27.png" width="300" alt="App de diagnóstico en Duo Simulator: controles de observación y disponibilidad de bisagra">
-  <img src="Documentation/Images/runtime-simulator-measurements-2026-10-27.png" width="300" alt="Medidas del simulador: 1398 por 2034 píxeles nativos y bisagra cerrada a cero radianes, con fuente y metadatos">
+#### Dos ventanas independientes
+
+<p align="center">
+  <a href="Documentation/Images/runtime-dual-windows-2026-11-01.png">
+    <img src="Documentation/Images/runtime-dual-windows-2026-11-01.png" width="860" alt="RuntimeProbe con dos ventanas de diagnóstico lado a lado en la pantalla interior de Duo Simulator, cada una con sus controles de observación">
+  </a>
 </p>
 
-Izquierda: controles y disponibilidad de API. Derecha: medidas, bisagra y procedencia de las muestras. Estas pantallas pertenecen a RuntimeProbe; tu app diseña su propia interfaz.
+`FoldNewWindowButton` solicita otra escena mediante la acción nativa. Aquí el sistema presenta **dos instancias lado a lado**, cada una con estado y observador propios. Cada ventana mide 469 × 669 puntos en esta configuración. La separación central corresponde a la presentación multiventana; no representa una segunda pantalla física ni una bisagra medida. La disponibilidad y colocación las decide iOS.
+
+#### Pantalla interior: medidas y controles de observación
+
+<p align="center">
+  <a href="Documentation/Images/runtime-interior-measurements-2026-11-01.png">
+    <img src="Documentation/Images/runtime-interior-measurements-2026-11-01.png" width="760" alt="Lectura del panel interior en RuntimeProbe: ventana de 951 por 669 puntos, pantalla de 2007 por 2853 píxeles nativos y controles para montar y habilitar el observador">
+  </a>
+</p>
+
+El botón de lectura muestra **951 × 669 puntos de ventana** y **2007 × 2853 píxeles nativos** de la pantalla interior asociada. Se conservan los ejes propios de cada API. El perfil interior de estas medidas se admite con origen simulador. Los interruptores permiten montar o desmontar el observador y habilitar o suspender su recepción.
+
+#### Pantalla exterior: el mismo consumidor en espacio compacto
+
+<p align="center">
+  <a href="Documentation/Images/runtime-exterior-measurements-2026-11-01.png">
+    <img src="Documentation/Images/runtime-exterior-measurements-2026-11-01.png" width="350" alt="RuntimeProbe en la pantalla exterior de Duo Simulator: ventana de 466 por 678 puntos y pantalla de 1398 por 2034 píxeles nativos">
+  </a>
+</p>
+
+Al cerrar Duo, la app continúa en el panel exterior: **466 × 678 puntos** y **1398 × 2034 píxeles nativos** en esta captura. Las dos lecturas ilustran por qué tamaño de ventana y resolución de pantalla son datos distintos. La lectura manual es una instantánea: hay que pulsar de nuevo para actualizarla; el observador de FoldContextKit entrega sus propios cambios durante la ejecución.
+
+| Función | Qué muestra la galería o dónde consultar el detalle |
+| --- | --- |
+| Nueva escena | Dos ventanas de RuntimeProbe abiertas mediante el botón público |
+| Medidas por ventana y pantalla | Comparación del panel interior y exterior, en puntos y píxeles |
+| Ciclo de observación | Controles para montar, habilitar y suspender el observador |
+| Bisagra y postura | La app muestra estado y ángulo más abajo; el [registro a 90°](Validation/RuntimeProbe/Results/2026-11-01-completion-90-validation.txt) recoge `partiallyOpen` a π/2 y `fullyOpen` a π |
+| Clasificación, regiones y procedencia | Disponibles en el diagnóstico; contratos y resultados en la [ficha técnica](Documentation/FichaTecnica.md) |
+
+Pulsa cualquier captura para abrirla a resolución completa. Las imágenes muestran Split View y controles de diagnóstico; no un escritorio macOS ni controles de tres círculos.
+
+<details>
+<summary>Capturas históricas del 27/10/2026</summary>
+
+Estas imágenes pertenecen a una revisión anterior a las últimas funciones de inferencia y regiones. Se conservan como referencia visual de disponibilidad de API y muestras de bisagra; no acreditan el comportamiento de la revisión actual.
+
+<p>
+  <img src="Documentation/Images/runtime-simulator-overview-2026-10-27.png" width="300" alt="Revisión histórica de RuntimeProbe: controles de observación y disponibilidad de bisagra">
+  <img src="Documentation/Images/runtime-simulator-measurements-2026-10-27.png" width="300" alt="Revisión histórica de RuntimeProbe: medidas de pantalla exterior y bisagra cerrada a cero radianes, con fuente y metadatos">
+</p>
+
+</details>
 
 ## Cómo interpretar el resultado
 

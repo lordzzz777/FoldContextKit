@@ -4,8 +4,14 @@ import FoldContextKit
 
 @main
 struct RuntimeProbeApp: App {
+    static let windowActivityType = "org.foldcontextkit.RuntimeProbe.window"
+
     var body: some Scene {
-        WindowGroup(id: "diagnostic") { DiagnosticView() }
+        WindowGroup(id: "diagnostic") {
+            DiagnosticView()
+                .handlesExternalEvents(preferring: [], allowing: [])
+        }
+        .handlesExternalEvents(matching: [Self.windowActivityType])
     }
 }
 
@@ -32,7 +38,7 @@ private struct DiagnosticView: View {
                 Text("Diagnóstico local").font(.title2)
                 Text("Validación en hardware físico: pendiente.").font(.caption)
                 ModeSection(synthetic: $synthetic)
-                WindowInspectionSection(canOpenSecondWindow: canOpenSecondWindow)
+                WindowInspectionSection()
                 Toggle("Montar observador", isOn: $mounted).disabled(synthetic)
                 Toggle("Habilitar observación", isOn: $enabled).disabled(synthetic)
                 Text("Fase de esta escena: \(String(describing: scenePhase))")
@@ -79,18 +85,6 @@ private struct DiagnosticView: View {
         .onChange(of: scenePhase, initial: true) { _, value in
             record("Fase de escena: \(value)")
         }
-    }
-
-    private var canOpenSecondWindow: Bool {
-        guard !synthetic, mounted, enabled, scenePhase == .active,
-              let snapshot,
-              case let .observed(hinge, metadata) = snapshot.hinge,
-              metadata.context == snapshot.context,
-              metadata.validity == .current,
-              metadata.origin == .system || metadata.origin == .simulator else {
-            return false
-        }
-        return hinge.status == .fullyOpen || hinge.status == .partiallyOpen
     }
 
     private func receive(_ event: FoldObservationEvent) {
@@ -302,11 +296,9 @@ private func reasonDescription(_ reason: AssessmentReason) -> String {
 
 /// Manual diagnostic reading tied to this window, never a global screen selector.
 private struct WindowInspectionSection: View {
-    let canOpenSecondWindow: Bool
-    @Environment(\.openWindow) private var openWindow
-    @Environment(\.supportsMultipleWindows) private var supportsMultipleWindows
     @State private var anchor = UIView()
     @State private var reading = "Sin lectura manual."
+    @State private var activationFailure: String?
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -321,16 +313,23 @@ private struct WindowInspectionSection: View {
                 reading = "UIScreen.scale: \(screen.scale) · nativeScale: \(screen.nativeScale) (factores sin unidad)\nUIScreen.bounds: \(screen.bounds.width) × \(screen.bounds.height) puntos\nUIScreen.nativeBounds: \(screen.nativeBounds.width) × \(screen.nativeBounds.height) píxeles\nUIWindow.bounds: \(window.bounds.width) × \(window.bounds.height) puntos\nRol UISceneSession: \(scene.session.role.rawValue)\nLectura manual histórica; pulsar de nuevo para actualizar."
             }
             Text(reading).font(.caption).textSelection(.enabled)
-            Button("Abrir segunda ventana") {
-                guard canOpenSecondWindow, supportsMultipleWindows else { return }
-                openWindow(id: "diagnostic")
+            FoldNewWindowButton(String(localized: "Abrir segunda ventana"), userActivity: {
+                activationFailure = nil
+                let activity = NSUserActivity(activityType: RuntimeProbeApp.windowActivityType)
+                activity.targetContentIdentifier = UUID().uuidString
+                return activity
+            }, onFailure: { error in
+                switch error {
+                case .sourceUnavailable: activationFailure = "La ventana de origen ya no está conectada."
+                case .sourceInactive: activationFailure = "La escena de origen no está activa."
+                case .multipleScenesUnsupported: activationFailure = "El sistema no admite varias escenas."
+                case .unavailableOrRejected: activationFailure = "iOS no permite abrir otra ventana en este contexto o ha rechazado la solicitud."
+                }
+            })
+            if let activationFailure {
+                Text(activationFailure).foregroundStyle(.red)
             }
-            .disabled(!canOpenSecondWindow || !supportsMultipleWindows)
-            Text(!supportsMultipleWindows
-                 ? "El sistema no permite varias ventanas en este contexto."
-                 : canOpenSecondWindow
-                 ? "Cada ventana observa su propia escena. iOS decide su colocación."
-                 : "Abre o entreabre el dispositivo con la observación activa para abrir otra ventana.")
+            Text("Acción nativa de FoldContextKit. iOS decide la disponibilidad y colocación; cada ventana conserva su propio contexto.")
                 .font(.caption)
         }
         .background(WindowInspectionAnchor(view: anchor))

@@ -4,6 +4,25 @@ Documentación consolidada el 29 de octubre de 2026. Reúne los contratos, decis
 
 ## Estado vigente
 
+### Activación de ventanas en la biblioteca — 1 de noviembre
+
+Implementados `FoldWindowActivation.request(from:userActivity:onError:)`, `makeAction(title:from:userActivity:onFailure:)` y el adaptador SwiftUI `FoldNewWindowButton`. Sustituyen el botón local condicionado por la bisagra: la acción nativa `UIWindowScene.ActivationAction` gestiona la disponibilidad contextual del sistema. La solicitud explícita usa `UIApplication.activateSceneSession(for:errorHandler:)`, con `UISceneSessionActivationRequest` y `options.requestingScene` de la escena que la origina. No consulta ventanas globales ni modifica el clasificador.
+
+La acción resuelve la escena desde una referencia débil a la vista al invocarse. Rechaza origen desconectado/inactivo o falta de soporte multiwindow. La solicitud directa devuelve el error original por callback; la alternativa de la acción nativa solo permite informar unavailableOrRejected, sin inventar un NSError. No hay callback de éxito: el consumidor confirma la creación o reutilización en el ciclo de vida del destino. La app configura múltiples escenas y el enrutamiento de NSUserActivity. No se fuerza colocación lado a lado, ni se seleccionan vistas o navegación.
+
+RuntimeProbe consume el botón público, muestra fallos y enruta actividades a nuevas instancias de su WindowGroup con estado independiente. Se eliminó su puerta basada en fullyOpen/partiallyOpen. README incluye ejemplos SwiftUI y UIKit. Firmas verificadas con DocumentationSearch y SDK local iOS Simulator 27.2; mínimo del paquete iOS26, sin nuevas dependencias.
+
+Validación: paquete y app compilados; 47 casos de Swift Testing superados en simulador (dos nuevos: comprobaciones previas y liberación de la vista de origen/creación diferida de la actividad). La suite inicial de45 no incluía los nuevos archivos hasta actualizar el grafo del paquete; solo el resultado posterior de47 acredita estas pruebas. RuntimeProbe instalada/arrancada en Duo Simulator 27.1: botón nativo habilitado en la pantalla interior, pero el toque automático no produjo una segunda escena observada. La herramienta capturó la pantalla exterior negra y no permite asegurar que el toque llegara a la interior. No se declara fallo ni éxito de la solicitud. [Registro runtime](../Validation/RuntimeProbe/Results/2026-11-01-native-window-runtime.txt). [47 casos](../Validation/RuntimeProbe/Results/2026-11-01-window-activation-tests.txt).
+
+Fuentes: [acción nativa](https://developer.apple.com/documentation/uikit/uiwindowscene/activationaction), [solicitud de sesión](https://developer.apple.com/documentation/uikit/uiscenesessionactivationrequest-swift.struct), [enrutamiento SwiftUI](https://developer.apple.com/documentation/swiftui/view/handlesexternalevents(preferring:allowing:)).
+
+
+### Lectura interior obtenida — 1 de noviembre
+
+Se registra por primera vez en la app una muestra actual del panel interior de Duo Simulator 27.1: `UIWindow.bounds = 951 × 669 puntos`, `UIScreen.nativeBounds = 2007 × 2853 píxeles`, bisagra UIKit `fullyOpen`, ángulo 3.141592653589793 radianes, origen simulator, captura inactive y atribución applicationDisplay. Las medidas conservan los ejes de cada API; no se calcularon desde pulgadas ni desde capturas. El registro runtime enlazado arriba contiene snapshot y metadatos originales.
+
+El clasificador informa capacidad hingeObserved y modelo insufficientInformation por dimensionsDoNotMatch. El perfil interior implementado compara 1878 × 2670 píxeles; la lectura obtenida difiere. Se registra esta abstención conocida en simulador, sin inventar una tasa de errores ni ampliar el perfil automáticamente. Cumple el ensayo de obtener la lectura interior, pero no acredita la identificación interior ni posturas entreabierta/90° o hardware físico. Sustituye las afirmaciones históricas inferiores de que no había lectura interior.
+
 ### Segunda ventana con el dispositivo abierto — 31 de octubre
 
 RuntimeProbe ofrece «Abrir segunda ventana» usando `openWindow(id: "diagnostic")`. Se habilita cuando `supportsMultipleWindows` es verdadero y esta escena está activa, con observador montado/habilitado, modo sintético desactivado y muestra de bisagra vigente del mismo contexto y origen sistema/simulador en fullyOpen o partiallyOpen. Cada instancia de WindowGroup mantiene snapshot, historial y observador propios. iOS decide la colocación; no se garantiza presentación simultánea lado a lado ni se cierran ventanas automáticamente al plegar. La biblioteca no abre ventanas del consumidor: esta acción pertenece a la app. Compilación, instalación y arranque correctos. En simulador cerrado se observó el botón deshabilitado, con modo sintético desactivado y observación activa. [Registro runtime](../Validation/RuntimeProbe/Results/2026-10-31-window-runtime.txt). Comprobación de apertura de dos escenas en abierto pendiente.

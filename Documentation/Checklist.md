@@ -1,5 +1,15 @@
 # Etapas verificables
 
+## Activación de ventanas en FoldContextKit — 1 de noviembre
+
+- [x] API UIKit de solicitud explícita con escena de origen y errores del sistema.
+- [x] Acción nativa y botón SwiftUI reutilizable, sin puerta basada en ángulo o modelo.
+- [x] Integrar RuntimeProbe y documentar configuración/enrutamiento del consumidor.
+- [x] Compilar paquete/app y superar 47 casos en simulador, incluidos 2 nuevos de activación.
+- [ ] Observar creación de dos escenas independientes con el adaptador nativo y confirmar su presentación.
+
+Las condiciones de apertura basadas en bisagra de la sección del 31 de octubre quedan sustituidas por la acción nativa anterior.
+
 ## Segunda ventana — 31 de octubre
 
 - [x] Habilitar «Abrir segunda ventana» con bisagra abierta/entreabierta vigente y soporte multiwindow del sistema, conservando estado por escena.
@@ -165,7 +175,7 @@ Registro futuro por caso: identificador local del ensayo, entorno, versión, esc
 ## Etapa 7 — Decisión sobre inferencia
 
 - [x] Inventariar la evidencia dimensional disponible y verificar su API: especificaciones y contrato de nativeBounds contrastados, lectura exterior en simulador. Alcance y límites en [DimensionEvidence](FichaTecnica.md#dimensiones).
-- [ ] Registrar la lectura interior en simulador; no sustituirla por especificaciones ni datos sintéticos.
+- [x] Registrar lectura interior real: Duo Simulator 27.1, fullyOpen π rad, UIWindow 951 × 669 puntos, nativeBounds 2007 × 2853 píxeles. Discrepa del perfil interior; no modifica tolerancias ni acredita hardware.
 - [x] Definir tolerancias y contexto de la versión sin perfiles: ninguna tolerancia de identificación habilitada; comparación exacta solo para fixtures, vigencia/contexto/origen explícitos. Véase [SimulatorControls](FichaTecnica.md#controles).
 - [x] Contrastar control negativo iPhone 17 iOS 27.0 y rotación de su ventana; registrar que Duo no rotó su interfaz.
 - [ ] Observar scale/nativeScale y cambios efectivos de escala. Lectura manual implementada y compilada; ensayo runtime bloqueado por conexión al simulador.

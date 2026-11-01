@@ -1,0 +1,575 @@
+================================================================================
+TEST RESULTS SUMMARY
+================================================================================
+Generated: 2026-11-01T00:25:47Z
+Total Results: 47
+================================================================================
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 1/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: activationActionDoesNotRetainSourceOrCreateActivityEarly()
+TEST_DISPLAY_NAME: activationActionDoesNotRetainSourceOrCreateActivityEarly()
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/WindowActivationTests.swift
+TEST_LINE_NUMBER: 19
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 2/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: archivalCopyDoesNotMutateCurrentEvidence()
+TEST_DISPLAY_NAME: archivalCopyDoesNotMutateCurrentEvidence()
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ObservationTests.swift
+TEST_LINE_NUMBER: 22
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 3/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: boundedBufferPreservesDiscreteEventsAndReportsOverflow()
+TEST_DISPLAY_NAME: boundedBufferPreservesDiscreteEventsAndReportsOverflow()
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ObservationTests.swift
+TEST_LINE_NUMBER: 9
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 4/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: captureAndExternalContextsBlockDuoInference()
+TEST_DISPLAY_NAME: captureAndExternalContextsBlockDuoInference()
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/PresentationTests.swift
+TEST_LINE_NUMBER: 57
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 5/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: contradictoryDimensionsBlockInference()
+TEST_DISPLAY_NAME: contradictoryDimensionsBlockInference()
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ClassificationTests.swift
+TEST_LINE_NUMBER: 78
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 6/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: duoInferenceAndPanelRespectEvidenceAndRotation()
+TEST_DISPLAY_NAME: duoInferenceAndPanelRespectEvidenceAndRotation()
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/PresentationTests.swift
+TEST_LINE_NUMBER: 38
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 7/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: fragmentedRegionsAreBoundedAndRemainOutsideOcclusions()
+TEST_DISPLAY_NAME: fragmentedRegionsAreBoundedAndRemainOutsideOcclusions()
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/PresentationTests.swift
+TEST_LINE_NUMBER: 150
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 8/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: hingeWithoutDimensionsObservesCapabilityOnly(_:)
+TEST_DISPLAY_NAME: .unknown
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ClassificationTests.swift
+TEST_LINE_NUMBER: 48
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 9/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: hingeWithoutDimensionsObservesCapabilityOnly(_:)
+TEST_DISPLAY_NAME: .closed
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ClassificationTests.swift
+TEST_LINE_NUMBER: 48
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 10/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: hingeWithoutDimensionsObservesCapabilityOnly(_:)
+TEST_DISPLAY_NAME: .partiallyOpen
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ClassificationTests.swift
+TEST_LINE_NUMBER: 48
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 11/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: hingeWithoutDimensionsObservesCapabilityOnly(_:)
+TEST_DISPLAY_NAME: .fullyOpen
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ClassificationTests.swift
+TEST_LINE_NUMBER: 48
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 12/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: historicalEvidenceRetainsItsOwnWindowAndGeneration()
+TEST_DISPLAY_NAME: historicalEvidenceRetainsItsOwnWindowAndGeneration()
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/EvidenceTests.swift
+TEST_LINE_NUMBER: 26
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 13/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: historicalSamplesCannotActAsCurrentEvidence()
+TEST_DISPLAY_NAME: historicalSamplesCannotActAsCurrentEvidence()
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ClassificationTests.swift
+TEST_LINE_NUMBER: 129
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 14/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: invalidHistoryAddsNoTransitionAndDoesNotOverrideCurrentEvidence()
+TEST_DISPLAY_NAME: invalidHistoryAddsNoTransitionAndDoesNotOverrideCurrentEvidence()
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ClassificationTests.swift
+TEST_LINE_NUMBER: 178
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 15/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: layoutChoiceDoesNotFollowHingeAngle()
+TEST_DISPLAY_NAME: layoutChoiceDoesNotFollowHingeAngle()
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/PresentationTests.swift
+TEST_LINE_NUMBER: 75
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 16/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: measuredDivisionOverridesEqualHalvesAndKeepsMargins()
+TEST_DISPLAY_NAME: measuredDivisionOverridesEqualHalvesAndKeepsMargins()
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/PresentationTests.swift
+TEST_LINE_NUMBER: 95
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 17/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: missingDataDoesNotCollapseIntoOneState()
+TEST_DISPLAY_NAME: missingDataDoesNotCollapseIntoOneState()
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/EvidenceTests.swift
+TEST_LINE_NUMBER: 14
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 18/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: missingHingeNeverMeansPhysicalAbsence(_:)
+TEST_DISPLAY_NAME: .apiUnavailable
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ClassificationTests.swift
+TEST_LINE_NUMBER: 39
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 19/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: missingHingeNeverMeansPhysicalAbsence(_:)
+TEST_DISPLAY_NAME: .awaitingSample
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ClassificationTests.swift
+TEST_LINE_NUMBER: 39
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 20/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: missingHingeNeverMeansPhysicalAbsence(_:)
+TEST_DISPLAY_NAME: .observationSuspended
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ClassificationTests.swift
+TEST_LINE_NUMBER: 39
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 21/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: missingHingeNeverMeansPhysicalAbsence(_:)
+TEST_DISPLAY_NAME: .unavailableInContext
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ClassificationTests.swift
+TEST_LINE_NUMBER: 39
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 22/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: nonsyntheticSourcesCannotProduceSyntheticInference(_:)
+TEST_DISPLAY_NAME: .system
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ClassificationTests.swift
+TEST_LINE_NUMBER: 167
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 23/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: nonsyntheticSourcesCannotProduceSyntheticInference(_:)
+TEST_DISPLAY_NAME: .simulator
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ClassificationTests.swift
+TEST_LINE_NUMBER: 167
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 24/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: nonsyntheticSourcesCannotProduceSyntheticInference(_:)
+TEST_DISPLAY_NAME: .unknown
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ClassificationTests.swift
+TEST_LINE_NUMBER: 167
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 25/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: occlusionsAreExcludedWithoutLosingUnobscuredArea()
+TEST_DISPLAY_NAME: occlusionsAreExcludedWithoutLosingUnobscuredArea()
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/PresentationTests.swift
+TEST_LINE_NUMBER: 112
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 26/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: pointsCannotSubstituteForNativePixels(_:)
+TEST_DISPLAY_NAME: .uiWindowBounds
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ClassificationTests.swift
+TEST_LINE_NUMBER: 99
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 27/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: pointsCannotSubstituteForNativePixels(_:)
+TEST_DISPLAY_NAME: .uiViewBounds
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ClassificationTests.swift
+TEST_LINE_NUMBER: 99
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 28/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: pointsCannotSubstituteForNativePixels(_:)
+TEST_DISPLAY_NAME: .swiftUIGeometry
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ClassificationTests.swift
+TEST_LINE_NUMBER: 99
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 29/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: policyIsExplicitAndObservationOnlyCannotInfer()
+TEST_DISPLAY_NAME: policyIsExplicitAndObservationOnlyCannotInfer()
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ClassificationTests.swift
+TEST_LINE_NUMBER: 57
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 30/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: rejectsInvalidMeasurements()
+TEST_DISPLAY_NAME: rejectsInvalidMeasurements()
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/EvidenceTests.swift
+TEST_LINE_NUMBER: 3
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 31/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: rotationMatchesButDoesNotBecomeATransition()
+TEST_DISPLAY_NAME: rotationMatchesButDoesNotBecomeATransition()
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ClassificationTests.swift
+TEST_LINE_NUMBER: 87
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 32/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: sceneActivationRejectsDisconnectedInactiveAndUnsupportedSources()
+TEST_DISPLAY_NAME: sceneActivationRejectsDisconnectedInactiveAndUnsupportedSources()
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/WindowActivationTests.swift
+TEST_LINE_NUMBER: 6
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 33/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: sceneWindowAndGenerationMismatchesAreRejected()
+TEST_DISPLAY_NAME: sceneWindowAndGenerationMismatchesAreRejected()
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ClassificationTests.swift
+TEST_LINE_NUMBER: 141
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 34/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: screenAttributionBlocksInference(_:)
+TEST_DISPLAY_NAME: .unknown
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ClassificationTests.swift
+TEST_LINE_NUMBER: 159
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 35/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: screenAttributionBlocksInference(_:)
+TEST_DISPLAY_NAME: .externalDisplay
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ClassificationTests.swift
+TEST_LINE_NUMBER: 159
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 36/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: screenAttributionBlocksInference(_:)
+TEST_DISPLAY_NAME: .mirrored
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ClassificationTests.swift
+TEST_LINE_NUMBER: 159
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 37/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: staleOrForeignGeometryCannotSupplySafeRegions()
+TEST_DISPLAY_NAME: staleOrForeignGeometryCannotSupplySafeRegions()
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/PresentationTests.swift
+TEST_LINE_NUMBER: 129
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 38/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: syntheticCombinationNeedsNoInitialTransition(_:)
+TEST_DISPLAY_NAME: .uiHingeInteraction
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ClassificationTests.swift
+TEST_LINE_NUMBER: 66
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 39/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: syntheticCombinationNeedsNoInitialTransition(_:)
+TEST_DISPLAY_NAME: .swiftUIHingeChange
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ClassificationTests.swift
+TEST_LINE_NUMBER: 66
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 40/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: transitionIsDependentAndNeverPromotesModel()
+TEST_DISPLAY_NAME: transitionIsDependentAndNeverPromotesModel()
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ClassificationTests.swift
+TEST_LINE_NUMBER: 113
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 41/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: UIKitObservationTests/detachedStartDeliversAndStopRemovesProbe()
+TEST_DISPLAY_NAME: detachedStartDeliversAndStopRemovesProbe()
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ObservationTests.swift
+TEST_LINE_NUMBER: 44
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 42/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: UIKitObservationTests/releaseCleansUpWithoutRetainCycle()
+TEST_DISPLAY_NAME: releaseCleansUpWithoutRetainCycle()
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ObservationTests.swift
+TEST_LINE_NUMBER: 61
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 43/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: UIKitObservationTests/swiftUICoordinatorFirstDeliveryAndDismantle()
+TEST_DISPLAY_NAME: swiftUICoordinatorFirstDeliveryAndDismantle()
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ObservationTests.swift
+TEST_LINE_NUMBER: 73
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 44/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: UIKitObservationTests/swiftUIDeliveryReportsOverflowAndKeepsDiscreteOrder()
+TEST_DISPLAY_NAME: swiftUIDeliveryReportsOverflowAndKeepsDiscreteOrder()
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ObservationTests.swift
+TEST_LINE_NUMBER: 89
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 45/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: UIKitObservationTests/initialDeliveryNativeChangeAndDisableInsideCallback()
+TEST_DISPLAY_NAME: initialDeliveryNativeChangeAndDisableInsideCallback()
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ObservationTests.swift
+TEST_LINE_NUMBER: 103
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 46/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: UIKitObservationTests/unavailableAPIAndControlledHierarchyChanges()
+TEST_DISPLAY_NAME: unavailableAPIAndControlledHierarchyChanges()
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ObservationTests.swift
+TEST_LINE_NUMBER: 136
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+--------------------------------------------------------------------------------
+TEST_RESULT_INDEX: 47/47
+TEST_TARGET: FoldContextKitTests
+TEST_IDENTIFIER: UIKitObservationTests/windowsLifecycleGeometryAndIsolation()
+TEST_DISPLAY_NAME: windowsLifecycleGeometryAndIsolation()
+TEST_STATE: Passed
+TEST_FILE_PATH: AdapteDuoKit/Tests/FoldContextKitTests/ObservationTests.swift
+TEST_LINE_NUMBER: 165
+TEST_TAGS: (none)
+
+TEST_ISSUE_COUNT: 0
+
+
+================================================================================
+END OF TEST RESULTS SUMMARY
+================================================================================

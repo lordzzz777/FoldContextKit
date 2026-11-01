@@ -137,11 +137,67 @@ final class FoldStatusViewController: UIViewController {
 
 Para suspender temporalmente, usa `observer.isEnabled = false`. Para releer geometría si tu app la cambia sin generar layout, usa `observer.refresh()`. Cambiar `observer.interiorLayout` modifica la evaluación consultada; no genera un evento de hardware.
 
+## Abrir otra ventana desde la app
+
+En iOS, FoldContextKit incluye `FoldNewWindowButton` para SwiftUI y `FoldWindowActivation` para UIKit. Usan la activación nativa de escenas; no abren ventanas automáticamente al plegar ni convierten la multitarea de iOS en un escritorio macOS. La disponibilidad y colocación dependen del sistema, no de la clasificación Duo ni solo de su bisagra.
+
+Configura soporte de múltiples escenas en tu app (`UIApplicationSceneManifest` → `UIApplicationSupportsMultipleScenes = YES`). La app también debe decidir qué escena recibe cada actividad. Ejemplo SwiftUI con un grupo dedicado:
+
+```swift
+import SwiftUI
+import FoldContextKit
+
+@main
+struct ExampleApp: App {
+    var body: some Scene {
+        WindowGroup {
+            WindowContent()
+                .handlesExternalEvents(preferring: [], allowing: [])
+        }
+        .handlesExternalEvents(matching: ["com.example.app.window"])
+    }
+}
+
+struct WindowContent: View {
+    @State private var failure: String?
+
+    var body: some View {
+        VStack {
+            FoldNewWindowButton(String(localized: "Abrir otra ventana"), userActivity: {
+                let activity = NSUserActivity(activityType: "com.example.app.window")
+                activity.targetContentIdentifier = UUID().uuidString
+                return activity
+            }, onFailure: { error in
+                failure = String(describing: error)
+            })
+            if let failure { Text(failure) }
+        }
+    }
+}
+```
+
+Cada instancia posee su propio estado. Los conjuntos vacíos en el modificador de la vista evitan que una escena abierta reciba la actividad en este ejemplo; el modificador del grupo selecciona el destino para una nueva escena. Adapta esta política si quieres reutilizar ventanas.
+
+Desde UIKit, puedes instalar `FoldWindowActivation.makeAction(title:from:userActivity:onFailure:)` en un botón o menú. También puedes solicitar la activación explícitamente desde la escena del controlador:
+
+```swift
+if let scene = view.window?.windowScene {
+    let activity = NSUserActivity(activityType: "com.example.app.window")
+    activity.targetContentIdentifier = UUID().uuidString
+    FoldWindowActivation.request(from: scene, userActivity: activity) { error in
+        // Mostrar o registrar el error: aquí llega el error original del sistema.
+        print(error)
+    }
+}
+```
+
+El consumidor UIKit configura su delegado de escenas y sus condiciones de activación. El botón nativo ofrece un error genérico si el sistema usa su acción alternativa; la solicitud directa conserva el error original. Solicitar una ventana no confirma que se haya creado: comprueba el ciclo de vida de la escena destino. iOS puede reutilizar una escena según la configuración de tu app.
+
 ## Ver la app de diagnóstico
 
 Abre [RuntimeProbe.xcodeproj](Validation/RuntimeProbe/RuntimeProbe.xcodeproj), selecciona el esquema **RuntimeProbe** y un simulador iOS. La app muestra medidas, fuentes, bisagra, clasificación, regiones e historial. Mantén desactivado **Ejemplo sintético** para observar el entorno.
 
-La biblioteca no incorpora una interfaz propia: esta app es un consumidor local que permite ver los datos que recibiría tu aplicación.
+La app es un consumidor local del observador y de `FoldNewWindowButton`. La biblioteca proporciona ese control de activación, pero no selecciona el contenido ni la navegación de tus ventanas.
 
 ### Capturas del simulador
 
@@ -166,7 +222,7 @@ La inferencia no es una identificación oficial ni una garantía de exclusividad
 
 ## Estado y documentación
 
-Paquete y app compilados para iOS Simulator. **25 tests del núcleo superados en Mac** y consumidor SwiftPM local ejecutado. **45 casos superados en Duo Simulator con iOS 27.1**, incluidos UIKit y SwiftUI, sin fallos ni omisiones. En la app se observaron entrega inicial de bisagra, inferencia exterior, deshabilitación/reactivación y remontaje SwiftUI en simulador. También se observó suspensión al pasar a segundo plano y recepción de una muestra nueva al regresar. Quedan pendientes lectura del panel interior y posturas libro/90°; no hay dispositivo físico disponible. Detalles en la ficha técnica. Las pruebas controladas no acreditan comportamiento físico.
+Paquete y app compilados para iOS Simulator. **25 tests del núcleo superados en Mac** y consumidor SwiftPM local ejecutado. **47 casos superados en iOS Simulator**, sin fallos ni omisiones: cubren UIKit, SwiftUI y dos pruebas nuevas de activación de ventanas. En la app se observaron entrega inicial de bisagra, inferencia exterior, deshabilitación/reactivación y remontaje SwiftUI en simulador. También se observó suspensión al pasar a segundo plano y recepción de una muestra nueva al regresar. La lectura interior se obtuvo: 2007 × 2853 píxeles nativos con bisagra fullyOpen en simulador. Difiere del perfil interior implementado (1878 × 2670), por lo que allí el modelo queda desconocido. Quedan pendientes posturas libro/90° y la apertura efectiva de dos escenas con el nuevo botón; no hay dispositivo físico disponible. Detalles en la ficha técnica. Las pruebas controladas no acreditan comportamiento físico.
 
 - [Ficha técnica](Documentation/FichaTecnica.md): contratos, fuentes, regiones, límites y resultados.
 - [Checklist](Documentation/Checklist.md): trabajo completado y pendientes.
